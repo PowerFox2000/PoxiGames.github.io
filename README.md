@@ -1,1 +1,1 @@
-# PoxiGames.github.io
+# Poxi Games Player Wiki
