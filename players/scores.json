@@ -1,72 +1,22 @@
 {
-"players": [
-{
-"id": "matheo",
-"name": "Matheo",
-"minecraft": "Matheo123",
-"discord": "Matheo#1234",
-"tier": "S",
-"roles": ["Dev","Tester"],
-"warnings": 1,
-"banned": false,
-"head": "https://fr.namemc.com/skin/cc7ba0ed8287adbf",
-"seasons": {
-"S1": {
-"placement": 2,
-"points": 420,
-"minigames": {
-"Race": 80,
-"Hunt": 100,
-"Battle": 0,
-"Heist": 50,
-"LavaRun": 0,
-"Pirates": 65,
-"Don't Fall": 0,
-"Spleef": 75
-}
-},
-"S2": {
-"placement": 5,
-"points": 300,
-"minigames": {
-"Race": 70,
-"Hunt": 0,
-"Battle": 60,
-"Heist": 40,
-"LavaRun": 0,
-"Pirates": 55,
-"Don't Fall": 30,
-"Spleef": 0
-}
-}
-}
-},
-{
-"id": "finn",
-"name": "FinnishGuy",
-"minecraft": "Finn_TheMad",
-"discord": "Finn#9999",
-"tier": "A",
-"roles": [],
-"warnings": 0,
-"banned": false,
-"head": "img/heads/finn.png",
-"seasons": {
-"S1": {
-"placement": 1,
-"points": 500,
-"minigames": {
-"Race": 100,
-"Hunt": 80,
-"Battle": 95,
-"Heist": 90,
-"LavaRun": 60,
-"Pirates": 55,
-"Don't Fall": 80,
-"Spleef": 40
-}
-}
-}
-}
-]
+  "head": "https://fr.namemc.com/skin/cc7ba0ed8287adbf",
+  "id": "matheo",
+  "name": "Matheo",
+  "minecraft": "Matheo123",
+  "discord": "Matheo#1234",
+  "tier": "S",
+  "roles": ["Dev", "Tester"],
+  "placement": [2, 5],
+  "points": [420, 300],
+  "minigames": 
+  {
+    "race": [],
+    "hunt": [],
+    "battle": [],
+    "heist": [],
+    "lavarun": [],
+    "pirates": [],
+    "don"t fall": [],
+    "spleef": [],
+  }
 }
