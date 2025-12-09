@@ -1,4 +1,4 @@
-fetch("scores.json")
+fetch("./scores.json")
   .then(r => r.json())
   .then(json => {
     const tableBody = document.getDocumentById("table-body");
