@@ -40,13 +40,13 @@
   fetch("scores.json")
     .then(r => r.json())
     .then(json => {
-      const tablebody = document.querySelector("#Table tbody");
+      const Table = document.querySelector("#Table tbody");
 
       json.components.forEach(component => {
         const val = document.createElement("tr");
         val.innerHTML = '<td>"${component}"</td>';
 
-        tablebody.appendChild(val);
+        Table.appendChild(val);
       }
     }
 </script>
