@@ -11,5 +11,5 @@ fetch("scores.json")
       `;
 
       Table.appendChild(val);
-    }
-  }
+    });
+  })
