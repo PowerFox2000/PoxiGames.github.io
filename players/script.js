@@ -1,16 +1,13 @@
 fetch("./scores.json")
   .then(r => r.json())
   .then(json => {
-    const tableBody = document.getElementById("table-body");
+    const players = document.getElementById("players");
 
     json.players.forEach(player => {
       const val = document.createElement("tr");
-      val.innerHTML = `
-        <td>${player.name}</td>
-        <td>${player.id}</td>
-      `;
+      val.innerHTML = `<div>${player.name}</div>`;
 
-      tableBody.appendChild(val);
+      players.appendChild(val);
     });
   })
   .catch(err => console.error(err));
