@@ -6,7 +6,7 @@
   "discord": "matheofox",
   "tier": "S",
   "roles": ["Dev", "Tester"],
-  "placement": s[1, 1],
+  "placement": [1, 1],
   "points": [, ],
   "minigames": 
   {
