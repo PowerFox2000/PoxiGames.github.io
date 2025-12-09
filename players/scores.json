@@ -7,7 +7,7 @@
   "tier": "S",
   "roles": ["Dev", "Tester"],
   "placement": [1, 1],
-  "points": [, ],
+  "points": [45, 5],
   "minigames": 
   {
     "race": [],
