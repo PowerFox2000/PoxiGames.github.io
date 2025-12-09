@@ -1,6 +1,5 @@
 {
-  players = [
-  [
+  players: [
     {
       "head": "https://fr.namemc.com/skin/cc7ba0ed8287adbf",
       "id": "matheo",
