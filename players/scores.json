@@ -1,22 +1,27 @@
 {
-  "head": "https://fr.namemc.com/skin/cc7ba0ed8287adbf",
-  "id": "matheo",
-  "name": "Matheo",
-  "minecraft": "Little_Fox_2000",
-  "discord": "matheofox",
-  "tier": "S",
-  "roles": ["Dev", "Tester"],
-  "placement": [1, 1],
-  "points": [45, 5],
-  "minigames": 
-  {
-    "race": [],
-    "hunt": [],
-    "battle": [],
-    "heist": [],
-    "lavarun": [],
-    "pirates": [],
-    "don't fall": [],
-    "spleef": [],
-  }
+  players = 
+  [
+    {
+      "head": "https://fr.namemc.com/skin/cc7ba0ed8287adbf",
+      "id": "matheo",
+      "name": "Matheo",
+      "minecraft": "Little_Fox_2000",
+      "discord": "matheofox",
+      "tier": "S",
+      "roles": ["Dev", "Tester"],
+      "placement": [1, 1],
+      "points": [45, 5],
+      "minigames": 
+      {
+        "race": [],
+        "hunt": [],
+        "battle": [],
+        "heist": [],
+        "lavarun": [],
+        "pirates": [],
+        "don't fall": [],
+        "spleef": [],
+      }
+    }
+  ]
 }
