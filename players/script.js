@@ -1,7 +1,7 @@
 fetch("scores.json")
   .then(r => r.json())
   .then(json => {
-    const Table = document.querySelector("#Table tbody");
+    const Table = document.getDocumentById("table-tbody");
 
     json.players.forEach(player => {
       const val = document.createElement("tr");
