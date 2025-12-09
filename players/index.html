@@ -44,9 +44,7 @@
 
       json.components.forEach(component => {
         const val = document.createElement("tr");
-        val.innerHTML = '
-          <td>"${component}"</td>
-        ';
+        val.innerHTML = '<td>"${component}"</td>';
 
         tablebody.appendChild(val);
       }
