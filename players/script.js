@@ -7,7 +7,7 @@ fetch("./scores.json")
       const val = document.createElement("div");
       val.innerHTML = `
       <div class= "player" id= "${player.id}">
-        <img src="${player.head}"></img> ${player.name}
+        <img src="${player.head}"></img> <strong>${player.name}</strong>
       </div>`;
 
       players.appendChild(val);
