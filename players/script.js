@@ -6,7 +6,7 @@ fetch("./scores.json")
     json.players.forEach(player => {
       const val = document.createElement("div");
       val.innerHTML = `
-      <div class= "player" id= "${player.id}">
+      <div class= "player" id= "${player.minecraft}">
         <img src="${player.head}"></img> <h1><strong>${player.name}</strong></h1>
       </div>`;
 
