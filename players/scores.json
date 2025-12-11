@@ -19,7 +19,7 @@
         "heist": [932,2844],
         "lavarun": [446,480],
         "pirates": [2160,1490],
-        "don't fall": [595,510],
+        "dont_fall": [595,510],
         "spleef": [648,770]
       }
     }, 
@@ -27,7 +27,7 @@
       "name": "Nael",
       "minecraft": "EarthStream3321",
       "discord": "Nael",
-      "discord_name": "nael911_71167"
+      "discord_name": "nael911_71167",
       "team": ["Red","Red"],
       "tier": "C",
       "roles": ["Tester"],
@@ -42,7 +42,7 @@
         "heist": [700,1],
         "lavarun": [171,123],
         "pirates": [810,40],
-        "don't fall": [255,425],
+        "dont_fall": [255,425],
         "spleef": [414,190]
       }
     }
