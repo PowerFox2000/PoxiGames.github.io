@@ -36,14 +36,14 @@
       
       "minigames": 
       {
-        "race": [424,],
-        "hunt": [690,],
-        "battle": [1,],
-        "heist": [700,],
-        "lavarun": [171,],
-        "pirates": [810,],
-        "don't fall": [255,],
-        "spleef": [414,]
+        "race": [424,421],
+        "hunt": [690,688],
+        "battle": [1,118],
+        "heist": [700,1],
+        "lavarun": [171,123],
+        "pirates": [810,40],
+        "don't fall": [255,425],
+        "spleef": [414,190]
       }
     }
   ]
