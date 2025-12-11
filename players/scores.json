@@ -1,10 +1,10 @@
 {
   "players": [
     {
-      "id": "matheo",
       "name": "Matheo",
       "minecraft": "Little_Fox_2000",
       "discord": "matheofox",
+      "discord_name": "matheofox",
       "team": ["Red","Red"],
       "tier": "S",
       "roles": ["Dev", "Tester"],
@@ -24,15 +24,15 @@
       }
     }, 
     {
-      "id": "matheo",
-      "name": "Matheo",
-      "minecraft": "Little_Fox_2000",
-      "discord": "matheofox",
-      "team": "red",
-      "tier": "S",
-      "roles": ["Dev", "Tester"],
-      "placement": [1, 1],
-      "points": [45, 5],
+      "name": "Nael",
+      "minecraft": "EarthStream3321",
+      "discord": "Nael",
+      "discord_name": "nael911_71167"
+      "team": ["Red","Red"],
+      "tier": "C",
+      "roles": ["Tester"],
+      "placement": [1, 9],
+      "points": [5117, 4026],
       
       "minigames": 
       {
