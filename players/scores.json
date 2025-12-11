@@ -22,6 +22,121 @@
         "don't fall": [],
         "spleef": []
       }
+    }, 
+    {
+      "id": "matheo",
+      "name": "Matheo",
+      "minecraft": "Little_Fox_2000",
+      "discord": "matheofox",
+      "team": "red",
+      "tier": "S",
+      "roles": ["Dev", "Tester"],
+      "placement": [1, 1],
+      "points": [45, 5],
+      
+      "minigames": 
+      {
+        "race": [],
+        "hunt": [],
+        "battle": [],
+        "heist": [],
+        "lavarun": [],
+        "pirates": [],
+        "don't fall": [],
+        "spleef": []
+      }
+    },
+    {
+      "id": "matheo",
+      "name": "Matheo",
+      "minecraft": "Little_Fox_2000",
+      "discord": "matheofox",
+      "team": "red",
+      "tier": "S",
+      "roles": ["Dev", "Tester"],
+      "placement": [1, 1],
+      "points": [45, 5],
+      
+      "minigames": 
+      {
+        "race": [],
+        "hunt": [],
+        "battle": [],
+        "heist": [],
+        "lavarun": [],
+        "pirates": [],
+        "don't fall": [],
+        "spleef": []
+      }
+    },
+    {
+      "id": "matheo",
+      "name": "Matheo",
+      "minecraft": "Little_Fox_2000",
+      "discord": "matheofox",
+      "team": "red",
+      "tier": "S",
+      "roles": ["Dev", "Tester"],
+      "placement": [1, 1],
+      "points": [45, 5],
+      
+      "minigames": 
+      {
+        "race": [],
+        "hunt": [],
+        "battle": [],
+        "heist": [],
+        "lavarun": [],
+        "pirates": [],
+        "don't fall": [],
+        "spleef": []
+      }
+    },
+    {
+      "id": "matheo",
+      "name": "Matheo",
+      "minecraft": "Little_Fox_2000",
+      "discord": "matheofox",
+      "team": "red",
+      "tier": "S",
+      "roles": ["Dev", "Tester"],
+      "placement": [1, 1],
+      "points": [45, 5],
+      
+      "minigames": 
+      {
+        "race": [],
+        "hunt": [],
+        "battle": [],
+        "heist": [],
+        "lavarun": [],
+        "pirates": [],
+        "don't fall": [],
+        "spleef": []
+      }
+    },
+    {
+      "id": "matheo",
+      "name": "Matheo",
+      "minecraft": "Little_Fox_2000",
+      "discord": "matheofox",
+      "team": "red",
+      "tier": "S",
+      "roles": ["Dev", "Tester"],
+      "placement": [1, 1],
+      "points": [45, 5],
+      
+      "minigames": 
+      {
+        "race": [],
+        "hunt": [],
+        "battle": [],
+        "heist": [],
+        "lavarun": [],
+        "pirates": [],
+        "don't fall": [],
+        "spleef": []
+      }
     }
   ]
 }
