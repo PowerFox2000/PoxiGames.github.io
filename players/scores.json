@@ -68,6 +68,29 @@
         "dont_fall": [255,425],
         "spleef": [414,190]
       }
+    },
+    {
+      "name": "Louis",
+      "minecraft": "CoolNugets",
+      "discord": "CoolNugets325",
+      "discord_name": "loul00180",
+      "team": ["Green","Green"],
+      "tier": "C",
+      "roles": [],
+      "placement": [10, 8],
+      "points": [4493, 4151],
+      
+      "minigames": 
+      {
+        "race": [90, 218],
+        "hunt": [790, 548],
+        "battle": [609, 196],
+        "heist": [428, 1],
+        "lavarun": [135, 210],
+        "pirates": [60, 520],
+        "dont_fall": [170, 340],
+        "spleef": [532, 160]
+      }
     }
   ]
 }
