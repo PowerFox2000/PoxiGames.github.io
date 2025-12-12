@@ -9,6 +9,7 @@
       "tier": "S",
       "roles": ["Dev", "Tester"],
       "placement": [1, 1],
+      "seasons":[2,3],
       "points": [16469, 14244],
       
       "minigames": 
@@ -32,6 +33,7 @@
       "tier": "S",
       "roles": ["Tester"],
       "placement": [1, 3],
+      "seasons":[2,3],
       "points": [8281, 14244],
       
       "minigames": 
@@ -55,6 +57,7 @@
       "tier": "C",
       "roles": ["Tester"],
       "placement": [1, 9],
+      "seasons":[2,3],
       "points": [5117, 4026],
       
       "minigames": 
