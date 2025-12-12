@@ -5,22 +5,22 @@
       "minecraft": "Little_Fox_2000",
       "discord": "matheofox",
       "discord_name": "matheofox",
-      "team": ["Red","Red"],
+      "team": ["Red","Red","Red"],
       "tier": "S",
       "roles": ["Dev", "Tester"],
-      "placement": [1, 1],
+      "placement": [2,1, 1],
       "points": [16469, 14244],
       
       "minigames": 
       {
-        "race": [1391,2127],
-        "hunt": [650,688],
-        "battle": [1692,1269],
-        "heist": [932,2844],
-        "lavarun": [446,480],
-        "pirates": [2160,1490],
-        "dont_fall": [595,510],
-        "spleef": [648,770]
+        "race": [0,1391,2127],
+        "hunt": [0,650,688],
+        "battle": [0,1692,1269],
+        "heist": [0,932,2844],
+        "lavarun": [0,446,480],
+        "pirates": [0,2160,1490],
+        "dont_fall": [0,595,510],
+        "spleef": [0,648,770]
       }
     },
     {
@@ -28,22 +28,22 @@
       "minecraft": "Dragon_Sam",
       "discord": "Dragon Sam",
       "discord_id": "Dragon_sam1",
-      "team": ["Red","Red"],
+      "team": ["","Red","Red"],
       "tier": "S",
       "roles": ["Tester"],
-      "placement": [6, 2],
-      "points": [8281, 14244],
+      "placement": [0,6, 2],
+      "points": [0,8281, 14244],
       
       "minigames": 
       {
-        "race": [647,1491],
-        "hunt": [650,800],
-        "battle": [666,571],
-        "heist": [440,3320],
-        "lavarun": [150,480],
-        "pirates": [890,1490],
-        "dont_fall": [510,510],
-        "spleef": [284,770]
+        "race": [0,647,1491],
+        "hunt": [0,650,800],
+        "battle": [0,666,571],
+        "heist": [0,440,3320],
+        "lavarun": [0,150,480],
+        "pirates": [0,890,1490],
+        "dont_fall": [0,510,510],
+        "spleef": [0,284,770]
       }
     },
     {
@@ -51,11 +51,11 @@
       "minecraft": "EarthStream3321",
       "discord": "Nael",
       "discord_name": "nael911_71167",
-      "team": ["Red","Red"],
+      "team": ["","Red","Red"],
       "tier": "C",
       "roles": ["Tester"],
       "placement": [1, 9],
-      "points": [5117, 4026],
+      "points": [0,5117, 4026],
       
       "minigames": 
       {
@@ -74,7 +74,7 @@
       "minecraft": "thelololguy",
       "discord": "lolol",
       "discord_name": "thelololguy",
-      "team": ["Blue","Purple"],
+      "team": ["","Blue","Purple"],
       "tier": "S",
       "roles": ["Helper","Tester"],
       "placement": [5, 3],
@@ -97,7 +97,7 @@
       "minecraft": "AlexAstro98",
       "discord": "Indigo",
       "discord_name": "indigo_is_nice",
-      "team": ["Blue","Blue"],
+      "team": ["","Blue","Blue"],
       "tier": "A",
       "roles": [],
       "placement": [2, 7],
@@ -120,7 +120,7 @@
       "minecraft": "CoolNugets325",
       "discord": "CoolNugets325",
       "discord_name": "loul00180",
-      "team": ["Green","Green"],
+      "team": ["","Green","Green"],
       "tier": "C",
       "roles": [],
       "placement": [10, 8],
