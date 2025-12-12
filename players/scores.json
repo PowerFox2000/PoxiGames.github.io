@@ -138,6 +138,29 @@
         "spleef": [0, 1,10]
       }
     },
+      {
+      "name": "Ducky",
+      "minecraft": "AlexAstro98",
+      "discord": "Indigo",
+      "discord_name": "indigo_is_nice",
+      "team": ["","Blue","Blue"],
+      "tier": "A",
+      "roles": [],
+      "placement": [0, 2, 7],
+      "points": [0, 8567, 10663],
+      
+      "minigames": 
+      {
+        "race": [0, 808,1192],
+        "hunt": [0, 0,688],
+        "battle": [0, 1,1368],
+        "heist": [0, 620,1020],
+        "lavarun": [0, 99,379],
+        "pirates": [0, 160,1360],
+        "dont_fall": [0, 1,510],
+        "spleef": [0, 1,10]
+      }
+    },
     {
       "name": "Louis",
       "minecraft": "CoolNugets325",
