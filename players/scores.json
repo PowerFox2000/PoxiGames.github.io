@@ -9,7 +9,6 @@
       "tier": "S",
       "roles": ["Dev", "Tester"],
       "placement": [1, 1],
-      "seasons":[2,3],
       "points": [16469, 14244],
       
       "minigames": 
@@ -33,7 +32,6 @@
       "tier": "S",
       "roles": ["Tester"],
       "placement": [1, 3],
-      "seasons":[2,3],
       "points": [8281, 14244],
       
       "minigames": 
@@ -57,7 +55,6 @@
       "tier": "C",
       "roles": ["Tester"],
       "placement": [1, 9],
-      "seasons":[2,3],
       "points": [5117, 4026],
       
       "minigames": 
@@ -70,6 +67,29 @@
         "pirates": [810,40],
         "dont_fall": [255,425],
         "spleef": [414,190]
+      }
+    },
+    {
+      "name": "Lucas",
+      "minecraft": "thelololguy",
+      "discord": "lolol",
+      "discord_name": "thelololguy",
+      "team": ["Blue","Purple"],
+      "tier": "S",
+      "roles": ["Helper","Tester"],
+      "placement": [5, 3],
+      "points": [8567, 10663],
+      
+      "minigames": 
+      {
+        "race": [808,1192],
+        "hunt": [0,688],
+        "battle": [1,1368],
+        "heist": [620,1020],
+        "lavarun": [99,379],
+        "pirates": [160,1360],
+        "dont_fall": [1,510],
+        "spleef": [1,10]
       }
     },
     {
