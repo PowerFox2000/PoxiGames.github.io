@@ -9,7 +9,7 @@
       "tier": "S",
       "roles": ["Dev", "Tester"],
       "placement": [2,1, 1],
-      "points": [16469, 14244],
+      "points": [15597 ,16469, 14244],
       
       "minigames": 
       {
@@ -54,19 +54,19 @@
       "team": ["","Red","Red"],
       "tier": "C",
       "roles": ["Tester"],
-      "placement": [1, 9],
+      "placement": [0, 1, 9],
       "points": [0,5117, 4026],
       
       "minigames": 
       {
-        "race": [424,421],
-        "hunt": [690,688],
-        "battle": [1,118],
-        "heist": [700,1],
-        "lavarun": [171,123],
-        "pirates": [810,40],
-        "dont_fall": [255,425],
-        "spleef": [414,190]
+        "race": [0,424,421],
+        "hunt": [0,690,688],
+        "battle": [0,1,118],
+        "heist": [0,700,1],
+        "lavarun": [0,171,123],
+        "pirates": [0,810,40],
+        "dont_fall": [0,255,425],
+        "spleef": [0,414,190]
       }
     },
     {
@@ -77,19 +77,19 @@
       "team": ["","Blue","Purple"],
       "tier": "S",
       "roles": ["Helper","Tester"],
-      "placement": [5, 3],
-      "points": [8567, 10663],
+      "placement": [0, 5, 3],
+      "points": [0, 8567, 10663],
       
       "minigames": 
       {
-        "race": [808,1192],
-        "hunt": [0,688],
-        "battle": [1,1368],
-        "heist": [620,1020],
-        "lavarun": [99,379],
-        "pirates": [160,1360],
-        "dont_fall": [1,510],
-        "spleef": [1,10]
+        "race": [0,808,1192],
+        "hunt": [0,0,688],
+        "battle": [0,1,1368],
+        "heist": [0,620,1020],
+        "lavarun": [0,99,379],
+        "pirates": [0,160,1360],
+        "dont_fall": [0,1,510],
+        "spleef": [0,1,10]
       }
     },
     {
@@ -100,19 +100,42 @@
       "team": ["","Blue","Blue"],
       "tier": "A",
       "roles": [],
-      "placement": [2, 7],
-      "points": [8567, 10663],
+      "placement": [0, 2, 7],
+      "points": [0,8567, 10663],
       
       "minigames": 
       {
-        "race": [808,1192],
-        "hunt": [0,688],
-        "battle": [1,1368],
-        "heist": [620,1020],
-        "lavarun": [99,379],
-        "pirates": [160,1360],
-        "dont_fall": [1,510],
-        "spleef": [1,10]
+        "race": [0, 808,1192],
+        "hunt": [0, 0,688],
+        "battle": [0, 1,1368],
+        "heist": [0, 620,1020],
+        "lavarun": [0, 99,379],
+        "pirates": [0, 160,1360],
+        "dont_fall": [0, 1,510],
+        "spleef": [0, 1,10]
+      }
+    },
+        {
+      "name": "Alex",
+      "minecraft": "AlexAstro98",
+      "discord": "Indigo",
+      "discord_name": "indigo_is_nice",
+      "team": ["","Blue","Blue"],
+      "tier": "A",
+      "roles": [],
+      "placement": [0, 2, 7],
+      "points": [0, 8567, 10663],
+      
+      "minigames": 
+      {
+        "race": [0, 808,1192],
+        "hunt": [0, 0,688],
+        "battle": [0, 1,1368],
+        "heist": [0, 620,1020],
+        "lavarun": [0, 99,379],
+        "pirates": [0, 160,1360],
+        "dont_fall": [0, 1,510],
+        "spleef": [0, 1,10]
       }
     },
     {
@@ -123,19 +146,19 @@
       "team": ["","Green","Green"],
       "tier": "C",
       "roles": [],
-      "placement": [10, 8],
-      "points": [4493, 4151],
+      "placement": [0, 10, 8],
+      "points": [0, 4493, 4151],
       
       "minigames": 
       {
-        "race": [90, 218],
-        "hunt": [790, 548],
-        "battle": [609, 196],
-        "heist": [428, 1],
-        "lavarun": [135, 210],
-        "pirates": [60, 520],
-        "dont_fall": [170, 340],
-        "spleef": [532, 160]
+        "race": [0, 90, 218],
+        "hunt": [0, 790, 548],
+        "battle": [0, 609, 196],
+        "heist": [0, 428, 1],
+        "lavarun": [0, 135, 210],
+        "pirates": [0, 60, 520],
+        "dont_fall": [0, 170, 340],
+        "spleef": [0, 532, 160]
       }
     }
   ]
