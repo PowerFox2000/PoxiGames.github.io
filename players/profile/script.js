@@ -10,7 +10,8 @@ fetch("../scores.json") // correct path
       return;
     }
 
-    console.log(document.getElementById("canvas"));
+    console.log("Canvas:", canvas);
+    console.log("ID from URL:", id);
 
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
