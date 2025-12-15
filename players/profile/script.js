@@ -17,7 +17,7 @@ for(let i = 0; i < count; i++)
   const angle = (i / count) * 2 * Math.PI;
   const x = cx + Math.cos(angle) * radius;
   const y = cy + Math.sin(angle) * radius;
-  if(i = 0) ctx.moveTo(x, y);
+  if(i === 0) ctx.moveTo(x, y);
   else ctx.lineTo(x, y);
 }
 
