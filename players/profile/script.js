@@ -1,3 +1,4 @@
+fetch("../scores.json")
 const canvas = document.getElementById("poly");
 const ctx = canvas.getContext("2d");
 const param = new URLSearchParams(window.location.search);
