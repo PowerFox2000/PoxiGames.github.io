@@ -11,6 +11,9 @@ const values = Object.values(player.minigames).map(v => v[season]);
 const maxValue = 500;
 const out = 100;
 
+console.log(player);
+console.log(values);
+
 ctx.beginPath();
 for(let i = 0; i < count; i++)
 {
