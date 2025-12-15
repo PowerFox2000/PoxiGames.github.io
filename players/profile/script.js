@@ -1,3 +1,5 @@
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 const param = new URLSearchParams(window.location.search);
 const id = param.get("id");
 const player = json.players.find(p => p.minecraft === id);
