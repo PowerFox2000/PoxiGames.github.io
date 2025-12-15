@@ -8,13 +8,14 @@ const count = 8;
 const values = Object.values(player.minigames).map(v => v[season]);
 const maxValue = 500;
 const out = 100;
-const radius = values[i] / maxValue * out;
 
 for(let l = 0; l < 2; l++)
 {
   ctx.beginPath();
   for(let i = 0; i < count; i++)
   {
+    
+    const radius = values[i] / maxValue * out;
     const angle = (i / count) * 2 * Math.PI;
     const x = cx + Math.cos(angle) * radius;
     const y = cy + Math.sin(angle) * radius;
