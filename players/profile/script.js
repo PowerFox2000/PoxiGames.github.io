@@ -1,5 +1,5 @@
 const param = new URLSearchParams(window.location.search);
-const id = param.get(decodeURIComponent("id"));
+const id = param.get("id");
 const player = json.players.find(p => p.minecraft === id);
 const cx = canvas.width / 2;
 const cy = canvas.height / 2;
