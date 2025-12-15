@@ -13,13 +13,13 @@ const radius = values[i] / maxValue * out;
 for(let l = 0; l < 2; l++)
 {
   ctx.beginPath();
-  ctx.moveTo(x, y);
   for(let i = 0; i < count; i++)
   {
     const angle = (i / count) * 2 * Math.PI;
     const x = cx + Math.cos(angle) * radius;
     const y = cy + Math.sin(angle) * radius;
-    ctx.lineTo(x, y);
+    if(i = 0) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
   }
   
   ctx.strokeStyle = "white";
