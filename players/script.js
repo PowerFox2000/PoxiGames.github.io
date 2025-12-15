@@ -6,7 +6,7 @@ fetch("./scores.json")
     json.players.forEach(player => {
       const val = document.createElement("div");
       val.innerHTML = `
-      <div class= "player" id= "${player.name}" onclick="go(${player.id})">
+      <div class= "player" id= "${player.name}" onclick="go(${player.name})">
         <img src="https://mc-heads.net/head/${player.minecraft}"></img> <h1><strong>${player.minecraft}</strong></h1>
       </div>`;
 
