@@ -10,7 +10,7 @@ fetch("../scores.json") // correct path
       return;
     }
 
-    const canvas = document.getElementById("canvas");
+    const canvas = document.getElementById("poly");
     const ctx = canvas.getContext("2d");
     const cx = canvas.width / 2;
     const cy = canvas.height / 2;
