@@ -6,7 +6,7 @@ fetch("./scores.json")
     json.players.forEach(player => {
       const val = document.createElement("div");
       val.innerHTML = `
-      <div class= "player" id= "${player.name}" onclick="location.href='profile'">
+      <div class= "player" id= "${player.name}" onclick="go = (${player.id})">
         <img src="https://mc-heads.net/head/${player.minecraft}"></img> <h1><strong>${player.minecraft}</strong></h1>
       </div>`;
 
@@ -14,3 +14,6 @@ fetch("./scores.json")
     });
   })
   .catch(err => console.error(err));
+
+function go(id):
+  window.location.href = `player.html?id=${id}`;
