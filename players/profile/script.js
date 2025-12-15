@@ -6,7 +6,9 @@ const cy = canvas.height / 2;
 const season = 0;
 const count = 8;
 const values = Object.values(player.minigames).map(v => v[season]);
+const maxValue = 500;
 const out = 100;
+const radius = values[i] / maxValue * out;
 
 for(let l = 0; l < 2; l++)
 {
