@@ -8,7 +8,7 @@ const count = 8;
 const values = Object.values(player.minigames).map(v => v[season]);
 const out = 100;
 
-for(let i = 0; i < 2; i++)
+for(let l = 0; l < 2; l++)
 {
   ctx.beginPath();
   
