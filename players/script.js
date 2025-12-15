@@ -17,5 +17,5 @@ fetch("./scores.json")
 
 function go(id)
 {
-  window.location.href = `profile/?id=${id}`;
+  window.location.href = `profile/?id=${encodeURIComponent(id)}`;
 }
