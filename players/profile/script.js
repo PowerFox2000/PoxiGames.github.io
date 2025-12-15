@@ -1,3 +1,6 @@
+const param = new URLSearchParams(window.location.search);
+const id = param.get("id");
+const player = json.players.find(p => p.name === id);
 const cx = canvas.width / 2;
 const cy = canvas.height / 2;
 const season = 0;
