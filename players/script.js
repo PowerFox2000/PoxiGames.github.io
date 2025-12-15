@@ -16,4 +16,4 @@ fetch("./scores.json")
   .catch(err => console.error(err));
 
 function go(id):
-  window.location.href = `player.html?id=${id}`;
+  window.location.href = `profile/?id=${id}`;
