@@ -25,7 +25,12 @@ fetch("../scores.json")
       return valid.reduce((a, b) => a + b, 0) / valid.length;
     });
     const maxRadius = 140;
-    for(i = 0; i <= 8; i++)
+    const normalizedValues = values.map(value => (value / highestAverage) * maxRadius);
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    ctx.beginPath();
+    for(let i = 0; i <= 8; i++)
     {
       const angle = (i / normalizedValues.length) * Math.PI * 2 - Math.PI / 2;
       const x = cx + Math.cos(angle) * maxRadius;
@@ -40,10 +45,7 @@ fetch("../scores.json")
     ctx.strokeStyle = "red";
     ctx.lineWidth = 2;
     ctx.stroke();
-    
-    const normalizedValues = values.map(value => (value / highestAverage) * maxRadius);
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
 
     normalizedValues.forEach((value, i) => {
