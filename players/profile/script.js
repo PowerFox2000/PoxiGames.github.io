@@ -7,7 +7,7 @@ fetch("../scores.json")
     const player = json.players.find(p => p.minecraft === id);
     if (!player) return;
 
-    const canvas = document.getElementById("canvas");
+    const canvas = document.getElementById("minigames");
     const ctx = canvas.getContext("2d");
 
     const cx = canvas.width / 2;
