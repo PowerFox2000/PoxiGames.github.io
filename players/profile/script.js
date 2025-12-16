@@ -9,7 +9,7 @@ fetch("../scores.json")
     const ctx = canvas.getContext("2d");
     const cx = canvas.width / 2;
     const cy = canvas.height / 2;
-    let season = 0;
+    let season = 1;
     const count = 8;
     const values = Object.values(player.minigames).map(v => v[season]);
     const maxValue = Math.max(...values);
