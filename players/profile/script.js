@@ -14,7 +14,7 @@ fetch("../scores.json")
     const cy = canvas.height / 2;
 
     const values = Object.values(player.minigames).map(seasons => {
-      const valid = seasons.filter(v => v > 0);
+      const valid = seasons.filter(v => v > 1);
       return valid.reduce((a, b) => a + b, 0) / valid.length;
     });
 
