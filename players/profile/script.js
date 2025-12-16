@@ -25,6 +25,22 @@ fetch("../scores.json")
       return valid.reduce((a, b) => a + b, 0) / valid.length;
     });
     const maxRadius = 140;
+    for(i = 0; i <= 8; i++)
+    {
+      const angle = (i / normalizedValues.length) * Math.PI * 2 - Math.PI / 2;
+      const x = cx + Math.cos(angle) * maxRadius;
+      const y = cy + Math.sin(angle) * maxRadius;
+
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.fillStyle = "rgba(255,0,0,0.25)";
+    ctx.fill();
+    ctx.strokeStyle = "red";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    
     const normalizedValues = values.map(value => (value / highestAverage) * maxRadius);
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
