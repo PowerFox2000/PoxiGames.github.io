@@ -42,7 +42,7 @@ fetch("../scores.json")
     ctx.closePath();
     ctx.fillStyle = "rgba(255,255,255,0.25)";
     ctx.fill();
-    ctx.strokeStyle = "red";
+    ctx.strokeStyle = "white";
     ctx.lineWidth = 2;
     ctx.stroke();
 
@@ -60,7 +60,7 @@ fetch("../scores.json")
     ctx.closePath();
     ctx.fillStyle = "rgba(255,0,0,0.25)";
     ctx.fill();
-    ctx.strokeStyle = "white";
+    ctx.strokeStyle = "red";
     ctx.lineWidth = 2;
     ctx.stroke();
 
