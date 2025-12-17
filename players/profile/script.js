@@ -30,7 +30,7 @@ fetch("../scores.json")
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
     ctx.beginPath();
-    for(let i = 0; i <= 8; i++)
+    for(let i = 0; i < 8; i++)
     {
       const angle = (i / normalizedValues.length) * Math.PI * 2 - Math.PI / 2;
       const x = cx + Math.cos(angle) * maxRadius;
