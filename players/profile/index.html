@@ -1,10 +1,8 @@
 <!doctype html>
 <html lang="en">
-  <head>
+  <head id='head'>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <title>Poxi Games — Profiles</title>
     
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"></link>
   </head>
@@ -25,7 +23,12 @@
         .then(json => {
           const params = new URLSearchParams(window.location.search);
           const id = params.get("id");
-          const player = json.players.find(p => p.minecraft === id);
+          const player = json.players.find(p => p.minecraft === id); 
+          const title = document.getDocumentById("head");
+          const val = document.createElement("title");
+          val.innerHTML = `
+          <title>Poxi Games — ${player}'s profile</title>`;
+          title.appendChild(val);
         }
     </script>
   </body>
