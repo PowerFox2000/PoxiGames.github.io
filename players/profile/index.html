@@ -24,7 +24,7 @@
           const params = new URLSearchParams(window.location.search);
           const id = params.get("id");
           const player = json.players.find(p => p.minecraft === id); 
-          const title = document.getDocumentById("head");
+          const title = document.getElementById("head");
           const val = document.createElement("title");
           val.innerHTML = `
           <title>Poxi Games — ${player}'s profile</title>`;
