@@ -19,5 +19,14 @@
     <canvas id="minigames" width="300" height="300"></canvas>
     
     <script src="script.js" defer></script>
+    <script>
+      fetch("../scores.json")
+        .then(r => r.json())
+        .then(json => {
+          const params = new URLSearchParams(window.location.search);
+          const id = params.get("id");
+          const player = json.players.find(p => p.minecraft === id);
+        }
+    </script>
   </body>
 </html>
