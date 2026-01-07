@@ -25,10 +25,7 @@
           const id = params.get("id");
           const player = json.players.find(p => p.minecraft === id); 
           const title = document.getElementById("head");
-          const val = document.createElement("title");
-          val.innerHTML = `
-          <title>Poxi Games — ${player}'s profile</title>`;
-          title.appendChild(val);
+          document.title = "Poxi games — ${player}s profile";
         }
     </script>
   </body>
