@@ -1,4 +1,4 @@
-fetch("../players.json")
+fetch("../data.json")
   .then(r => r.json())
   .then(json => {
 
