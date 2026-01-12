@@ -3,8 +3,6 @@
   <head id='head'>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"></link>
   </head>
   
   <body class="bg-gray-900 text-gray-100">
@@ -15,18 +13,18 @@
     
     <canvas id="seasons" width="300" height="300"></canvas>
     <canvas id="minigames" width="300" height="300"></canvas>
-    
-    <script src="script.js" defer></script>
-    <script>
-      fetch("../players.json")
-        .then(r => r.json())
-        .then(json => {
-          const params = new URLSearchParams(window.location.search);
-          const id = params.get("id");
-          const player = json.players.find(p => p.minecraft === id); 
-          const title = document.getElementById("head");
-          document.title = "Poxi games — ${player}s profile";
-        }
-    </script>
   </body>
 </html>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"></link>
+<script src="script.js" defer></script>
+<script>
+  fetch("../players.json")
+    .then(r => r.json())
+    .then(json => {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+      const player = json.players.find(p => p.minecraft === id); 
+      const title = document.getElementById("head");
+      document.title = "Poxi games — ${player}s profile";
+    });
+</script>
