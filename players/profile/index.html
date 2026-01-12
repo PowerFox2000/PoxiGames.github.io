@@ -18,7 +18,7 @@
     
     <script src="script.js" defer></script>
     <script>
-      fetch("../scores.json")
+      fetch("../players.json")
         .then(r => r.json())
         .then(json => {
           const params = new URLSearchParams(window.location.search);
