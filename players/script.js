@@ -1,4 +1,4 @@
-fetch("./scores.json")
+fetch("./players.json")
   .then(r => r.json())
   .then(json => {
     const players = document.getElementById("players");
