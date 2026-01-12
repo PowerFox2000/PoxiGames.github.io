@@ -7,7 +7,7 @@
       "discord_id": "matheofox",
       "team": ["Red","Red","Red"],
       "tier": "S",
-      "roles": ["Dev", "Tester"],
+      "roles": ["👑 Admin", "Dev", "Tester"],
       "placement": [2,1, 1],
       "points": [15597 ,16469, 14244],
       
@@ -160,6 +160,29 @@
         "dont_fall": [0, 170, 340],
         "spleef": [0, 532, 160]
       }
-    }
+    },
+    {
+      "name": "someoneelse",
+      "minecraft": "Hart0990",
+      "discord": "someoneelse.",
+      "discord_id": "theressoemeoneelse",
+      "team": ["","","", "Green"],
+      "tier": "D",
+      "roles": ["Dev", "Tester"],
+      "placement": [0, 0, 0],
+      "points": [0, 0, 0],
+      
+      "minigames": 
+      {
+        "race": [0, 0, 0],
+        "hunt": [0, 0, 0],
+        "battle": [0, 0, 0],
+        "heist": [0, 0, 0],
+        "lavarun": [0, 0, 0],
+        "pirates": [0, 0, 0],
+        "dont_fall": [0, 0, 0],
+        "spleef": [0, 0, 0]
+      }
+    },
   ]
 }
