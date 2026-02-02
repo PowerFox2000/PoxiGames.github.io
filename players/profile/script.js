@@ -6,7 +6,8 @@ fetch("../data.json")
     val.innerHTML = `
     <div>
       <p><img src="https://mc-heads.net/head/${player.minecraft}"></img> <h1><strong>${player.minecraft} ${player.discord} ${player.tier}</strong></h1><p>
-      <strong> ${player.name} </strong><br />
+      <strong> ${player.name} ⎯ ${player.discord_id}</strong><br />
+      Joined Season ... <br />
     </div>
     `;
 
