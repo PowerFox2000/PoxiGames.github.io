@@ -21,7 +21,8 @@ fetch("../data.json")
         </p>
       </div>
     `;
-
+    
+    const infos = document.querySelector(".infos");
     infos.appendChild(val);
 
     const canvas = document.getElementById("stats");
