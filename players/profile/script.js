@@ -1,6 +1,9 @@
 fetch("../data.json")
   .then(r => r.json())
   .then(json => {
+
+    const player = json.players.find(p => p.minecraft === id);
+    if (!player) return;
     
     const val = document.createElement("div");
     val.innerHTML = `
@@ -15,9 +18,6 @@ fetch("../data.json")
 
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
-
-    const player = json.players.find(p => p.minecraft === id);
-    if (!player) return;
 
     const canvas = document.getElementById("minigames");
     const ctx = canvas.getContext("2d");
