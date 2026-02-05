@@ -25,7 +25,7 @@ fetch("../data.json")
     const infos = document.querySelector(".infos");
     infos.appendChild(val);
 
-    const canvas = document.getElementById(".stats");
+    const canvas = document.querySelector(".stats");
     const ctx = canvas.getContext("2d");
 
     const size = 300;
