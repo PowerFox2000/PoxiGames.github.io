@@ -16,8 +16,8 @@ fetch("../data.json")
           ${player.minecraft} ${player.discord} ${player.tier}
         </h1>
         <p>
-          <strong>${player.name} ⎯ ${player.discord_id}</strong><br />
-          Joined Season ...
+          <h2>${player.name} ⎯ ${player.discord_id}</h2><br />
+          <h3>Joined Season ...</h3>
         </p>
       </div>
     `;
