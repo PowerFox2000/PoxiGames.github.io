@@ -13,7 +13,7 @@ fetch("../data.json")
       <div class="space-y-2">
         <img src="https://mc-heads.net/head/${player.minecraft}" />
         <h1 class="text-xl font-bold">
-          ${player.minecraft} ${player.discord} ${player.tier}
+          ${player.minecraft} ⎯⎯ Discord : ${player.discord} ⎯⎯ Tier ${player.tier}
         </h1>
         <p>
           <h2>${player.name} ⎯ ${player.discord_id}</h2><br />
