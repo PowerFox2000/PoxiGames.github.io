@@ -22,7 +22,7 @@ fetch("../data.json")
       </div>
     `;
     
-    const infos = document.querySelector(".infos");
+    const infos = document.querySelector("infos");
     infos.appendChild(val);
 
     const canvas = document.getElementById("stats");
