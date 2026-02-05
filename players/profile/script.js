@@ -2,6 +2,9 @@ fetch("../data.json")
   .then(r => r.json())
   .then(json => {
 
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    
     const player = json.players.find(p => p.minecraft === id);
     if (!player) return;
     
@@ -20,9 +23,6 @@ fetch("../data.json")
     `;
 
     infos.appendChild(val);
-
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get("id");
 
     const canvas = document.getElementById("stats");
     const ctx = canvas.getContext("2d");
