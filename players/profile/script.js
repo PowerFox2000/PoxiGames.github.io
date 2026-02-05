@@ -7,19 +7,24 @@ fetch("../data.json")
     
     const val = document.createElement("div");
     val.innerHTML = `
-    <div>
-      <p><img src="https://mc-heads.net/head/${player.minecraft}"></img> <h1><strong>${player.minecraft} ${player.discord} ${player.tier}</strong></h1><p>
-      <strong> ${player.name} ⎯ ${player.discord_id}</strong><br />
-      Joined Season ... <br />
-    </div>
+      <div class="space-y-2">
+        <img src="https://mc-heads.net/head/${player.minecraft}" />
+        <h1 class="text-xl font-bold">
+          ${player.minecraft} ${player.discord} ${player.tier}
+        </h1>
+        <p>
+          <strong>${player.name} ⎯ ${player.discord_id}</strong><br />
+          Joined Season ...
+        </p>
+      </div>
     `;
 
-    players.appendChild(val);
+    infos.appendChild(val);
 
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
 
-    const canvas = document.getElementById("minigames");
+    const canvas = document.getElementById("stats");
     const ctx = canvas.getContext("2d");
 
     const size = 300;
