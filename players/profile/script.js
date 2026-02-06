@@ -12,7 +12,7 @@ fetch("../data.json")
     val.innerHTML = `
       <div class="space-y-2">
         <img src="https://mc-heads.net/head/${player.minecraft}" />
-        <h1 class="text-xl font-bold" style="font-size=3rem">
+        <h1 class="text-xl font-bold" style="font-size=5rem">
           ${player.minecraft} ⎯⎯ Discord : ${player.discord} ⎯⎯ Tier ${player.tier}
         </h1>
         <p>
