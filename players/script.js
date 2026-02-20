@@ -6,7 +6,7 @@ fetch("./data.json")
     json.players.forEach(player => {
       const val = document.createElement("div");
       val.innerHTML = `
-      <div class= "player" id= "${player.name}" onclick="go('${player.minecraft}')">
+      <div class= "player" id= "${player.name}" onclick="go('${player.minecraft}')" style="fontsize: 2.5rem">
         <img src="https://mc-heads.net/head/${player.minecraft}"></img> <h1><strong>${player.minecraft}</strong></h1>
       </div>`;
 
