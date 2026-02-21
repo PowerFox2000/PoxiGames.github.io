@@ -16,6 +16,7 @@ fetch("../data.json")
       if(json.player.points != 0) break;
       else firstSeason += 1;
     }
+    firstSeason += 1;
     
     val.innerHTML = `
       <div class="space-y-2">
