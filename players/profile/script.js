@@ -9,6 +9,14 @@ fetch("../data.json")
     if (!player) return;
     
     const val = document.createElement("div");
+    
+    const players = json.players;
+    let firstSeason = 0;
+    for(i = 0; i > json.players.length; i++) {
+      if(json.player.points != 0) break;
+      else firstSeason += 1;
+    }
+    
     val.innerHTML = `
       <div class="space-y-2">
         <img src="https://mc-heads.net/head/${player.minecraft}" />
@@ -17,7 +25,7 @@ fetch("../data.json")
         </h1></b>
         <p>
           <h2>${player.name} ⎯ ${player.discord_id}</h2><br />
-          <h3>Joined Season ...</h3>
+          <h3>Joined Season ${firstSeason}</h3>
         </p>
       </div>
     `;
