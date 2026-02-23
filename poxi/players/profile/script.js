@@ -32,7 +32,7 @@ fetch("../data.json")
         <div class="stats">
           <canvas id="statsCanvas"></canvas>
         </div>
-        <h3>He is: ${roles}</h3>
+        <h3>He is ${roles}</h3>
       </div>
     `;
     
