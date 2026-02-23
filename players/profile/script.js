@@ -10,11 +10,7 @@ fetch("../data.json")
     
     const val = document.createElement("div");
     
-    let firstSeason = 0;
-    for(i = 0; i <= player.points.length; i++) {
-      firstSeason += 1;
-      if(json.player.points[i] != 0) break;
-    }
+    let firstSeason = player.points.findIndex(p => p !== 0);
     
     val.innerHTML = `
       <div class="space-y-2">
