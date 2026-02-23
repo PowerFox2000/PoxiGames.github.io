@@ -10,13 +10,10 @@ fetch("../data.json")
     
     const val = document.createElement("div");
     let firstSeason = player.points.findIndex(p => p !== 0);
-    if (firstSeason === -1) {
-      firstSeason = "N/A";
-    }
     let firstSeasonIndicator = "";
-    if (firstSeason == "N/A") {firstSeasonIndicator = "Never played";}
-    else if(firstSeason <= 5) {firstSeasonIndicator += "Joined Poxi Games 1 season" + (firstSeason + 1)}
-    else {firstSeasonIndicator += "Joined Poxi Games 2 season" + (firstSeason - 4)}
+    if (firstSeason == -1) {firstSeasonIndicator = "Never played";}
+    else if(firstSeason <= 5) {firstSeasonIndicator += "Joined Poxi Games 1 season " + (firstSeason + 1)}
+    else {firstSeasonIndicator += "Joined Poxi Games 2 season " + (firstSeason - 4)}
     
     val.innerHTML = `
       <div class="space-y-2">
