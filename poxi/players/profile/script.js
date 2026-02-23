@@ -14,7 +14,13 @@ fetch("../data.json")
     if (firstSeason == -1) {firstSeasonIndicator = "Never played";}
     else if(firstSeason <= 5) {firstSeasonIndicator += "Joined Poxi Games 1 season " + (firstSeason + 1)}
     else {firstSeasonIndicator += "Joined Poxi Games 2 season " + (firstSeason - 5 + 1)}
-    
+
+    let roles = "";
+    for(i = 0; i < player.roles.length; i++) {
+      roles += player.roles[i];
+      if(i != player.roles.length - 1) {roles += "; \n"}
+    } 
+      
     val.innerHTML = `
       <div class="space-y-2">
         <img src="https://mc-heads.net/head/${player.minecraft}" />
@@ -26,6 +32,7 @@ fetch("../data.json")
         <div class="stats">
           <canvas id="statsCanvas"></canvas>
         </div>
+        <h3>He is: ${roles}</h3>
       </div>
     `;
     
