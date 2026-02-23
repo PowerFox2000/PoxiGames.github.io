@@ -13,6 +13,7 @@ fetch("../data.json")
     if (firstSeason === -1) {
       firstSeason = "N/A";
     }
+    firstSeason += 1;
     
     val.innerHTML = `
       <div class="space-y-2">
