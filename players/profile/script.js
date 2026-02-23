@@ -13,12 +13,10 @@ fetch("../data.json")
     if (firstSeason === -1) {
       firstSeason = "N/A";
     }
-    firstSeason += 1;
-
     let firstSeasonIndicator = "";
     if (firstSeason == "N/A") {firstSeasonIndicator = "Never played";}
-    else if(firstSeason <= 5) {firstSeasonIndicator += "Joined Poxi Games 1 season" + firstSeason}
-    else {firstSeasonIndicator += "Joined Poxi Games 2 season" + (firstSeason - 5)}
+    else if(firstSeason <= 5) {firstSeasonIndicator += "Joined Poxi Games 1 season" + (firstSeason + 1)}
+    else {firstSeasonIndicator += "Joined Poxi Games 2 season" + (firstSeason - 4)}
     
     val.innerHTML = `
       <div class="space-y-2">
