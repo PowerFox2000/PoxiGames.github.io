@@ -162,10 +162,10 @@
       }
     },
     {
-      "name": "someoneelse",
+      "name": "someone",
       "minecraft": "_someonelse",
       "discord": "someoneelse.",
-      "discord_id": "theressomeoneelse",
+      "discord_id": "theressomeoneelse.",
       "team": ["","","", "Green"],
       "tier": "D",
       "roles": ["Dev", "Tester"],
