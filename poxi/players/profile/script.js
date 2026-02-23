@@ -18,7 +18,8 @@ fetch("../data.json")
     let roles = "";
     for(i = 0; i < player.roles.length; i++) {
       roles += player.roles[i];
-      if(i != player.roles.length - 1) {roles += ", "}
+      if(i != player.roles.length - 2) {roles += ", "}
+      if(i != player.roles.length - 1) {roles += " and "}
     } 
       
     val.innerHTML = `
@@ -32,7 +33,7 @@ fetch("../data.json")
         <div class="stats">
           <canvas id="statsCanvas"></canvas>
         </div>
-        <h3>He is ${roles}</h3>
+        <h3>He is a ${roles}</h3>
       </div>
     `;
     
