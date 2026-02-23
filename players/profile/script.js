@@ -17,14 +17,14 @@ fetch("../data.json")
     val.innerHTML = `
       <div class="space-y-2">
         <img src="https://mc-heads.net/head/${player.minecraft}" />
-        <h1><b>
+        <h1>
           ${player.minecraft} ⎯⎯ Discord : ${player.discord} ⎯⎯ Tier ${player.tier}
-        </h1></b>
-          <h2>${player.name} ⎯ ${player.discord_id}</h2><br />
-          <h3>Joined Season ${firstSeason}</h3>
-          <div class="stats">
-            <canvas id="statsCanvas"></canvas>
-          </div>
+        </h1>
+        <h2>${player.name} ⎯ ${player.discord_id}</h2><br />
+        <h3>Joined Season ${firstSeason}</h3>
+        <div class="stats">
+          <canvas id="statsCanvas"></canvas>
+        </div>
       </div>
     `;
     
