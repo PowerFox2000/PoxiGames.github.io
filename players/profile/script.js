@@ -22,9 +22,9 @@ fetch("../data.json")
       <div class="space-y-2">
         <img src="https://mc-heads.net/head/${player.minecraft}" />
         <h1>
-          ${player.minecraft} ⎯⎯ Discord : ${player.discord} ⎯⎯ Tier ${player.tier}
+          ${player.minecraft} ⎯⎯ Tier ${player.tier}
         </h1>
-        <h2>${player.name} ⎯ ${player.discord_id}</h2><br />
+        <h2>${player.name} ⎯ Discord : ${player.discord} - ${player.discord_id}</h2><br />
         <h3>${firstSeasonIndicator}</h3>
         <div class="stats">
           <canvas id="statsCanvas"></canvas>
