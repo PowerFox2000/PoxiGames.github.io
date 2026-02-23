@@ -18,8 +18,8 @@ fetch("../data.json")
     let roles = "";
     for(i = 0; i < player.roles.length; i++) {
       roles += player.roles[i];
-      if(i != player.roles.length - 2) {roles += ", "}
-      if(i != player.roles.length - 1) {roles += " and "}
+      if(i < player.roles.length - 2) {roles += ", "}
+      if(i < player.roles.length - 1) {roles += " and "}
     } 
     
     let rolesIndicator = ""
