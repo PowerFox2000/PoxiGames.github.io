@@ -10,11 +10,10 @@ fetch("../data.json")
     
     const val = document.createElement("div");
     
-    const players = json.players;
     let firstSeason = 0;
-    for(i = 0; i > json.players.length; i++) {
+    for(i = 0; i > player.points.length; i++) {
       firstSeason += 1;
-      if(json.player.points != 0) break;
+      if(json.player.points[i] != 0) break;
     }
     
     val.innerHTML = `
