@@ -21,6 +21,9 @@ fetch("../data.json")
       if(i != player.roles.length - 2) {roles += ", "}
       if(i != player.roles.length - 1) {roles += " and "}
     } 
+    
+    let rolesIndicator = ""
+    if(roles != "") {rolesIndicator = "He is a " + roles;}
       
     val.innerHTML = `
       <div class="space-y-2">
@@ -33,7 +36,7 @@ fetch("../data.json")
         <div class="stats">
           <canvas id="statsCanvas"></canvas>
         </div>
-        <h3>He is a ${roles}</h3>
+        <h3>${rolesIndicator}</h3>
       </div>
     `;
     
