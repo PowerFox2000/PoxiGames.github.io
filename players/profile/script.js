@@ -14,6 +14,11 @@ fetch("../data.json")
       firstSeason = "N/A";
     }
     firstSeason += 1;
+
+    let firstSeasonIndicator = "";
+    if (firstSeason == "N/A") {firstSeasonIndicator = "Never played";}
+    else if(firstSeason <= 5) {firstSeasonIndicator += "Joined Poxi Games 1 season" + firstSeason}
+    else {firstSeasonIndicator += "Joined Poxi Games 2 season" + (firstSeason - 5)}
     
     val.innerHTML = `
       <div class="space-y-2">
@@ -22,7 +27,7 @@ fetch("../data.json")
           ${player.minecraft} ⎯⎯ Discord : ${player.discord} ⎯⎯ Tier ${player.tier}
         </h1>
         <h2>${player.name} ⎯ ${player.discord_id}</h2><br />
-        <h3>Joined Season ${firstSeason}</h3>
+        <h3>${firstSeasonIndicator}</h3>
         <div class="stats">
           <canvas id="statsCanvas"></canvas>
         </div>
