@@ -23,7 +23,7 @@ fetch("../data.json")
     } 
     
     let rolesIndicator = ""
-    if(roles != "") {rolesIndicator = "He is a " + roles;}
+    if(roles != "") {rolesIndicator = player.pronoun + " is a " + roles;}
       
     val.innerHTML = `
       <div class="space-y-2">
