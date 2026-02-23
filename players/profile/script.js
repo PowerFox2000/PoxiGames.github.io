@@ -9,8 +9,10 @@ fetch("../data.json")
     if (!player) return;
     
     const val = document.createElement("div");
-    
     let firstSeason = player.points.findIndex(p => p !== 0);
+    if (firstSeason === -1) {
+      firstSeason = "N/A";
+    }
     
     val.innerHTML = `
       <div class="space-y-2">
@@ -18,19 +20,22 @@ fetch("../data.json")
         <h1><b>
           ${player.minecraft} ⎯⎯ Discord : ${player.discord} ⎯⎯ Tier ${player.tier}
         </h1></b>
-        <p>
           <h2>${player.name} ⎯ ${player.discord_id}</h2><br />
           <h3>Joined Season ${firstSeason}</h3>
-        </p>
+          <div class="stats">
+            <canvas id="statsCanvas"></canvas>
+          </div>
       </div>
     `;
     
     const infos = document.querySelector(".infos");
     infos.appendChild(val);
 
-    const canvas = document.querySelector(".stats");
+    const canvas = document.getElementById("statsCanvas");
+    if (!canvas) return;
+    
     const ctx = canvas.getContext("2d");
-
+    
     const size = 300;
     const dpr = window.devicePixelRatio || 1;
     canvas.width = size * dpr;
