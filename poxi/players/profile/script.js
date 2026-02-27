@@ -12,8 +12,8 @@ fetch("../data.json")
     let firstSeason = player.points.findIndex(p => p !== 0);
     let firstSeasonIndicator = "";
     if (firstSeason == -1) {firstSeasonIndicator = "Never played";}
-    else if(firstSeason <= 5) {firstSeasonIndicator += "Joined Poxi Games 1 season " + (firstSeason + 1)}
-    else {firstSeasonIndicator += "Joined Poxi Games 2 season " + (firstSeason - 5 + 1)}
+    else if(firstSeason <= 5) {firstSeasonIndicator += "Joined Poxi Games 2 season " + (firstSeason + 1)}
+    else {firstSeasonIndicator += "Joined Poxi Games 3 season " + (firstSeason - 5 + 1)}
 
     let roles = "";
     for(i = 0; i < player.roles.length; i++) {
