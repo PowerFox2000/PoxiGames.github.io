@@ -1,196 +1,3576 @@
 {
-  "players": [
-    {
-      "name": "Matheo",
-      "minecraft": "Little_Fox_2000",
-      "discord": "matheofox",
-      "discord_id": "matheofox",
-      "team": ["Red","Red","Red"],
-      "tier": "S",
-      "pronoun": "He",
-      "roles": ["👑 Admin", "Dev", "Tester"],
-      "placement": [2,1, 1],
-      "points": [15597 ,16469, 14244],
-      
-      "minigames": 
-      {
-        "race": [0,1391,2127],
-        "hunt": [0,650,688],
-        "battle": [0,1692,1269],
-        "heist": [0,932,2844],
-        "lavarun": [0,446,480],
-        "pirates": [0,2160,1490],
-        "dont_fall": [0,595,510],
-        "spleef": [0,648,770]
-      }
-    },
-    {
-      "name": "Sam",
-      "minecraft": "Dragon_Sam",
-      "discord": "Dragon Sam",
-      "discord_id": "Dragon_sam1",
-      "team": ["","Red","Red"],
-      "tier": "S",
-      "pronoun": "He",
-      "roles": ["Tester"],
-      "placement": [0,6, 2],
-      "points": [0,8281, 14244],
-      
-      "minigames": 
-      {
-        "race": [0,647,1491],
-        "hunt": [0,650,800],
-        "battle": [0,666,571],
-        "heist": [0,440,3320],
-        "lavarun": [0,150,480],
-        "pirates": [0,890,1490],
-        "dont_fall": [0,510,510],
-        "spleef": [0,284,770]
-      }
-    },
-    {
-      "name": "Nael",
-      "minecraft": "EarthStream3321",
-      "discord": "Nael",
-      "discord_id": "nael911_71167",
-      "team": ["","Red","Red"],
-      "tier": "C",
-      "pronoun": "He",
-      "roles": ["Tester"],
-      "placement": [0, 1, 9],
-      "points": [0,5117, 4026],
-      
-      "minigames": 
-      {
-        "race": [0,424,421],
-        "hunt": [0,690,688],
-        "battle": [0,1,118],
-        "heist": [0,700,1],
-        "lavarun": [0,171,123],
-        "pirates": [0,810,40],
-        "dont_fall": [0,255,425],
-        "spleef": [0,414,190]
-      }
-    },
-    {
-      "name": "Lucas",
-      "minecraft": "thelololguy",
-      "discord": "lolol",
-      "discord_id": "thelololguy",
-      "team": ["","Blue","Purple"],
-      "tier": "S",
-      "pronoun": "He",
-      "roles": ["Helper","Tester"],
-      "placement": [0, 5, 3],
-      "points": [0, 8567, 10663],
-      
-      "minigames": 
-      {
-        "race": [0,808,1192],
-        "hunt": [0,0,688],
-        "battle": [0,1,1368],
-        "heist": [0,620,1020],
-        "lavarun": [0,99,379],
-        "pirates": [0,160,1360],
-        "dont_fall": [0,1,510],
-        "spleef": [0,1,10]
-      }
-    },
-    {
-      "name": "Alex",
-      "minecraft": "AlexAstro98",
-      "discord": "Indigo",
-      "discord_id": "indigo_is_nice",
-      "team": ["","Blue","Blue"],
-      "tier": "A",
-      "pronoun": "He",
-      "roles": [],
-      "placement": [0, 2, 7],
-      "points": [0, 8567, 10663],
-      
-      "minigames": 
-      {
-        "race": [0, 808,1192],
-        "hunt": [0, 0,688],
-        "battle": [0, 1,1368],
-        "heist": [0, 620,1020],
-        "lavarun": [0, 99,379],
-        "pirates": [0, 160,1360],
-        "dont_fall": [0, 1,510],
-        "spleef": [0, 1,10]
-      }
-    },
-      {
-      "name": "Ducky",
-      "minecraft": "Duckymcz",
-      "discord": "DuckyMCz",
-      "discord_id": "duckymcz",
-      "team": ["","Blue","Blue"],
-      "tier": "A",
-      "pronoun": "He",
-      "roles": [],
-      "placement": [0, 3, 5],
-      "points": [0, 11797, 5588],
-      
-      "minigames": 
-      {
-        "race": [0, 295,592],
-        "hunt": [0, 570,610],
-        "battle": [0, 242,277],
-        "heist": [0, 632,602],
-        "lavarun": [0, 180,379],
-        "pirates": [0, 160,1360],
-        "dont_fall": [0, 1,510],
-        "spleef": [0, 1,10]
-      }
-    },
-    {
-      "name": "Louis",
-      "minecraft": "CoolNugets325",
-      "discord": "CoolNugets325",
-      "discord_id": "loul00180",
-      "team": ["","Green","Green"],
-      "tier": "C",
-      "pronoun": "He",
-      "roles": [],
-      "placement": [0, 10, 8],
-      "points": [0, 4493, 4151],
-      
-      "minigames": 
-      {
-        "race": [0, 90, 218],
-        "hunt": [0, 790, 548],
-        "battle": [0, 609, 196],
-        "heist": [0, 428, 1],
-        "lavarun": [0, 135, 210],
-        "pirates": [0, 60, 520],
-        "dont_fall": [0, 170, 340],
-        "spleef": [0, 532, 160]
-      }
-    },
-    {
-      "name": "someone",
-      "minecraft": "_someonelse",
-      "discord": "someoneelse.",
-      "discord_id": "theressomeoneelse.",
-      "team": ["","","", "Green"],
-      "tier": "D",
-      "pronoun": "He",
-      "roles": ["Dev", "Tester"],
-      "placement": [0, 0, 0],
-      "points": [0, 0, 0],
-      
-      "minigames": 
-      {
-        "race": [0, 0, 0],
-        "hunt": [0, 0, 0],
-        "battle": [0, 0, 0],
-        "heist": [0, 0, 0],
-        "lavarun": [0, 0, 0],
-        "pirates": [0, 0, 0],
-        "dont_fall": [0, 0, 0],
-        "spleef": [0, 0, 0]
-      }
-    }
-  ]
+	"players" : 
+	[
+		{
+			"discord" : "matheofox",
+			"discord_id" : "matheofox",
+			"minecraft" : "Little_Fox_2000",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					1692,
+					1269,
+					663,
+					958,
+					1676,
+					1347
+				],
+				"dont_fall" : 
+				[
+					0,
+					595,
+					510,
+					600,
+					700,
+					600,
+					700
+				],
+				"heist" : 
+				[
+					0,
+					932,
+					2844,
+					460,
+					1080,
+					264,
+					755
+				],
+				"hunt" : 
+				[
+					0,
+					650,
+					688,
+					824,
+					698,
+					536,
+					920
+				],
+				"lavarun" : 
+				[
+					0,
+					446,
+					480,
+					202,
+					240,
+					760,
+					865
+				],
+				"pirates" : 
+				[
+					0,
+					2160,
+					1490,
+					1720,
+					410,
+					1140,
+					1440
+				],
+				"race" : 
+				[
+					0,
+					1391,
+					2127,
+					1616,
+					1629,
+					1585,
+					842
+				],
+				"spleef" : 
+				[
+					0,
+					648,
+					770,
+					1050,
+					734,
+					668,
+					572
+				]
+			},
+			"name" : "Matheo",
+			"place" : 
+			[
+				1
+			],
+			"points" : 
+			[
+				15597,
+				16469,
+				14244,
+				14001,
+				10231,
+				10383,
+				12754
+			],
+			"pronoun" : "He",
+			"roles" : 
+			[
+				"\ud83d\udc51 Admin",
+				"Dev",
+				"Tester"
+			],
+			"team" : 
+			[
+				"Red",
+				"Red",
+				"Red",
+				"Red",
+				"Red",
+				"Red",
+				"Red"
+			],
+			"tier" : "S"
+		},
+		{
+			"discord" : "Dragon Sam",
+			"discord_id" : "Dragon_sam1",
+			"minecraft" : "Dragon_Sam",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					666,
+					571,
+					270
+				],
+				"dont_fall" : 
+				[
+					0,
+					510,
+					510,
+					500
+				],
+				"heist" : 
+				[
+					0,
+					440,
+					3320,
+					32
+				],
+				"hunt" : 
+				[
+					0,
+					650,
+					800,
+					444
+				],
+				"lavarun" : 
+				[
+					0,
+					150,
+					480,
+					242
+				],
+				"pirates" : 
+				[
+					0,
+					890,
+					1490,
+					1100
+				],
+				"race" : 
+				[
+					0,
+					647,
+					1491,
+					902
+				],
+				"spleef" : 
+				[
+					0,
+					284,
+					770,
+					398
+				]
+			},
+			"name" : "Sam",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				8281,
+				14244,
+				7802
+			],
+			"pronoun" : "He",
+			"roles" : 
+			[
+				"Tester"
+			],
+			"team" : 
+			[
+				"",
+				"Red",
+				"Red",
+				"Blue"
+			],
+			"tier" : "S"
+		},
+		{
+			"discord" : "Nael",
+			"discord_id" : "nael911_71167",
+			"minecraft" : "EarthStream3321",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					1,
+					118,
+					250,
+					372,
+					213
+				],
+				"dont_fall" : 
+				[
+					0,
+					255,
+					425,
+					400,
+					500,
+					600
+				],
+				"heist" : 
+				[
+					0,
+					700,
+					1,
+					536,
+					147,
+					543
+				],
+				"hunt" : 
+				[
+					0,
+					690,
+					688,
+					886,
+					700,
+					516
+				],
+				"lavarun" : 
+				[
+					0,
+					171,
+					123,
+					237,
+					390,
+					605
+				],
+				"pirates" : 
+				[
+					0,
+					810,
+					40,
+					790,
+					890,
+					1380
+				],
+				"race" : 
+				[
+					0,
+					424,
+					421,
+					626,
+					803,
+					462
+				],
+				"spleef" : 
+				[
+					0,
+					414,
+					190,
+					502,
+					842,
+					436
+				]
+			},
+			"name" : "Nael",
+			"place" : 
+			[
+				7
+			],
+			"points" : 
+			[
+				0,
+				5117,
+				4026,
+				7818,
+				6932,
+				7437
+			],
+			"pronoun" : "He",
+			"roles" : 
+			[
+				"Tester"
+			],
+			"team" : 
+			[
+				"",
+				"Red",
+				"Red",
+				"Red",
+				"Red",
+				"Red"
+			],
+			"tier" : "C"
+		},
+		{
+			"discord" : "lolol",
+			"discord_id" : "thelololguy",
+			"minecraft" : "thelololguy",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					1,
+					1368,
+					1326,
+					265,
+					526
+				],
+				"dont_fall" : 
+				[
+					0,
+					1,
+					510,
+					500,
+					850,
+					600
+				],
+				"heist" : 
+				[
+					0,
+					620,
+					1020,
+					970,
+					225,
+					1042
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					688,
+					806,
+					332,
+					716
+				],
+				"lavarun" : 
+				[
+					0,
+					99,
+					379,
+					708,
+					620,
+					895
+				],
+				"pirates" : 
+				[
+					0,
+					160,
+					1360,
+					1410,
+					1090,
+					1
+				],
+				"race" : 
+				[
+					0,
+					808,
+					1192,
+					1196,
+					1490,
+					670
+				],
+				"spleef" : 
+				[
+					0,
+					1,
+					10,
+					1332,
+					504,
+					1214
+				]
+			},
+			"name" : "Lucas",
+			"place" : 
+			[
+				6
+			],
+			"points" : 
+			[
+				0,
+				8567,
+				10663,
+				14046,
+				8003,
+				8914
+			],
+			"pronoun" : "He",
+			"roles" : 
+			[
+				"Helper",
+				"Tester"
+			],
+			"team" : 
+			[
+				"",
+				"Blue",
+				"Purple",
+				"Purple",
+				"Green",
+				"Purple"
+			],
+			"tier" : "S"
+		},
+		{
+			"discord" : "Indigo",
+			"discord_id" : "indigo_is_nice",
+			"minecraft" : "AlexAstro98",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					1,
+					1368
+				],
+				"dont_fall" : 
+				[
+					0,
+					1,
+					510
+				],
+				"heist" : 
+				[
+					0,
+					620,
+					1020
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					688
+				],
+				"lavarun" : 
+				[
+					0,
+					99,
+					379
+				],
+				"pirates" : 
+				[
+					0,
+					160,
+					1360
+				],
+				"race" : 
+				[
+					0,
+					808,
+					1192
+				],
+				"spleef" : 
+				[
+					0,
+					1,
+					10
+				]
+			},
+			"name" : "Alex",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				8567,
+				10663
+			],
+			"pronoun" : "He",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"Blue",
+				"Blue"
+			],
+			"tier" : "A"
+		},
+		{
+			"discord" : "DuckyMCz",
+			"discord_id" : "duckymcz",
+			"minecraft" : "Duckymcz",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					242,
+					277
+				],
+				"dont_fall" : 
+				[
+					0,
+					1,
+					510
+				],
+				"heist" : 
+				[
+					0,
+					632,
+					602
+				],
+				"hunt" : 
+				[
+					0,
+					570,
+					610
+				],
+				"lavarun" : 
+				[
+					0,
+					180,
+					379
+				],
+				"pirates" : 
+				[
+					0,
+					160,
+					1360
+				],
+				"race" : 
+				[
+					0,
+					295,
+					592
+				],
+				"spleef" : 
+				[
+					0,
+					1,
+					10
+				]
+			},
+			"name" : "Ducky",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				11797,
+				5588
+			],
+			"pronoun" : "He",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"Blue",
+				"Blue"
+			],
+			"tier" : "A"
+		},
+		{
+			"discord" : "CoolNugets325",
+			"discord_id" : "loul00180",
+			"minecraft" : "CoolNugets325",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					609,
+					196
+				],
+				"dont_fall" : 
+				[
+					0,
+					170,
+					340
+				],
+				"heist" : 
+				[
+					0,
+					428,
+					1
+				],
+				"hunt" : 
+				[
+					0,
+					790,
+					548
+				],
+				"lavarun" : 
+				[
+					0,
+					135,
+					210
+				],
+				"pirates" : 
+				[
+					0,
+					60,
+					520
+				],
+				"race" : 
+				[
+					0,
+					90,
+					218
+				],
+				"spleef" : 
+				[
+					0,
+					532,
+					160
+				]
+			},
+			"name" : "Louis",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				4493,
+				4151
+			],
+			"pronoun" : "He",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"Green",
+				"Green"
+			],
+			"tier" : "C"
+		},
+		{
+			"discord" : "someoneelse.",
+			"discord_id" : "theressomeoneelse.",
+			"minecraft" : "_someonelse",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0
+				],
+				"lavarun" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					0,
+					0
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0
+				]
+			},
+			"name" : "someone",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0
+			],
+			"pronoun" : "He",
+			"roles" : 
+			[
+				"Dev",
+				"Tester"
+			],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"Green"
+			],
+			"tier" : "D"
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Dier",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					913,
+					523,
+					800
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					600,
+					400,
+					600
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					964,
+					630,
+					849
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					992,
+					118,
+					882
+				],
+				"lavarun" : 
+				[
+					230,
+					1435
+				],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					900,
+					1950,
+					1300
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					1301,
+					1243,
+					592
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					268,
+					196,
+					558
+				]
+			},
+			"name" : "",
+			"place" : 
+			[
+				2
+			],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				12221,
+				7425,
+				12328
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"Purple",
+				"Purple",
+				"Red"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "remnant",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					815
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					500
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					730
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					550
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					1180
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					627
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					896
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				9437
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"Blue"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Darbz",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					537,
+					103
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					500,
+					300
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					456,
+					472
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					538,
+					668
+				],
+				"lavarun" : 
+				[
+					461
+				],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					660,
+					80
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					241,
+					383
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					612,
+					514
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				6019,
+				5600
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"Blue",
+				"Blue"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Hart9",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					10
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					404
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					892
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					20
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					76
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					198
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				2966
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"Green"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Sharcks",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					628
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					410
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					114
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				2623
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"Green"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "_someoneelse",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					42,
+					76
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					200,
+					100
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					182,
+					179
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					274,
+					122
+				],
+				"lavarun" : 
+				[
+					405
+				],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					40,
+					1
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					58,
+					161
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					156,
+					320
+				]
+			},
+			"name" : "",
+			"place" : 
+			[
+				11
+			],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				1648,
+				2450
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"Green",
+				"Purple"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Oisar",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					323,
+					355
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					500,
+					300
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					168
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					460
+				],
+				"lavarun" : 
+				[
+					525
+				],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					900
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					949
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					398,
+					0
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				1506,
+				5409
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"Red",
+				"Green"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "SoulGregory",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					173,
+					317
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					300,
+					400
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					192
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					186
+				],
+				"lavarun" : 
+				[
+					130
+				],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					100
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					127
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					128,
+					704
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				816,
+				3826
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"Green",
+				"Green"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "remant",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					1571
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					600
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					804
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					822
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					1010
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					696
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					972
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				11523
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"Blue"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Rodald",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					622
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					700
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					184
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					890
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					720
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					1051
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					740
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				8583
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"Red"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Dragon Sam",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					352,
+					572
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					600,
+					850
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					200,
+					191
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					782,
+					892
+				],
+				"lavarun" : 
+				[
+					660
+				],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					140,
+					580
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					1558,
+					1567
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					872,
+					1110
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				8491,
+				9429
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"Blue",
+				"Blue"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "forkloo",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					338
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					500
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					558
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					700
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					890
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					619
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					382
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				7083
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"Red"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "RaccoonFish",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					287
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					400
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					612
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					586
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					1020
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					448
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					238
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				6336
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"Purple"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "EarthStream",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					319
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					500
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					342
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					358
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					810
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					731
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					414
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				5683
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"Green"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Coolnugget",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					102
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					200
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					738
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					602
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					20
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					302
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					424
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				5121
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"Purple"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Kibiyo",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"Green"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Caelan",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					974
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					300
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					323
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					596
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					1050
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					1390
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					452
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				8812
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"",
+				"Blue"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "S3bastian",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					537
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					400
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					195
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					734
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					860
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					750
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					846
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				8111
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"",
+				"Green"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Creative",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					78
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					300
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					163
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					346
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					200
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					503
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					616
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				4472
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"",
+				"Red"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Solaceon",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					460
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					700
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					147
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					686
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					1510
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					885
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					242
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				6883
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"",
+				"Purple"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Styx",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					80
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					100
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					76
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					590
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					160
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					697
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					1272
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				4921
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"",
+				"Blue"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Ananaciya",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					859
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					300
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					232
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					826
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					860
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					960
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					444
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				5703
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"",
+				"Purple"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Luaston",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					98
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					500
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					74
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					975
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				]
+			},
+			"name" : "",
+			"place" : [],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				1647
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"",
+				"Purple"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "4koala",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					836
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					850
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					829
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					416
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1580
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					590
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1180
+				]
+			},
+			"name" : "",
+			"place" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				3
+			],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				11615
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"Purple"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "S3b",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1124
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					850
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					507
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					722
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1630
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					332
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					778
+				]
+			},
+			"name" : "",
+			"place" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				4
+			],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				10861
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"Blue"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Cw",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					957
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					400
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					428
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					608
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1755
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					224
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					478
+				]
+			},
+			"name" : "",
+			"place" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				5
+			],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				9202
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"Blue"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "ChickAndGuy",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					126
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					400
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					244
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					390
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					800
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					245
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					474
+				]
+			},
+			"name" : "",
+			"place" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				8
+			],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				4548
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"Green"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Flav",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					73
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					300
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					319
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					300
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					180
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					183
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					452
+				]
+			},
+			"name" : "",
+			"place" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				9
+			],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				3255
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"Green"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Panda",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					84
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					200
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					176
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					242
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					360
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					82
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					482
+				]
+			},
+			"name" : "",
+			"place" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				10
+			],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				3049
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"Green"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Saco",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					200
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					730
+				],
+				"lavarun" : [],
+				"pirates" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					180
+				],
+				"race" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					108
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					92
+				]
+			},
+			"name" : "",
+			"place" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				12
+			],
+			"points" : 
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				1512
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"Blue"
+			],
+			"tier" : ""
+		}
+	]
 }
