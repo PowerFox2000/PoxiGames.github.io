@@ -283,7 +283,7 @@
 				"",
 				"Purple"
 			],
-			"tier" : ""
+			"tier" : "S"
 		},
 		{
 			"discord" : "",
@@ -425,7 +425,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "A"
 		},
 		{
 			"discord" : "DuckyMCz",
@@ -567,7 +567,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "A"
 		},
 		{
 			"discord" : "",
@@ -709,7 +709,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "Ø"
 		},
 		{
 			"discord" : "lolol",
@@ -851,7 +851,7 @@
 				"Green",
 				"Purple"
 			],
-			"tier" : ""
+			"tier" : "S"
 		},
 		{
 			"discord" : "Dragon Sam",
@@ -1135,7 +1135,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "Ø"
 		},
 		{
 			"discord" : "Nael",
@@ -1277,7 +1277,7 @@
 				"Red",
 				"Red"
 			],
-			"tier" : ""
+			"tier" : "B"
 		},
 		{
 			"discord" : "Coolnugets325",  
@@ -1419,7 +1419,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "C"
 		},
 		{
 			"discord" : "",
@@ -1561,7 +1561,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "Ø"
 		},
 		{
 			"discord" : "",
@@ -1703,7 +1703,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "C"
 		},
 		{
 			"discord" : "MonkeyMan",
@@ -1845,7 +1845,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "B"
 		},
 		{
 			"discord" : "kont",
@@ -1987,7 +1987,7 @@
 				"",
 				"Red"
 			],
-			"tier" : ""
+			"tier" : "S"
 		},
 		{
 			"discord" : "",
@@ -2129,7 +2129,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "D"
 		},
 		{
 			"discord" : "Remnant",
@@ -2271,7 +2271,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "S"
 		},
 		{
 			"discord" : "",
@@ -2413,7 +2413,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "B"
 		},
 		{
 			"discord" : "ToutLeMonde2_0",
@@ -2555,7 +2555,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "C"
 		},
 		{
 			"discord" : "Sharcks",
@@ -2697,12 +2697,12 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "C"
 		},
 		{
 			"discord" : "someoneelse.",
 			"discord_id" : "theressomeoneelse.",
-			"minecraft" : "_someonelse",
+			"minecraft" : "_Someonelse",
 			"minigames" : 
 			{
 				"battle" : 
@@ -2839,7 +2839,7 @@
 				"",
 				"Purple"
 			],
-			"tier" : ""
+			"tier" : "C"
 		},
 		{
 			"discord" : "oIsar",
@@ -2981,7 +2981,7 @@
 				"Green",
 				""
 			],
-			"tier" : ""
+			"tier" : "B"
 		},
 		{
 			"discord" : "qdeehwee",
@@ -3123,7 +3123,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "C"
 		},
 		{
 			"discord" : "Rodald",
@@ -3265,7 +3265,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "A"
 		},
 		{
 			"discord" : "forkloo",
@@ -3407,7 +3407,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "B"
 		},
 		{
 			"discord" : "Raccoonfish",
@@ -3549,7 +3549,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "Ø"
 		},
 		{
 			"discord" : "Kibiyo",
@@ -3691,7 +3691,7 @@
 				"",
 				""
 			],
-			"tier" : ""
+			"tier" : "Ø"
 		},
 		{
 			"discord" : "!Cw",
@@ -3833,7 +3833,7 @@
 				"Blue",
 				"Blue"
 			],
-			"tier" : ""
+			"tier" : "A"
 		},
 		{
 			"discord" : "s3bastianDK",
@@ -3975,7 +3975,7 @@
 				"Green",
 				"Blue"
 			],
-			"tier" : ""
+			"tier" : "A"
 		},
 		{
 			"discord" : "g_lukas",
@@ -4117,7 +4117,7 @@
 				"Red",
 				""
 			],
-			"tier" : ""
+			"tier" : "D"
 		},
 		{
 			"discord" : "MattySP",
@@ -4259,7 +4259,7 @@
 				"Purple",
 				""
 			],
-			"tier" : ""
+			"tier" : "B"
 		},
 		{
 			"discord" : "CosmosVA",
@@ -4401,7 +4401,7 @@
 				"Blue",
 				""
 			],
-			"tier" : ""
+			"tier" : "C"
 		},
 		{
 			"discord" : "ananaciya",
@@ -4543,7 +4543,7 @@
 				"Purple",
 				""
 			],
-			"tier" : ""
+			"tier" : "B"
 		},
 		{
 			"discord" : "Luaston",
@@ -4685,7 +4685,7 @@
 				"Purple",
 				""
 			],
-			"tier" : ""
+			"tier" : "Ø"
 		},
 		{
 			"discord" : "ChickAndGuy",
@@ -4827,7 +4827,7 @@
 				"",
 				"Green"
 			],
-			"tier" : ""
+			"tier" : "D"
 		},
 		{
 			"discord" : "L3onardow",
@@ -4969,7 +4969,7 @@
 				"",
 				"Green"
 			],
-			"tier" : ""
+			"tier" : "D"
 		},
 		{
 			"discord" : "Panda",
@@ -5111,7 +5111,7 @@
 				"",
 				"Green"
 			],
-			"tier" : ""
+			"tier" : "D"
 		},
 		{
 			"discord" : "Saco",
@@ -5253,7 +5253,7 @@
 				"",
 				"Blue"
 			],
-			"tier" : ""
+			"tier" : "C"
 		}
 	]
 }
