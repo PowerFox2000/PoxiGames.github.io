@@ -1,4 +1,4 @@
-                      void pointsEver(const player) {
+void pointsEver(const player) {
   let pts = 0;
   player.points.forEach(p => {
     pts += p;
@@ -16,8 +16,10 @@ fetch("./data.json")
     playersSorted.forEach(player => {
       const val = document.createElement("div");
       val.innerHTML = `
-      <div class= "player" id= "${player.name}" onclick="go('${player.minecraft}')" style="fontsize: 2.5rem">
-        <img src="https://mc-heads.net/head/${player.minecraft}"></img> <h1><strong>${player.minecraft}</strong></h1>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class= "player" id= "${player.name}" onclick="go('${player.minecraft}')" style="fontsize: 2.5rem">
+          <img src="https://mc-heads.net/head/${player.minecraft}"></img> <h1><strong>${player.minecraft}</strong></h1>
+        </div>
       </div>`;,
 
       players.appendChild(val);
