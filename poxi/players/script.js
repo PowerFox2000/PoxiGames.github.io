@@ -1,4 +1,4 @@
-void pointsEver(const player) {
+                      void pointsEver(const player) {
   let pts = 0;
   player.points.forEach(pl => {
     pts += pl;
@@ -18,7 +18,8 @@ fetch("./data.json")
       val.innerHTML = `
       <div class= "player" id= "${player.name}" onclick="go('${player.minecraft}')" style="fontsize: 2.5rem">
         <img src="https://mc-heads.net/head/${player.minecraft}"></img> <h1><strong>${player.minecraft}</strong></h1>
-      </div>`;
+        "${player}"
+      </div>`;,
 
       players.appendChild(val);
     });
