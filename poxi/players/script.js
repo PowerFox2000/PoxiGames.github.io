@@ -16,7 +16,7 @@ fetch("./data.json")
       const val = document.createElement("div");
 
       val.innerHTML = `
-        <div class="player" id="${player.name}" onclick="go('${player.minecraft}')" style="font-size: 2.5rem">
+        <div class="player" id="${player.name}" onclick="go('${player.minecraft}')">
           <img src="https://mc-heads.net/head/${player.minecraft}">
           <h1><strong>${player.minecraft}</strong></h1>
         </div>
