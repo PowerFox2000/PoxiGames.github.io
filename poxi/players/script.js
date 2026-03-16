@@ -16,10 +16,10 @@ fetch("./data.json")
       const val = document.createElement("div");
 
       val.innerHTML = `
-        <div class="btn-card" id="${player.name}" onclick="go('${player.minecraft}')">
+        <a class="btn-card" id="${player.name}" onclick="go('${player.minecraft}')">
           <img src="https://mc-heads.net/head/${player.minecraft}">
           <h1><strong>${player.minecraft}</strong></h1>
-        </div>
+        </a>
       `;
 
       players.appendChild(val);
