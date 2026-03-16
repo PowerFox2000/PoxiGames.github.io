@@ -13,7 +13,7 @@ fetch("./data.json")
     );
 
     playersSorted.forEach(player => {
-      const val = document.createElement("div");
+      const val = document.createElement("a");
 
       val.innerHTML = `
         <a class="btn-card" id="${player.name}" onclick="go('${player.minecraft}')">
