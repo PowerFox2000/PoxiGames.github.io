@@ -117,5 +117,7 @@ fetch("../data.json")
     ctx.strokeStyle = "red";
     ctx.lineWidth = 2;
     ctx.stroke();
+
+    ctx.fillText("Battle", 0, cx);
   })
   .catch(console.error);
