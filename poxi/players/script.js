@@ -18,7 +18,7 @@ fetch("./data.json")
       val.innerHTML = `
         <a class="btn-card" id="${player.name}" onclick="go('${player.minecraft}')">
           <img src="https://mc-heads.net/head/${player.minecraft}">
-          <h1><strong>${player.minecraft}</strong></h1>
+          <h1><strong>${player.minecraft}</strong></h1>eeeee
         </a>
       `;
 
