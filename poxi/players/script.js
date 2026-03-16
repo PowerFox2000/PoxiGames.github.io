@@ -13,12 +13,12 @@ fetch("./data.json")
     );
 
     playersSorted.forEach(player => {
-      const val = document.createElement("a");
+      const val = document.createElement("div");
 
       val.innerHTML = `
-        <a class="btn-card" id="${player.name}" onclick="go('${player.minecraft}')">
+        <a class="btn-card" id="${player.name}" href="profile/?id=${encodeURIComponent(player.minecraft)}">
           <img src="https://mc-heads.net/head/${player.minecraft}">
-          <h1><strong>${player.minecraft}</strong></h1>eeeee
+          <h1><strong>${player.minecraft}</strong></h1>
         </a>
       `;
 
@@ -27,7 +27,3 @@ fetch("./data.json")
 
   })
   .catch(err => console.error(err));
-
-function go(id) {
-  window.location.href = `profile/?id=${encodeURIComponent(id)}`;
-}
