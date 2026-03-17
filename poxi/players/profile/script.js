@@ -19,10 +19,10 @@ fetch("../data.json")
     for(i = 0; i < player.roles.length; i++) {
       roles += player.roles[i];
       if(i < player.roles.length - 2) {roles += ", "}
-      if(i < player.roles.length - 1) {roles += " and "}
+      else if(i < player.roles.length - 1) {roles += " and "}
     } 
     
-    let rolesIndicator = ""
+    let rolesIndicator = "";
     if(roles != "") {rolesIndicator = player.pronoun + " is a " + roles;}
       
     val.innerHTML = `
