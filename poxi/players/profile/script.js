@@ -38,8 +38,8 @@ fetch("../data.json")
         </div>
         <h3>${rolesIndicator}</h3>
         <div class="grid grid-cols-1 sm:grid-cols-4 gap-6">
-          <button class="button" id="button2" role="button">Poxi Games 2</button>
-          <button class="button" id="button3" role="button">Poxi Games 3</button>
+          <button class="button" id="button2" role="button" onclick="PGVERS=2">Poxi Games 2</button>
+          <button class="button" id="button3" role="button" onclick="PGVERS=3">Poxi Games 3</button>
           <button class="button-dis" id="button4" role="button">Poxi Games 4</button>
         </div>
       </div>
@@ -124,5 +124,18 @@ fetch("../data.json")
     ctx.stroke();
 
     ctx.fillText("Battle", 0, cx);
+
+
+    let PGVERS = 2;
+    const PGBTN2 = document.getElementById(button2);
+    const PGBTN3 = document.getElementById(button3);
+    const PGBTN4 = document.getElementById(button4);
+
+    switch(PGVERS) {
+      case 2:
+        PGBTN2.style.background = linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03));
+      case 3:
+        PGBTN3.style.background = linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03));
+    }
   })
   .catch(console.error);
