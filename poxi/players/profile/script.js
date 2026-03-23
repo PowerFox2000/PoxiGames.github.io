@@ -37,7 +37,9 @@ fetch("../data.json")
           <canvas id="statsCanvas"></canvas>
         </div>
         <h3>${rolesIndicator}</h3>
-        <button class="button" role="button">Poxi Games 2</button>
+        <button class="button2" role="button">Poxi Games 2</button>
+        <button class="button3" role="button">Poxi Games 3</button>
+        <button class="button4" role="button">Poxi Games 4</button>
       </div>
     `;
     
