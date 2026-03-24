@@ -307,9 +307,11 @@ function setupButtons() {
 
     switch(PGVERS) {
       case 2:
-        PGBTN2.style.background = linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03));
+        PGBTN2.style.background = "linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03));"
+        break;
       case 3:
-        PGBTN3.style.background = linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03));
+        PGBTN3.style.background = "linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03));"
+        break;
     }
   })
   .catch(console.error);
