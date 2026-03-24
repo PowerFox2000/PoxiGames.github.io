@@ -1,4 +1,4 @@
-fetch("../data.json")
+efetch("../data.json")
   .then(r => r.json())
   .then(json => {
     const player = getPlayerFromURL(json);
@@ -46,6 +46,16 @@ function renderPlayer(player) {
         <button class="button" id="button2">Poxi Games 2</button>
         <button class="button" id="button3">Poxi Games 3</button>
         <button class="button-dis" id="button4">Poxi Games 4</button>
+      </div>
+      <div class="grid grid-cos-1 sm:grid-cols-5 gap-6">
+        <p class="minigame" id="minigame1"></p>
+        <p class="minigame" id="minigame2"></p>
+        <p class="minigame" id="minigame3"></p>
+        <p class="minigame" id="minigame4"></p>
+        <p class="minigame" id="minigame5"></p>
+        <p class="minigame" id="minigame6"></p>
+        <p class="minigame" id="minigame7"></p>
+        <p class="minigame" id="minigame8"></p>
       </div>
     </div>
   `;
@@ -171,5 +181,7 @@ function setupButtons() {
     updateButtons();
   });
 
+  document.getElementById(minigame1).innerHTML("fuck you");
+  
   updateButtons();
 }
