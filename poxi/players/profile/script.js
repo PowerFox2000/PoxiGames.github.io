@@ -172,5 +172,4 @@ function setupButtons() {
   });
 
   updateButtons();
-}
-  .catch(console.error);
+}.catch(console.error);
