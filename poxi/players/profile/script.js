@@ -172,4 +172,4 @@ function setupButtons() {
   });
 
   updateButtons();
-}.catch(console.error);
+}
