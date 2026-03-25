@@ -43,9 +43,9 @@ function renderPlayer(player) {
       <h3>${rolesIndicator}</h3>
 
       <div class="grid grid-cols-1 sm:grid-cols-4 gap-6">
-        <button class="button" id="button2">Poxi Games 2</button>
+        <button class="button rounded-l-1rem" id="button2">Poxi Games 2</button>
         <button class="button" id="button3">Poxi Games 3</button>
-        <button class="button-dis" id="button4">Poxi Games 4</button>
+        <button class="button-dis rounded-r-1rem" id="button4">Poxi Games 4</button>
       </div>
       <div class="grid grid-cos-1 sm:grid-cols-5 gap-6">
         <p class="minigame" id="minigame1"></p>
