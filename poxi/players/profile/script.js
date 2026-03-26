@@ -61,16 +61,14 @@ function renderPlayer(player) {
         </select>
         <button class="button-right" id="button4">Poxi Games 4</button>
       </div>
-      <div class="grid grid-cos-1 sm:grid-cols-5 gap-6">
-        <p class="minigame" id="minigame1"></p>
-        <p class="minigame" id="minigame2"></p>
-        <p class="minigame" id="minigame3"></p>
-        <p class="minigame" id="minigame4"></p>
-        <p class="minigame" id="minigame5"></p>
-        <p class="minigame" id="minigame6"></p>
-        <p class="minigame" id="minigame7"></p>
-        <p class="minigame" id="minigame8"></p>
-      </div>
+      <p class="minigame" id="minigame1"></p>
+      <p class="minigame" id="minigame2"></p>
+      <p class="minigame" id="minigame3"></p>
+      <p class="minigame" id="minigame4"></p>
+      <p class="minigame" id="minigame5"></p>
+      <p class="minigame" id="minigame6"></p>
+      <p class="minigame" id="minigame7"></p>
+      <p class="minigame" id="minigame8"></p>
     </div>
   `;
 
