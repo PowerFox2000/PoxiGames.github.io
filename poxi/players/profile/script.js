@@ -207,10 +207,10 @@ function setupButtons() {
   const select3 = document.getElementById("button4");
 
   select1.addEventListener('change', () => {
-    select2.value("default");
+    select2.value = "default";
   });
   select2.addEventListener('change', () => {
-    select1.value("default");
+    select1.value = "default";
   });
   
   updateButtons();
