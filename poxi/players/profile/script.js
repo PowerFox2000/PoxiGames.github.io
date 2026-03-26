@@ -31,6 +31,7 @@ function renderPlayer(player) {
 
   val.innerHTML = `
     <div class="space-y-2">
+      <link rel="icon" type="image/x-icon" href="https://mc-heads.net/head/${player.minecraft}"/>
       <img src="https://mc-heads.net/head/${player.minecraft}" />
       <h1>${player.minecraft} ⎯⎯ Tier ${player.tier}</h1>
       <h2>${player.name} ⎯ Discord : ${player.discord} - ${player.discord_id}</h2><br />
