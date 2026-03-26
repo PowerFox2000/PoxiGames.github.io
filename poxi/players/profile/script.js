@@ -62,6 +62,7 @@ function renderPlayer(player) {
         </select>
         <button class="button-right" id="button4">Poxi Games 4</button>
       </div>
+      <p class="minigame" id="total"></p>
       <p class="minigame" id="minigame1"></p>
       <p class="minigame" id="minigame2"></p>
       <p class="minigame" id="minigame3"></p>
@@ -194,7 +195,8 @@ function setupButtons() {
     updateButtons();
   });
 
-  document.getElementById("minigame1").innerHTML = "fuck you";
+  document.getElementById("total").innerHTML = "Total Points";
+  document.getElementById("minigame1").innerHTML = "Hunt";
   document.getElementById("minigame2").innerHTML = "you're kinda";
   document.getElementById("minigame3").innerHTML = "worthless";
   document.getElementById("minigame4").innerHTML = "fuck you4";
