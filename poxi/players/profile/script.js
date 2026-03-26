@@ -59,14 +59,7 @@ function renderPlayer(player) {
           <option value="5">PG3S4</option>
           <option value="6">PG3S5</option>
         </select>
-        <select class="button-right rounded-r-xl" disabled id="button4">
-          <option value="default" selected hidden>Poxi Games 4</option>
-          <option value="2">PG4S1</option>
-          <option value="3">PG4S2</option>
-          <option value="4">PG4S3</option>
-          <option value="5">PG4S4</option>
-          <option value="6">PG4S5</option>
-          </select>
+        <button class="button-right rounded-r-xl" id="button4">Poxi Games 4</button>
       </div>
       <div class="grid grid-cos-1 sm:grid-cols-5 gap-6">
         <p class="minigame" id="minigame1"></p>
