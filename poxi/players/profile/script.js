@@ -195,8 +195,8 @@ function setupButtons() {
   });
 
   document.getElementById("minigame1").innerHTML = "fuck you";
-  document.getElementById("minigame2").innerHTML = "fuck you2";
-  document.getElementById("minigame3").innerHTML = "fuck you3";
+  document.getElementById("minigame2").innerHTML = "you're kinda";
+  document.getElementById("minigame3").innerHTML = "worthless";
   document.getElementById("minigame4").innerHTML = "fuck you4";
   document.getElementById("minigame5").innerHTML = "fuck you5";
   document.getElementById("minigame6").innerHTML = "fuck you6";
