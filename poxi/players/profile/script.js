@@ -181,7 +181,14 @@ function setupButtons() {
     updateButtons();
   });
 
-  document.getElementById(minigame1).innerHTML("fuck you");
+  document.getElementById(minigame1).innerHTML = "fuck you1";
+  document.getElementById(minigame2).innerHTML = "fuck you2";
+  document.getElementById(minigame3).innerHTML = "fuck you3";
+  document.getElementById(minigame4).innerHTML = "fuck you4";
+  document.getElementById(minigame5).innerHTML = "fuck you5";
+  document.getElementById(minigame6).innerHTML = "fuck you6";
+  document.getElementById(minigame7).innerHTML = "fuck you7";
+  document.getElementById(minigame8).innerHTML = "fuck you8";
   
   updateButtons();
 }
