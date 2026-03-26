@@ -201,6 +201,17 @@ function setupButtons() {
   document.getElementById("minigame6").innerHTML = "fuck you6";
   document.getElementById("minigame7").innerHTML = "fuck you7";
   document.getElementById("minigame8").innerHTML = "fuck you8";
+
+  const select1 = document.getElementById("button2");
+  const select2 = document.getElementById("button3");
+  const select3 = document.getElementById("button4");
+
+  select1.addEventListener('change', () => {
+    select2.value("default");
+  });
+  select2.addEventListener('change', () => {
+    select1.value("default");
+  });
   
   updateButtons();
 }
