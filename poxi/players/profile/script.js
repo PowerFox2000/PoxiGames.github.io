@@ -43,7 +43,14 @@ function renderPlayer(player) {
       <h3>${rolesIndicator}</h3>
 
       <div class="grid grid-cols-1 sm:grid-cols-4 gap-6">
-        <button class="button rounded-l-1rem" id="button2">Poxi Games 2</button>
+        <select class="button rounded-l-1rem" id="button2">
+        <option value="default" selected hidden>Poxi Games 2</option>
+        <option value="2">PG2S1</option>
+        <option value="2">PG2S2</option>
+        <option value="2">PG2S3</option>
+        <option value="2">PG2S4</option>
+        <option value="2">PG2S5</option>
+        </select>
         <button class="button" id="button3">Poxi Games 3</button>
         <button class="button-dis rounded-r-1rem" id="button4">Poxi Games 4</button>
       </div>
