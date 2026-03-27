@@ -1,6 +1,23 @@
-canvas {
-  float:right;
+:root{--accent: #7c3aed}
+.chart-wrap{max-width:420px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:8px 6px;text-align:left}
+.role-badge{
+  background:rgba(255,255,255,0.03);
+  padding:6px 10px;border-radius:999px;
+  font-weight:600;
+  border:1px solid rgba(255,255,255,0.03)
 }
+.tag{
+  display:inline-block;
+  padding:4px 8px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.03);
+  font-weight:600
+}
+
+
 .button-left {
   padding: 1.7rem;
   margin-top: 1rem;
@@ -43,23 +60,6 @@ canvas {
   color:inherit;
   font-weight:600;
 }
-.h1 {
-  font-size: 400px;
-}
-.display {
-  display: flex;
-  flex-wrap: wrap;
-}
-.div {
-  display: flex;
-  align-items: center;
-  justify-context: center;
-}
-.players {
-  display: flex;
-  align-items: center;
-  justify-context: center;
-}
 .btn-card {
   display:flex;
   font-size: 2rem;
@@ -74,13 +74,36 @@ canvas {
   font-weight:600;
   margin: 2rem;
 }
-.player img {
-  width: 8rem;
-  margin-right: 10px;
-}
 .btn-card:hover {
   transform:translateY(-4px);
   transition:all .18s;
+}
+
+
+
+canvas {
+  float:right;
+}
+.display {
+  display: flex;
+  flex-wrap: wrap;
+}
+.h1 {
+  font-size: 400px;
+}
+.div {
+  display: flex;
+  align-items: center;
+  justify-context: center;
+}
+.players {
+  display: flex;
+  align-items: center;
+  justify-context: center;
+}
+.player img {
+  width: 8rem;
+  margin-right: 10px;
 }
 @media (max-width: 730px) {
   .player {
@@ -89,38 +112,3 @@ canvas {
   margin: 1%;
   font-size: 0.0005%;
 }
-:root{--accent: #7c3aed}
-.btn-card {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:1rem;
-  border-radius:12px;
-  background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));
-  border:1px solid rgba(255,255,255,0.04);
-  box-shadow:0 6px 18px rgba(2,6,23,0.6);
-  color:inherit;
-  text-decoration:none;
-  font-weight:600
-}
-.btn-card:hover {
-  transform:translateY(-4px);
-  transition:all .18s
-}
-.role-badge{
-  background:rgba(255,255,255,0.03);
-  padding:6px 10px;border-radius:999px;
-  font-weight:600;
-  border:1px solid rgba(255,255,255,0.03)
-}
-.tag{
-  display:inline-block;
-  padding:4px 8px;
-  border-radius:999px;
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.03);
-  font-weight:600
-}
-.chart-wrap{max-width:420px}
-.table{width:100%;border-collapse:collapse}
-.table th,.table td{padding:8px 6px;text-align:left}
