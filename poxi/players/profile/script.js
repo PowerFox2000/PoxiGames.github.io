@@ -41,7 +41,8 @@ function renderPlayer(player) {
         <canvas id="statsCanvas"></canvas>
       </div>
 
-      <h3>${rolesIndicator}</h3>
+      <h3>${rolesIndicator}<br /><br/>
+      Scores:</h3>
 
       <div class="grid grid-cols-1 sm:grid-cols-4 gap-6">
         <select class="button-left" id="button2">
