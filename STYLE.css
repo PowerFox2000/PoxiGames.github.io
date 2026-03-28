@@ -80,11 +80,12 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 .subTitle {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 300;
 }
 .text {
   font-size: 1.5rem;
