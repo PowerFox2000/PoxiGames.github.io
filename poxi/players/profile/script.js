@@ -33,9 +33,9 @@ function renderPlayer(player) {
     <div class="space-y-2">
       <link rel="icon" type="image/x-icon" href="https://mc-heads.net/head/${player.minecraft}"/>
       <img src="https://mc-heads.net/head/${player.minecraft}" />
-      <h1>${player.minecraft} ⎯⎯ Tier ${player.tier}</h1>
-      <h2>${player.name} ⎯ Discord : ${player.discord} - ${player.discord_id}</h2><br />
-      <h3>${firstSeasonIndicator}</h3>
+      <h1 class="title">${player.minecraft} ⎯⎯ Tier ${player.tier}</h1>
+      <h2 class="subtitle">${player.name} ⎯ Discord : ${player.discord} - ${player.discord_id}</h2><br />
+      <h3 class="text">${firstSeasonIndicator}</h3>
 
       <div class="stats">
         <canvas id="statsCanvas"></canvas>
@@ -44,7 +44,7 @@ function renderPlayer(player) {
       <h3>${rolesIndicator}<br /><br/>
       Scores:</h3>
 
-      <div class="grid grid-cols-1 sm:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-4 gap-6 text">
         <select class="button-left" id="button2">
           <option value="default" selected hidden>Poxi Games 2</option>
           <option value="2">PG2S1</option>
@@ -53,7 +53,7 @@ function renderPlayer(player) {
           <option value="5">PG2S4</option>
           <option value="6">PG2S5</option>
         </select>
-        <select class="button-middle" id="button3">
+        <select class="button-middle text" id="button3">
           <option value="default" selected hidden>Poxi Games 3</option>
           <option value="2">PG3S1</option>
           <option value="3">PG3S2</option>
@@ -61,17 +61,17 @@ function renderPlayer(player) {
           <option value="5">PG3S4</option>
           <option value="6">PG3S5</option>
         </select>
-        <button class="button-right" id="button4">Poxi Games 4</button>
+        <button class="button-right text" id="button4">Poxi Games 4</button>
       </div>
-      <p class="minigame" id="total"></p>
-      <p class="minigame" id="minigame1"></p>
-      <p class="minigame" id="minigame2"></p>
-      <p class="minigame" id="minigame3"></p>
-      <p class="minigame" id="minigame4"></p>
-      <p class="minigame" id="minigame5"></p>
-      <p class="minigame" id="minigame6"></p>
-      <p class="minigame" id="minigame7"></p>
-      <p class="minigame" id="minigame8"></p>
+      <p class="minigame text" id="total"></p>
+      <p class="minigame text" id="minigame1"></p>
+      <p class="minigame text" id="minigame2"></p>
+      <p class="minigame text" id="minigame3"></p>
+      <p class="minigame text" id="minigame4"></p>
+      <p class="minigame text" id="minigame5"></p>
+      <p class="minigame text" id="minigame6"></p>
+      <p class="minigame text" id="minigame7"></p>
+      <p class="minigame text" id="minigame8"></p>
     </div>
   `;
 
