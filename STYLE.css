@@ -79,6 +79,19 @@
   transition:all .18s;
 }
 
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.subTitle {
+  font-size: 1.8rem;
+}
+.text {
+  font-size: 1.5rem;
+}
+.bodytext {
+  font-size: 1.3rem;
+}
 
 
 canvas {
@@ -87,9 +100,6 @@ canvas {
 .display {
   display: flex;
   flex-wrap: wrap;
-}
-.h1 {
-  font-size: 400px;
 }
 .div {
   display: flex;
