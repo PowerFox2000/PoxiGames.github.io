@@ -33,16 +33,16 @@ function renderPlayer(player) {
     <div class="space-y-2">
       <link rel="icon" type="image/x-icon" href="https://mc-heads.net/head/${player.minecraft}"/>
       <img src="https://mc-heads.net/head/${player.minecraft}" />
-      <h1 class="title">${player.minecraft} ⎯⎯ Tier ${player.tier}</h1>
-      <h2 class="subtitle">${player.name} ⎯ Discord : ${player.discord} - ${player.discord_id}</h2><br />
-      <h3 class="text">${firstSeasonIndicator}</h3>
+      <p class="title">${player.minecraft} ⎯⎯ Tier ${player.tier}</p>
+      <p class="subtitle">${player.name} ⎯ Discord : ${player.discord} - ${player.discord_id}</p><br />
+      <p class="text">${firstSeasonIndicator}</p>
 
       <div class="stats">
         <canvas id="statsCanvas"></canvas>
       </div>
 
-      <h3>${rolesIndicator}<br /><br/>
-      Scores:</h3>
+      <p>${rolesIndicator}<br /><br/>
+      Scores:</p>
 
       <div class="grid grid-cols-1 sm:grid-cols-4 gap-6 text">
         <select class="button-left" id="button2">
