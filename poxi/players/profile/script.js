@@ -36,7 +36,7 @@ function renderPlayer(player) {
       <p class="title">${player.minecraft} ⎯⎯ Tier ${player.tier}</p>
       <p class="subTitle">${player.name} ⎯ Discord : ${player.discord} - ${player.discord_id}</p>
       <br />
-      <p class="bodyText">${firstSeasonIndicator}
+      <p class="bodyText">${firstSeasonIndicator}</p>
       <br />
 
       <div class="stats">
@@ -44,7 +44,7 @@ function renderPlayer(player) {
       </div>
       <br />
 
-      ${rolesIndicator}</p><br /><br/>
+      <p class="bodyText">${rolesIndicator}</p><br /><br/>
 
       <div class="grid grid-cols-1 sm:grid-cols-4 gap-0">
         <select class="button-left bodyText" id="button2">
