@@ -46,20 +46,20 @@ function renderPlayer(player) {
 
       <div class="grid grid-cols-1 sm:grid-cols-4 gap-0">
         <select class="button-left bodyText" id="button2">
-          <option value="default" selected hidden>Poxi Games 2</option>
-          <option value="2">PG2S1</option>
-          <option value="3">PG2S2</option>
-          <option value="4">PG2S3</option>
-          <option value="5">PG2S4</option>
-          <option value="6">PG2S5</option>
+          <option style="background: #393245" value="default" selected hidden>Poxi Games 2</option>
+          <option style="background: #393245" value="2">PG2S1</option>
+          <option style="background: #393245" value="3">PG2S2</option>
+          <option style="background: #393245" value="4">PG2S3</option>
+          <option style="background: #393245" value="5">PG2S4</option>
+          <option style="background: #393245" value="6">PG2S5</option>
         </select>
         <select class="button-middle bodyText" id="button3">
-          <option value="default" selected hidden>Poxi Games 3</option>
-          <option value="2">PG3S1</option>
-          <option value="3">PG3S2</option>
-          <option value="4">PG3S3</option>
-          <option value="5">PG3S4</option>
-          <option value="6">PG3S5</option>
+          <option style="background: #393245" value="default" selected hidden>Poxi Games 3</option>
+          <option style="background: #393245" value="2">PG3S1</option>
+          <option style="background: #393245" value="3">PG3S2</option>
+          <option style="background: #393245" value="4">PG3S3</option>
+          <option style="background: #393245" value="5">PG3S4</option>
+          <option style="background: #393245" value="6">PG3S5</option>
         </select>
         <button class="button-right bodyText" id="button4">Poxi Games 4</button>
       </div>
