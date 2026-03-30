@@ -27,7 +27,7 @@
   font-size: 1.7rem;
   align-items:center;
   justify-content:center;
-  background: solid rgba(255,255,255,0.03);
+  background: linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.03));
   border:1px solid rgba(255,255,255,0.04);
   box-shadow:0 6px 18px rgba(2,6,23,0.6);
   color:inherit;
@@ -41,7 +41,7 @@
   font-size: 1.7rem;
   align-items:center;
   justify-content:center;
-  background: solid rgba(255,255,255,0.03);
+  background: linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.03));
   border:1px solid rgba(255,255,255,0.04);
   box-shadow:0 6px 18px rgba(2,6,23,0.6);
   color:inherit;
