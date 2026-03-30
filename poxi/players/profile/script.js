@@ -180,7 +180,7 @@ function setupButtons() {
   const btn3 = document.getElementById("button3");
   const btn4 = document.getElementById("button4");
 
-  const activeStyle = "rgba(255,255,255,0.05";
+  const activeStyle = "rgba(255,255,255,0.1";
 
   function updateButtons() {
     [btn2, btn3, btn4].forEach(btn => (btn.style.background = ""));
