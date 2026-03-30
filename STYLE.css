@@ -21,7 +21,7 @@
 .button-left {
   padding: 1.7rem;
   margin-top: 1rem;
-  margin-down: 1rem;
+  margin-bottom: 1rem;
   border-radius: 1rem 0 0 1rem;
   display:flex;
   font-size: 1.7rem;
@@ -30,13 +30,14 @@
   background: linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.03));
   border:1px solid rgba(255,255,255,0.04);
   box-shadow:0 6px 18px rgba(2,6,23,0.6);
+  clip-path: inset(6px 0 6px 6px);
   color:inherit;
   font-weight:600;
 }
 .button-middle {
   padding: 1.7rem;
   margin-top: 1rem;
-  margin-down: 1rem;
+  margin-bottom: 1rem;
   display:flex;
   font-size: 1.7rem;
   align-items:center;
@@ -44,6 +45,7 @@
   background: linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.03));
   border:1px solid rgba(255,255,255,0.04);
   box-shadow:0 6px 18px rgba(2,6,23,0.6);
+  clip-path: inset(6px 0 6px 0);
   color:inherit;
   font-weight:600;
 }
