@@ -47,7 +47,7 @@ function renderPlayer(player) {
       <p class="bodyText">${rolesIndicator}</p><br /><br/>
 
       <div class="grid grid-cols-1 sm:grid-cols-6 gap-0">
-        <select class="button-left bodyText" id="button2">
+        <select class="button-left enabled bodyText" id="button2">
           <option style="background: #393245" value="default" selected hidden>Poxi Games 2</option>
           <option style="background: #393245" value="2">PG2S1</option>
           <option style="background: #393245" value="3">PG2S2</option>
@@ -55,7 +55,7 @@ function renderPlayer(player) {
           <option style="background: #393245" value="5">PG2S4</option>
           <option style="background: #393245" value="6">PG2S5</option>
         </select>
-        <select class="button-middle bodyText" id="button3">
+        <select class="button-middle enabled bodyText" id="button3">
           <option style="background: #393245" value="default" selected hidden>Poxi Games 3</option>
           <option style="background: #393245" value="2">PG3S1</option>
           <option style="background: #393245" value="3">PG3S2</option>
