@@ -48,13 +48,14 @@
 .button-right {
   padding: 1.7rem;
   margin-top: 1rem;
-  margin-down: 1rem;
-  border-radius: 0 1rem 1rem 0; 
+  margin-bottom: 1rem;
+  border-radius: 0 1rem 1rem 0;
   display:flex;
   font-size: 1.7rem;
   align-items:center;
   justify-content:center;
   border:1px solid rgba(255,255,255,0.04);
+  box-shadow:0 6px 18px rgba(2,6,23,0.6);
   color:inherit;
   font-weight:600;
 }
