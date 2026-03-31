@@ -64,8 +64,8 @@ function renderPlayer(player) {
           <option style="background: #393245" value="6">PG3S5</option>
         </select>
         <button class="button-middle bodyText" id="button4">Poxi Games 4</button>
-        <button class="button-middle bodyText" id="button4">Poxi Games 5</button>
-        <button class="button-right bodyText" id="button4">Poxi Games 6</button>
+        <button class="button-middle bodyText" id="button5">Poxi Games 5</button>
+        <button class="button-right bodyText" id="button6">Poxi Games 6</button>
       </div>
       <p class="minigame text" id="total"></p>
       <p class="minigame text" id="minigame1"></p>
