@@ -49,19 +49,18 @@ function renderPlayer(player) {
       <div class="grid grid-cols-1 sm:grid-cols-6 gap-0">
         <select class="button-left enabled bodyText" id="button2">
           <option style="background: #393245" value="default" selected hidden>Poxi Games 2</option>
-          <option style="background: #393245" value="2">PG2S1</option>
-          <option style="background: #393245" value="3">PG2S2</option>
-          <option style="background: #393245" value="4">PG2S3</option>
-          <option style="background: #393245" value="5">PG2S4</option>
-          <option style="background: #393245" value="6">PG2S5</option>
+          <option style="background: #393245" value="2">PG2S2</option>
+          <option style="background: #393245" value="3">PG2S3</option>
+          <option style="background: #393245" value="4">PG2S4</option>
+          <option style="background: #393245" value="5">PG2S5</option>
         </select>
         <select class="button-middle enabled bodyText" id="button3">
           <option style="background: #393245" value="default" selected hidden>Poxi Games 3</option>
-          <option style="background: #393245" value="2">PG3S1</option>
-          <option style="background: #393245" value="3">PG3S2</option>
-          <option style="background: #393245" value="4">PG3S3</option>
-          <option style="background: #393245" value="5">PG3S4</option>
-          <option style="background: #393245" value="6">PG3S5</option>
+          <option style="background: #393245" value="1">PG3S1</option>
+          <option style="background: #393245" value="2">PG3S2</option>
+          <option style="background: #393245" disabled value="3">PG3S3</option>
+          <option style="background: #393245" disabled value="4">PG3S4</option>
+          <option style="background: #393245" disabled value="5">PG3S5</option>
         </select>
         <button class="button-middle bodyText" id="button4">Poxi Games 4</button>
         <button class="button-middle bodyText" id="button5">Poxi Games 5</button>
@@ -200,17 +199,46 @@ function setupButtons() {
     updateButtons();
   });
 
-  switch()
+  let total;
+  let mg1, mg2, mg3, mg4, mg5, mg6, mg7, mg8;
+  let mgs = [];
+  switch(PGVERS) {
+    case 2:
+      switch(btn2.value) {
+        case 2:
+          total = player.points[2];
+          
+          mgs.push(player.minigames.battle[{"battle", 2}]);
+          mgs.push(player.minigames.battle[{"dont_fall", 2}]);
+          mgs.push(player.minigames.battle[{"heist", 2}]);
+          mgs.push(player.minigames.battle[{"hunt", 2}]);
+          mgs.push(player.minigames.battle[{"lavarun", 2}]);
+          mgs.push(player.minigames.battle[{"pirates", 2}]);
+          mgs.push(player.minigames.battle[{"race", 2}]);
+          mgs.push(player.minigames.battle[{"spleef", 2}]);
+        case 3:
+          total = player.points[3];
+          
+          mgs.push(player.minigames.battle[{"battle", 3}]);
+          mgs.push(player.minigames.battle[{"dont_fall", 3}]);
+          mgs.push(player.minigames.battle[{"heist", 3}]);
+          mgs.push(player.minigames.battle[{"hunt", 3}]);
+          mgs.push(player.minigames.battle[{"lavarun", 3}]);
+          mgs.push(player.minigames.battle[{"pirates", 3}]);
+          mgs.push(player.minigames.battle[{"race", 3}]);
+          mgs.push(player.minigames.battle[{"spleef", 3}]);
+      }
+  }
 
-  document.getElementById("total").innerHTML = "Total Points: " + player.points(season);
-  document.getElementById("minigame1").innerHTML = "Hunt";
-  document.getElementById("minigame2").innerHTML = "you're kinda";
-  document.getElementById("minigame3").innerHTML = "worthless";
-  document.getElementById("minigame4").innerHTML = "fuck you4";
-  document.getElementById("minigame5").innerHTML = "fuck you5";
-  document.getElementById("minigame6").innerHTML = "fuck you6";
-  document.getElementById("minigame7").innerHTML = "fuck you7";
-  document.getElementById("minigame8").innerHTML = "fuck you8";
+  document.getElementById("total").innerHTML = total;
+  document.getElementById("minigame1").innerHTML = "e";
+  document.getElementById("minigame2").innerHTML = "l";
+  document.getElementById("minigame3").innerHTML = "l";
+  document.getElementById("minigame4").innerHTML = "o";
+  document.getElementById("minigame5").innerHTML = "g";
+  document.getElementById("minigame6").innerHTML = "u";
+  document.getElementById("minigame7").innerHTML = "y";
+  document.getElementById("minigame8").innerHTML = "s";
 
   const select1 = document.getElementById("button2");
   const select2 = document.getElementById("button3");
