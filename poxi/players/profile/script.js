@@ -6,7 +6,7 @@ fetch("../data.json")
 
     renderPlayer(player);
     setupCanvas(player, json);
-    setupButtons();
+    setupButtons(player, json);
   })
   .catch(console.error);
 
@@ -200,7 +200,9 @@ function setupButtons() {
     updateButtons();
   });
 
-  document.getElementById("total").innerHTML = "Total Points";
+  switch()
+
+  document.getElementById("total").innerHTML = "Total Points: " + player.points(season);
   document.getElementById("minigame1").innerHTML = "Hunt";
   document.getElementById("minigame2").innerHTML = "you're kinda";
   document.getElementById("minigame3").innerHTML = "worthless";
