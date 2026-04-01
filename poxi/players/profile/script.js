@@ -199,7 +199,7 @@ function setupButtons() {
     updateButtons();
   });
 
-  let total;
+  let total = 0;
   let mg1, mg2, mg3, mg4, mg5, mg6, mg7, mg8;
   let mgs = [];
   switch(PGVERS) {
