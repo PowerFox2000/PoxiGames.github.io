@@ -227,11 +227,22 @@ function setupButtons() {
           mgs.push({"minigame": "Pirates", "score": player.minigames.pirates[3]});
           mgs.push({"minigame": "Race", "score": player.minigames.race[3]});
           mgs.push({"minigame": "Spleef", "score": player.minigames.spleef[3]});
+        case 4:
+          total = player.points[4];
+          
+          mgs.push({"minigame": "Battle", "score": player.minigames.battle[4]});
+          mgs.push({"minigame": "Don't fall", "score": player.minigames.dont_fall[4]});
+          mgs.push({"minigame": "Heist", "score": player.minigames.heist[4]});
+          mgs.push({"minigame": "Hunt", "score": player.minigames.hunt[4]});
+          mgs.push({"minigame": "LavaRun", "score": player.minigames.lavarun[4]});
+          mgs.push({"minigame": "Pirates", "score": player.minigames.pirates[4]});
+          mgs.push({"minigame": "Race", "score": player.minigames.race[4]});
+          mgs.push({"minigame": "Spleef", "score": player.minigames.spleef[4]});
       }
   }
 
   mgs.sort((a, b) => a.score - b.score);
-  if (total != 0) {
+  if (total == 0) {
     document.getElementById("total").innerHTML = total;
     document.getElementById("minigame1").innerHTML = "e";
     document.getElementById("minigame2").innerHTML = "l";
