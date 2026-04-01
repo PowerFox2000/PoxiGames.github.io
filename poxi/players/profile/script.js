@@ -231,7 +231,7 @@ function setupButtons() {
   }
 
   mgs.sort((a, b) => a.score - b.score);
-  if (!total == 0) {
+  if (total == 0) {
     document.getElementById("total").innerHTML = total;
     document.getElementById("minigame1").innerHTML = "e";
     document.getElementById("minigame2").innerHTML = "l";
