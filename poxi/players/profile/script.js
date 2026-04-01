@@ -231,16 +231,17 @@ function setupButtons() {
   }
 
   mgs.sort((a, b) => a.score - b.score);
-  
-  document.getElementById("total").innerHTML = total;
-  document.getElementById("minigame1").innerHTML = "e";
-  document.getElementById("minigame2").innerHTML = "l";
-  document.getElementById("minigame3").innerHTML = "l";
-  document.getElementById("minigame4").innerHTML = "o";
-  document.getElementById("minigame5").innerHTML = "g";
-  document.getElementById("minigame6").innerHTML = "u";
-  document.getElementById("minigame7").innerHTML = "y";
-  document.getElementById("minigame8").innerHTML = "s";
+  if (!total == 0) {
+    document.getElementById("total").innerHTML = total;
+    document.getElementById("minigame1").innerHTML = "e";
+    document.getElementById("minigame2").innerHTML = "l";
+    document.getElementById("minigame3").innerHTML = "l";
+    document.getElementById("minigame4").innerHTML = "o";
+    document.getElementById("minigame5").innerHTML = "g";
+    document.getElementById("minigame6").innerHTML = "u";
+    document.getElementById("minigame7").innerHTML = "y";
+    document.getElementById("minigame8").innerHTML = "s";
+  }
 
   const select1 = document.getElementById("button2");
   const select2 = document.getElementById("button3");
