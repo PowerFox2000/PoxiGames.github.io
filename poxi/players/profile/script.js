@@ -208,14 +208,14 @@ function setupButtons() {
         case 2:
           total = player.points[2];
           
-          mgs.push(player.minigames.battle[{"battle", 2}]);
-          mgs.push(player.minigames.battle[{"dont_fall", 2}]);
-          mgs.push(player.minigames.battle[{"heist", 2}]);
-          mgs.push(player.minigames.battle[{"hunt", 2}]);
-          mgs.push(player.minigames.battle[{"lavarun", 2}]);
-          mgs.push(player.minigames.battle[{"pirates", 2}]);
-          mgs.push(player.minigames.battle[{"race", 2}]);
-          mgs.push(player.minigames.battle[{"spleef", 2}]);
+          mgs.push(player.minigames.battle[{"minigame": "battle", "score": 2}]);
+          mgs.push(player.minigames.battle[{"minigame": "dont_fall", "score": 2}]);
+          mgs.push(player.minigames.battle[{"minigame": "heist", "score": 2}]);
+          mgs.push(player.minigames.battle[{"minigame": "hunt", "score": 2}]);
+          mgs.push(player.minigames.battle[{"minigame": "lavarun", "score": 2}]);
+          mgs.push(player.minigames.battle[{"minigame": "pirates", "score": 2}]);
+          mgs.push(player.minigames.battle[{"minigame": "race", "score": 2}]);
+          mgs.push(player.minigames.battle[{"minigame": "spleef", "score": 2}]);
         case 3:
           total = player.points[3];
           
