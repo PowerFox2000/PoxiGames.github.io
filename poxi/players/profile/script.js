@@ -203,6 +203,8 @@ function setupButtons() {
   let mg1, mg2, mg3, mg4, mg5, mg6, mg7, mg8;
   let mgs = [];
   switch(PGVERS) {
+    default:
+      total = 3;
     case 2:
       switch(btn2.value) {
         case 2:
