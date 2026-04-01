@@ -164,7 +164,7 @@ function getHighestAverage(json) {
 
 function getFirstSeasonText(firstSeason) {
   if (firstSeason === -1) return "Never played";
-  if (firstSeason < 5) return `Joined Poxi Games 2 season ${firstSeason + 1}`;
+  if (firstSeason < 5) return `Joined in Poxi Games 2 season ${firstSeason + 1}`;
   return `Joined Poxi Games 3 season ${firstSeason - 4}`;
 }
 
