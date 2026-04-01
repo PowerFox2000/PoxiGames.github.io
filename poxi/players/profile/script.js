@@ -208,25 +208,25 @@ function setupButtons() {
         case 2:
           total = player.points[2];
           
-          mgs.push(player.minigames.battle[{"minigame": "battle", "score": 2}]);
-          mgs.push(player.minigames.battle[{"minigame": "dont_fall", "score": 2}]);
-          mgs.push(player.minigames.battle[{"minigame": "heist", "score": 2}]);
-          mgs.push(player.minigames.battle[{"minigame": "hunt", "score": 2}]);
-          mgs.push(player.minigames.battle[{"minigame": "lavarun", "score": 2}]);
-          mgs.push(player.minigames.battle[{"minigame": "pirates", "score": 2}]);
-          mgs.push(player.minigames.battle[{"minigame": "race", "score": 2}]);
-          mgs.push(player.minigames.battle[{"minigame": "spleef", "score": 2}]);
+          mgs.push({"minigame": "Battle", "score": player.minigames.battle[2]});
+          mgs.push({"minigame": "Don't fall", "score": player.minigames.dont_fall[2]});
+          mgs.push({"minigame": "Heist", "score": player.minigames.heist[2]});
+          mgs.push({"minigame": "Hunt", "score": player.minigames.hunt[2]});
+          mgs.push({"minigame": "LavaRun", "score": player.minigames.lavarun[2]});
+          mgs.push({"minigame": "Pirates", "score": player.minigames.pirates[2]});
+          mgs.push({"minigame": "Race", "score": player.minigames.race[2]});
+          mgs.push({"minigame": "Spleef", "score": player.minigames.spleef[2]});
         case 3:
           total = player.points[3];
           
-          mgs.push(player.minigames.battle[{"minigame": "battle", "score": 3}]);
-          mgs.push(player.minigames.battle[{"minigame": "dont_fall", "score": 3}]);
-          mgs.push(player.minigames.battle[{"minigame": "heist", "score": 3}]);
-          mgs.push(player.minigames.battle[{"minigame": "hunt", "score": 3}]);
-          mgs.push(player.minigames.battle[{"minigame": "lavarun", "score": 3}]);
-          mgs.push(player.minigames.battle[{"minigame": "pirates", "score": 3}]);
-          mgs.push(player.minigames.battle[{"minigame": "race", "score": 3}]);
-          mgs.push(player.minigames.battle[{"minigame": "spleef", "score": 3}]);
+          mgs.push({"minigame": "Battle", "score": player.minigames.battle[3]});
+          mgs.push({"minigame": "Don't fall", "score": player.minigames.dont_fall[3]});
+          mgs.push({"minigame": "Heist", "score": player.minigames.heist[3]});
+          mgs.push({"minigame": "Hunt", "score": player.minigames.hunt[3]});
+          mgs.push({"minigame": "LavaRun", "score": player.minigames.lavarun[3]});
+          mgs.push({"minigame": "Pirates", "score": player.minigames.pirates[3]});
+          mgs.push({"minigame": "Race", "score": player.minigames.race[3]});
+          mgs.push({"minigame": "Spleef", "score": player.minigames.spleef[3]});
       }
   }
 
