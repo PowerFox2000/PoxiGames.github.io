@@ -199,7 +199,7 @@ function setupButtons() {
     updateButtons();
   });
 
-  let total = 0;
+  let total;
   let mg1, mg2, mg3, mg4, mg5, mg6, mg7, mg8;
   let mgs = [];
   switch(PGVERS) {
@@ -244,7 +244,7 @@ function setupButtons() {
   }
 
   mgs.sort((a, b) => a.score - b.score);
-  if (total == 0) {
+  if (total != 0) {
     document.getElementById("total").innerHTML = total;
     document.getElementById("minigame1").innerHTML = "e";
     document.getElementById("minigame2").innerHTML = "l";
