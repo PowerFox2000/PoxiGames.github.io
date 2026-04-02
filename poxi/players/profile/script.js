@@ -50,19 +50,19 @@ function renderPlayer(player) {
       <div class="grid grid-cols-1 sm:grid-cols-6 gap-0">
         <select class="button-left enabled bodyText" id="button2">
           <option hidden selected value="default">Poxi Games 2</option>
-          <option value="2">PG2S2</option>
-          <option value="3">PG2S3</option>
-          <option value="4">PG2S4</option>
-          <option value="5">PG2S5</option>
+          <option value="2">PG2 Season 2</option>
+          <option value="3">PG2 Season 3</option>
+          <option value="4">PG2 Season 4</option>
+          <option value="5">PG2 Season 5</option>
         </select>
 
         <select class="button-middle enabled bodyText" id="button3">
           <option hidden selected value="default">Poxi Games 3</option>
-          <option value="1">PG3S1</option>
-          <option value="2">PG3S2</option>
-          <option value="3" disabled>PG3S3</option>
-          <option value="4" disabled>PG3S4</option>
-          <option value="5" disabled>PG3S5</option>
+          <option value="1">PG3 Season 1</option>
+          <option value="2">PG3 Season 2</option>
+          <option value="3" disabled>PG3 Season 3</option>
+          <option value="4" disabled>PG3 Season 4</option>
+          <option value="5" disabled>PG3 Season 5</option>
         </select>
 
         <button class="button-middle bodyText" disabled>Poxi Games 4</button>
