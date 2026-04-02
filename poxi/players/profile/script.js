@@ -173,6 +173,21 @@ function formatRoles(roles) {
   return roles.join(", ").replace(/,([^,]*)$/, " and$1");
 }
 
+function changeScores(Version, Season) {
+  Season -= 1;
+  if (Version == 3) Season += 5;
+    
+  total = player.points[Season];
+  
+  mgs.push({"minigame": "Battle", "score": player.minigames.battle[Season]});
+  mgs.push({"minigame": "Don't fall", "score": player.minigames.dont_fall[Season]});
+  mgs.push({"minigame": "Heist", "score": player.minigames.heist[Season});
+  mgs.push({"minigame": "Hunt", "score": player.minigames.hunt[Season]});
+  mgs.push({"minigame": "LavaRun", "score": player.minigames.lavarun[Season]});
+  mgs.push({"minigame": "Pirates", "score": player.minigames.pirates[Season]});
+  mgs.push({"minigame": "Race", "score": player.minigames.race[Season]});
+  mgs.push({"minigame": "Spleef", "score": player.minigames.spleef[Season]});
+}
 
 function setupButtons() {
   let PGVERS = 1;
@@ -189,62 +204,22 @@ function setupButtons() {
     if (PGVERS === 3) btn3.style.background = activeStyle;
   }
 
-  btn2.addEventListener("click", () => {
+  btn2.addEventListener("change", () => {
     PGVERS = 2;
-    updateButtons();
-  });
-
-  btn3.addEventListener("click", () => {
-    PGVERS = 3;
-    updateButtons();
-  });
-
-  let total;
-  let mg1, mg2, mg3, mg4, mg5, mg6, mg7, mg8;
-  let mgs = [];
-  switch(PGVERS) {
-    default:
-      total = 3;
-    case 2:
-      switch(btn2.value) {
-        case 2:
-          total = player.points[2];
-          
-          mgs.push({"minigame": "Battle", "score": player.minigames.battle[2]});
-          mgs.push({"minigame": "Don't fall", "score": player.minigames.dont_fall[2]});
-          mgs.push({"minigame": "Heist", "score": player.minigames.heist[2]});
-          mgs.push({"minigame": "Hunt", "score": player.minigames.hunt[2]});
-          mgs.push({"minigame": "LavaRun", "score": player.minigames.lavarun[2]});
-          mgs.push({"minigame": "Pirates", "score": player.minigames.pirates[2]});
-          mgs.push({"minigame": "Race", "score": player.minigames.race[2]});
-          mgs.push({"minigame": "Spleef", "score": player.minigames.spleef[2]});
-        case 3:
-          total = player.points[3];
-          
-          mgs.push({"minigame": "Battle", "score": player.minigames.battle[3]});
-          mgs.push({"minigame": "Don't fall", "score": player.minigames.dont_fall[3]});
-          mgs.push({"minigame": "Heist", "score": player.minigames.heist[3]});
-          mgs.push({"minigame": "Hunt", "score": player.minigames.hunt[3]});
-          mgs.push({"minigame": "LavaRun", "score": player.minigames.lavarun[3]});
-          mgs.push({"minigame": "Pirates", "score": player.minigames.pirates[3]});
-          mgs.push({"minigame": "Race", "score": player.minigames.race[3]});
-          mgs.push({"minigame": "Spleef", "score": player.minigames.spleef[3]});
-        case 4:
-          total = player.points[4];
-          
-          mgs.push({"minigame": "Battle", "score": player.minigames.battle[4]});
-          mgs.push({"minigame": "Don't fall", "score": player.minigames.dont_fall[4]});
-          mgs.push({"minigame": "Heist", "score": player.minigames.heist[4]});
-          mgs.push({"minigame": "Hunt", "score": player.minigames.hunt[4]});
-          mgs.push({"minigame": "LavaRun", "score": player.minigames.lavarun[4]});
-          mgs.push({"minigame": "Pirates", "score": player.minigames.pirates[4]});
-          mgs.push({"minigame": "Race", "score": player.minigames.race[4]});
-          mgs.push({"minigame": "Spleef", "score": player.minigames.spleef[4]});
-      }
-  }
-
-  mgs.sort((a, b) => a.score - b.score);
-  if (total != 0) {
+    select1.value = "default";
+    switch (btn2.value) {
+      case 1:
+        changeScores(PGVERS, 1)
+      case 2:
+        changeScores(PGVERS, 2);
+      case 3:
+        changeScores(PGVERS, 3);
+      case 4:
+        changeScores(PGVERS, 4);
+      case 5:
+        changeScores(PGVERS, 5)
+    }
+    mgs.sort((a, b) => a.score - b.score);
     document.getElementById("total").innerHTML = total;
     document.getElementById("minigame1").innerHTML = "e";
     document.getElementById("minigame2").innerHTML = "l";
@@ -254,18 +229,43 @@ function setupButtons() {
     document.getElementById("minigame6").innerHTML = "u";
     document.getElementById("minigame7").innerHTML = "y";
     document.getElementById("minigame8").innerHTML = "s";
-  }
+    updateButtons();
+  });
+
+  btn3.addEventListener("click", () => {
+    PGVERS = 3;
+    select2.value = "default";    switch (btn2.value) {
+      case 2:
+        changeScores(PGVERS, 2);
+      case 3:
+        changeScores(PGVERS, 3);
+      case 4:
+        changeScores(PGVERS, 4);
+      case 5:
+        changeScores(PGVERS, 5)
+    }
+    mgs.sort((a, b) => a.score - b.score);
+    document.getElementById("total").innerHTML = total;
+    document.getElementById("minigame1").innerHTML = "e";
+    document.getElementById("minigame2").innerHTML = "l";
+    document.getElementById("minigame3").innerHTML = "l";
+    document.getElementById("minigame4").innerHTML = "o";
+    document.getElementById("minigame5").innerHTML = "g";
+    document.getElementById("minigame6").innerHTML = "u";
+    document.getElementById("minigame7").innerHTML = "y";
+    document.getElementById("minigame8").innerHTML = "s";
+    updateButtons();
+  });
+
+  let total;
+  let mg1, mg2, mg3, mg4, mg5, mg6, mg7, mg8;
+  let mgs = [];
+
+
 
   const select1 = document.getElementById("button2");
   const select2 = document.getElementById("button3");
   const select3 = document.getElementById("button4");
-
-  select1.addEventListener('change', () => {
-    select2.value = "default";
-  });
-  select2.addEventListener('change', () => {
-    select1.value = "default";
-  });
   
   updateButtons();
 }
