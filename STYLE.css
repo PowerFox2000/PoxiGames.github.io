@@ -61,6 +61,7 @@
 }
 .enabled {
   background: linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.03));
+  width: 10rem;
 }
 .btn-card {
   display:flex;
