@@ -209,7 +209,7 @@ function setupButtons() {
     select1.value = "default";
     switch (btn2.value) {
       case 1:
-        changeScores(PGVERS, 1)
+        changeScores(PGVERS, 1);
       case 2:
         changeScores(PGVERS, 2);
       case 3:
@@ -217,7 +217,7 @@ function setupButtons() {
       case 4:
         changeScores(PGVERS, 4);
       case 5:
-        changeScores(PGVERS, 5)
+        changeScores(PGVERS, 5);
     }
     mgs.sort((a, b) => a.score - b.score);
     document.getElementById("total").innerHTML = total;
@@ -232,9 +232,10 @@ function setupButtons() {
     updateButtons();
   });
 
-  btn3.addEventListener("click", () => {
+  btn3.addEventListener("change", () => {
     PGVERS = 3;
-    select2.value = "default";    switch (btn2.value) {
+    select2.value = "default";    
+    switch (btn2.value) {
       case 2:
         changeScores(PGVERS, 2);
       case 3:
@@ -242,7 +243,7 @@ function setupButtons() {
       case 4:
         changeScores(PGVERS, 4);
       case 5:
-        changeScores(PGVERS, 5)
+        changeScores(PGVERS, 5);
     }
     mgs.sort((a, b) => a.score - b.score);
     document.getElementById("total").innerHTML = total;
