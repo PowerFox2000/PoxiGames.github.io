@@ -197,8 +197,8 @@ function setupButtons(player) {
   btn2.addEventListener("change", () => {
     if (btn2.value === "default") return;
 
-    const resulta = changeScores(player, 2, btn2.value);
-    const result = resulta.mgs.splice(4, 1);
+    const result = changeScores(player, 2, btn2.value);
+    result.mgs.splice(4, 1);
     updateScores(result);
 
     btn3.value = "default"; // reset other select
@@ -207,8 +207,8 @@ function setupButtons(player) {
   btn3.addEventListener("change", () => {
     if (btn3.value === "default") return;
 
-    const resulta = changeScores(player, 3, btn3.value);
-    const result = resulta.mgs.splice(4, 1);
+    const result = changeScores(player, 3, btn3.value);
+    result.mgs.splice(4, 1);
     updateScores(result);
 
     btn2.value = "default"; // reset other select
