@@ -61,11 +61,13 @@ function renderPlayer(player) {
           <option hidden selected value="default">Poxi Games 3</option>
           <option value="1">PG3S1</option>
           <option value="2">PG3S2</option>
+          <option value="3" disabled>PG3S3</option>
+          <option value="4" disabled>PG3S4</option>
+          <option value="5" disabled>PG3S5</option>
         </select>
 
         <button class="button-middle bodyText" disabled>Poxi Games 4</button>
-        <button class="button-middle bodyText" disabled>Poxi Games 5</button>
-        <button class="button-right bodyText" disabled>Poxi Games 6</button>
+        <button class="button-right bodyText" disabled>Poxi Games 5</button>
       </div>
 
       <p id="total"></p>
@@ -154,6 +156,7 @@ function changeScores(player, version, season) {
     { name: "Heist", score: player.minigames.heist[season] },
     { name: "Hunt", score: player.minigames.hunt[season] },
     { name: "LavaRun", score: player.minigames.lavarun[season] },
+    { name: "Extraction", score: player.minigames.extraction[season] },
     { name: "Pirates", score: player.minigames.pirates[season] },
     { name: "Race", score: player.minigames.race[season] },
     { name: "Spleef", score: player.minigames.spleef[season] }
@@ -186,6 +189,7 @@ function setupButtons(player) {
     if (btn2.value === "default") return;
 
     const result = changeScores(player, 2, btn2.value);
+    result.splice(4, 1);
     updateScores(result);
 
     btn3.value = "default"; // reset other select
@@ -195,6 +199,7 @@ function setupButtons(player) {
     if (btn3.value === "default") return;
 
     const result = changeScores(player, 3, btn3.value);
+    result.splice(4, 1);
     updateScores(result);
 
     btn2.value = "default"; // reset other select
