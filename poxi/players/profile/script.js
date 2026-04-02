@@ -50,7 +50,6 @@ function renderPlayer(player) {
       <div class="grid grid-cols-1 sm:grid-cols-6 gap-0">
         <select class="button-left enabled bodyText" id="button2">
           <option hidden selected value="default">Poxi Games 2</option>
-          <option value="1">PG2S1</option>
           <option value="2">PG2S2</option>
           <option value="3">PG2S3</option>
           <option value="4">PG2S4</option>
