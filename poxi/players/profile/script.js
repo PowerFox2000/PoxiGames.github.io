@@ -245,9 +245,9 @@ function setupButtons(player) {
     result.mgs.splice(4, 1);
     updateScores(result);
 
-    btn2.classList.add("selected");
+    btn3.classList.add("selected");
     btn2.value = "default";
-    btn3.classList.remove("selected");
+    btn2.classList.remove("selected");
   });
 }
 
