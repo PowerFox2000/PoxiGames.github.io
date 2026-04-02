@@ -17,7 +17,14 @@
   font-weight:600
 }
 
-
+option {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  color: #000;
+  padding: 8px;
+}
 .button-left {
   padding: 1.7rem;
   margin-top: 1rem;
