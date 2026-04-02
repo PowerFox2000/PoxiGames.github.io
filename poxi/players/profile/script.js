@@ -109,7 +109,7 @@ function setupCanvas(player, json) {
 
   drawPolygon(ctx, cx, cy, maxRadius, normalized.length);
   drawPlayerData(ctx, cx, cy, normalized);
-  drawAverageData(ctx, cx, cy, normalized);
+  drawAverageData(ctx, cx, cy, json, maxRadius, highestAverage);
 
   ctx.textAlign = "center";
   ctx.fillText("Battle", cx, cy - maxRadius - 10);
