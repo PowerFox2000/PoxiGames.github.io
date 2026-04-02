@@ -125,6 +125,7 @@ function drawPolygon(ctx, cx, cy, radius, sides) {
   }
   ctx.closePath();
   
+  ctx.fillStyle = "rgba(0, 0, 0, 0)";
   ctx.strokeStyle = "rgba(200, 200, 200, 1)";
   ctx.lineWidth = 1;
   
