@@ -233,7 +233,9 @@ function setupButtons(player) {
     result.mgs.splice(4, 1);
     updateScores(result);
 
-    btn3.value = "default"; // reset other select
+    btn2.classList.add("selected");
+    btn3.value = "default";
+    btn3.classList.remove("selected");
   });
 
   btn3.addEventListener("change", () => {
@@ -243,7 +245,9 @@ function setupButtons(player) {
     result.mgs.splice(4, 1);
     updateScores(result);
 
-    btn2.value = "default"; // reset other select
+    btn2.classList.add("selected");
+    btn2.value = "default";
+    btn3.classList.remove("selected");
   });
 }
 
