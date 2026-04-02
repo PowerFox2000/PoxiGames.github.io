@@ -124,8 +124,8 @@ function drawPolygon(ctx, cx, cy, radius, sides) {
   }
   ctx.closePath();
   
-  ctx.fillStyle = rgba(200, 200, 200, 0.2);
-  ctx.strokeStyle = rgba(200, 200, 200, 1);
+  ctx.fillStyle = "rgba(200, 200, 200, 0.2)";
+  ctx.strokeStyle = "rgba(200, 200, 200, 1)";
   ctx.lineWidth = 1;
   
   ctx.fill();
@@ -142,8 +142,8 @@ function drawData(ctx, cx, cy, values) {
   });
   ctx.closePath();
   
-  ctx.fillStyle = rgba(255, 0, 0, 0.2);
-  ctx.strokeStyle = rgba(255, 0, 0, 1);
+  ctx.fillStyle = "rgba(255, 0, 0, 0.2)";
+  ctx.strokeStyle = "rgba(255, 0, 0, 1)";
   ctx.lineWidth = 1;
   
   ctx.fill();
