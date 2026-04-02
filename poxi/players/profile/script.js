@@ -181,7 +181,7 @@ function changeScores(Version, Season) {
   
   mgs.push({"minigame": "Battle", "score": player.minigames.battle[Season]});
   mgs.push({"minigame": "Don't fall", "score": player.minigames.dont_fall[Season]});
-  mgs.push({"minigame": "Heist", "score": player.minigames.heist[Season});
+  mgs.push({"minigame": "Heist", "score": player.minigames.heist[Season]});
   mgs.push({"minigame": "Hunt", "score": player.minigames.hunt[Season]});
   mgs.push({"minigame": "LavaRun", "score": player.minigames.lavarun[Season]});
   mgs.push({"minigame": "Pirates", "score": player.minigames.pirates[Season]});
