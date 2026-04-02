@@ -164,7 +164,7 @@ function getHighestAverage(json) {
 
 function getFirstSeasonText(firstSeason) {
   if (firstSeason === -1) return "Never played";
-  if (firstSeason < 5) return `Joined in Poxi Games 2 season ${firstSeason + 1}`;
+  if (firstSeason < 5) return `Joined in Poxi Games 2 Season ${firstSeason + 1}`;
   return `Joined Poxi Games 3 season ${firstSeason - 4}`;
 }
 
@@ -187,6 +187,21 @@ function changeScores(Version, Season) {
   mgs.push({"minigame": "Pirates", "score": player.minigames.pirates[Season]});
   mgs.push({"minigame": "Race", "score": player.minigames.race[Season]});
   mgs.push({"minigame": "Spleef", "score": player.minigames.spleef[Season]});
+
+  return(mgs)
+}
+
+function updateScores(mgs) {
+  mgs.sort((a, b) => a.score - b.score);
+  document.getElementById("total").innerHTML = total;
+  document.getElementById("minigame1").innerHTML = "e";
+  document.getElementById("minigame2").innerHTML = "l";
+  document.getElementById("minigame3").innerHTML = "l";
+  document.getElementById("minigame4").innerHTML = "o";
+  document.getElementById("minigame5").innerHTML = "g";
+  document.getElementById("minigame6").innerHTML = "u";
+  document.getElementById("minigame7").innerHTML = "y";
+  document.getElementById("minigame8").innerHTML = "s";
 }
 
 function setupButtons() {
@@ -209,26 +224,16 @@ function setupButtons() {
     select1.value = "default";
     switch (btn2.value) {
       case 1:
-        changeScores(PGVERS, 1);
+        updateScores(changeScores(PGVERS, 1));
       case 2:
-        changeScores(PGVERS, 2);
+        updateScores(changeScores(PGVERS, 2));
       case 3:
-        changeScores(PGVERS, 3);
+        updateScores(changeScores(PGVERS, 3));
       case 4:
-        changeScores(PGVERS, 4);
+        updateScores(changeScores(PGVERS, 4));
       case 5:
-        changeScores(PGVERS, 5);
+        updateScores(changeScores(PGVERS, 5));
     }
-    mgs.sort((a, b) => a.score - b.score);
-    document.getElementById("total").innerHTML = total;
-    document.getElementById("minigame1").innerHTML = "e";
-    document.getElementById("minigame2").innerHTML = "l";
-    document.getElementById("minigame3").innerHTML = "l";
-    document.getElementById("minigame4").innerHTML = "o";
-    document.getElementById("minigame5").innerHTML = "g";
-    document.getElementById("minigame6").innerHTML = "u";
-    document.getElementById("minigame7").innerHTML = "y";
-    document.getElementById("minigame8").innerHTML = "s";
     updateButtons();
   });
 
@@ -237,24 +242,14 @@ function setupButtons() {
     select2.value = "default";    
     switch (btn2.value) {
       case 2:
-        changeScores(PGVERS, 2);
+        updateScores(changeScores(PGVERS, 2));
       case 3:
-        changeScores(PGVERS, 3);
+        updateScores(changeScores(PGVERS, 3));
       case 4:
-        changeScores(PGVERS, 4);
+        updateScores(changeScores(PGVERS, 4));
       case 5:
-        changeScores(PGVERS, 5);
+        updateScores(changeScores(PGVERS, 5));
     }
-    mgs.sort((a, b) => a.score - b.score);
-    document.getElementById("total").innerHTML = total;
-    document.getElementById("minigame1").innerHTML = "e";
-    document.getElementById("minigame2").innerHTML = "l";
-    document.getElementById("minigame3").innerHTML = "l";
-    document.getElementById("minigame4").innerHTML = "o";
-    document.getElementById("minigame5").innerHTML = "g";
-    document.getElementById("minigame6").innerHTML = "u";
-    document.getElementById("minigame7").innerHTML = "y";
-    document.getElementById("minigame8").innerHTML = "s";
     updateButtons();
   });
 
