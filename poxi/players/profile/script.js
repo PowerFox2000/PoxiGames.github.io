@@ -108,7 +108,8 @@ function setupCanvas(player, json) {
   );
 
   drawPolygon(ctx, cx, cy, maxRadius, normalized.length);
-  drawData(ctx, cx, cy, normalized);
+  drawPlayerData(ctx, cx, cy, normalized);
+  drawAverageData(ctx, cx, cy, normalized);
 
   ctx.textAlign = "center";
   ctx.fillText("Battle", cx, cy - maxRadius - 10);
@@ -132,7 +133,7 @@ function drawPolygon(ctx, cx, cy, radius, sides) {
   ctx.stroke();
 }
 
-function drawData(ctx, cx, cy, values) {
+function drawPlayerData(ctx, cx, cy, values) {
   ctx.beginPath();
   values.forEach((value, i) => {
     const angle = (i / values.length) * Math.PI * 2 - Math.PI / 2;
@@ -142,10 +143,40 @@ function drawData(ctx, cx, cy, values) {
   });
   ctx.closePath();
   
-  ctx.fillStyle = "rgba(255, 0, 0, 0.2)";
   ctx.strokeStyle = "rgba(255, 0, 0, 1)";
   ctx.lineWidth = 1;
   
+  ctx.fill();
+  ctx.stroke();
+}
+
+function drawAverageData(ctx, cx, cy, json, maxRadius, highestAverage) {
+  const minigameKeys = Object.keys(json.players[0].minigames);
+
+  const averages = minigameKeys.map(key => {
+    const allValues = json.players.flatMap(p => p.minigames[key]);
+    return averageValid(allValues);
+  });
+
+  const normalized = averages.map(v =>
+    highestAverage > 0 ? (v / highestAverage) * maxRadius : 0
+  );
+
+  ctx.beginPath();
+
+  normalized.forEach((value, i) => {
+    const angle = (i / normalized.length) * Math.PI * 2 - Math.PI / 2;
+    const x = cx + Math.cos(angle) * value;
+    const y = cy + Math.sin(angle) * value;
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  });
+
+  ctx.closePath();
+
+  ctx.fillStyle = "rgba(255, 100, 0, 0.2)";
+  ctx.strokeStyle = "rgba(255, 100, 0, 1)";
+  ctx.lineWidth = 2;
+
   ctx.fill();
   ctx.stroke();
 }
