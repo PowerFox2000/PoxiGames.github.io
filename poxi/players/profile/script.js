@@ -230,7 +230,7 @@ function setupButtons(player) {
     if (btn2.value === "default") return;
 
     const result = changeScores(player, 2, btn2.value);
-    result.mgs.splice(4, 1);
+    result.mgs.splice(3, 1);
     updateScores(result);
 
     btn2.classList.add("selected");
