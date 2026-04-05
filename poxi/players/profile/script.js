@@ -6,7 +6,7 @@ fetch("../data.json")
 
     renderPlayer(player);
     setupCanvas("statsCanvas", player, json);
-    setupButtons(player);
+    setupButtons(json, player);
   })
   .catch(console.error);
 
@@ -206,7 +206,7 @@ function changeScores(player, version, season) {
   return { total, mgs };
 }
 
-function updateScores({ total, mgs }) {
+function updateScores(json, { total, mgs }) {
   mgs.sort((a, b) => b.score - a.score);
 
   document.getElementById("ptsIndic").textContent = `Points: `;
@@ -225,7 +225,7 @@ function updateScores({ total, mgs }) {
 
 // ------------------ BUTTONS ------------------
 
-function setupButtons(player) {
+function setupButtons(json, player) {
   const btn2 = document.getElementById("button2");
   const btn3 = document.getElementById("button3");
 
@@ -234,7 +234,7 @@ function setupButtons(player) {
 
     const result = changeScores(player, 2, btn2.value);
     result.mgs.splice(5, 1);
-    updateScores(result);
+    updateScores(json, result);
 
     btn2.classList.add("selected");
     btn3.value = "default";
