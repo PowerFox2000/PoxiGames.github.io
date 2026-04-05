@@ -38,12 +38,10 @@ function renderPlayer(player) {
       <p class="subTitle">${player.name} ⎯ Discord : ${player.discord} - ${player.discord_id}</p>
       <br />
       <p class="bodyText">${firstSeasonIndicator}</p>
-      <br />
 
       <div class="stats">
         <canvas id="statsCanvas"></canvas>
       </div>
-      <br />
 
       <p class="bodyText">${rolesIndicator}</p><br /><br/>
 
@@ -69,8 +67,8 @@ function renderPlayer(player) {
         <button class="button-right bodyText" disabled>Poxi Games 5</button>
       </div>
 
-      <p id="total"></p>
-      ${Array.from({ length: 8 }, (_, i) => `<p id="minigame${i+1}"></p>`).join("")}
+      <p class="bodyText" id="total"></p>
+      ${Array.from({ length: 8 }, (_, i) => `<p class="bodyText" id="minigame${i+1}"></p>`).join("")}
     </div>
   `;
 
