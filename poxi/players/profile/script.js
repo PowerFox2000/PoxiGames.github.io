@@ -211,6 +211,7 @@ function updateScores({ total, mgs }) {
 
   document.getElementById("ptsIndic").textContent = `Points: `;
   document.getElementById("total").textContent = `Total: ${total}`;
+  const player = getPlayerFromURL(json);
   setupCanvas("seasonCanvas", player, json);
   
   mgs.forEach((mg, i) => {
