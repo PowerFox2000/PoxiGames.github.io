@@ -67,6 +67,7 @@ function renderPlayer(player) {
         <button class="button-right bodyText" disabled>Poxi Games 5</button>
       </div>
 
+      <p class="subTitle" id="ptsIndic"></p>
       <p class="bodyText" id="total"></p>
       ${Array.from({ length: 8 }, (_, i) => `<p class="bodyText" id="minigame${i+1}"></p>`).join("")}
     </div>
@@ -207,6 +208,7 @@ function changeScores(player, version, season) {
 function updateScores({ total, mgs }) {
   mgs.sort((a, b) => b.score - a.score);
 
+  document.getElementById("ptsIndic").textContent = `Points: `;
   document.getElementById("total").textContent = `Total: ${total}`;
 
   mgs.forEach((mg, i) => {
