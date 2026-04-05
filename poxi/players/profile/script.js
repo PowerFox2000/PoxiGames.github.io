@@ -5,7 +5,7 @@ fetch("../data.json")
     if (!player) return;
 
     renderPlayer(player);
-    setupCanvas(player, json);
+    setupCanvas("statsCanvas", player, json);
     setupButtons(player);
   })
   .catch(console.error);
@@ -66,9 +66,10 @@ function renderPlayer(player) {
         <button class="button-middle bodyText" disabled>Poxi Games 4</button>
         <button class="button-right bodyText" disabled>Poxi Games 5</button>
       </div>
-
+      
       <p class="subTitle" id="ptsIndic"></p>
       <p class="bodyText" id="total"></p>
+      <canvas id="seasonCanvas"></canvas>
       ${Array.from({ length: 8 }, (_, i) => `<p class="bodyText" id="minigame${i+1}"></p>`).join("")}
     </div>
   `;
@@ -79,8 +80,8 @@ function renderPlayer(player) {
 
 // ------------------ CANVAS ------------------
 
-function setupCanvas(player, json) {
-  const canvas = document.getElementById("statsCanvas");
+function setupCanvas(canvasId, player, json) {
+  const canvas = document.getElementById(canvasId);
   if (!canvas) return;
 
   const ctx = canvas.getContext("2d");
@@ -210,7 +211,8 @@ function updateScores({ total, mgs }) {
 
   document.getElementById("ptsIndic").textContent = `Points: `;
   document.getElementById("total").textContent = `Total: ${total}`;
-
+  setupCanvas("seasonCanvas", player, json);
+  
   mgs.forEach((mg, i) => {
     const el = document.getElementById(`minigame${i + 1}`);
     if (el) {
