@@ -246,7 +246,7 @@ function setupButtons(json, player) {
 
     const result = changeScores(player, 3, btn3.value);
     result.mgs.splice(4, 1);
-    updateScores(result);
+    updateScores(json, result);
 
     btn3.classList.add("selected");
     btn2.value = "default";
