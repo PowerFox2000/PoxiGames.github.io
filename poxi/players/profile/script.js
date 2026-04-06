@@ -13,6 +13,10 @@ const VERSION_MINIGAMES = {
   3: ["battle", "dont_fall", "heist", "hunt", "lavarun", "race", "spleef"]
 };
 
+function getPlayerFromURL(json) {
+  return json.players.find(p => String(p.id) === id) || null;
+}
+
 function setupCanvas(canvasId, player, json, minigameKeys = null, seasonIndex = null) {
   const canvas = document.getElementById(canvasId);
   if (!canvas || !player || !json) return;
