@@ -14,7 +14,7 @@ fetch("../data.json")
 const MINIGAMES_VERSION = {
   1: ["race", "hunt", "battle", "heist", "lavarun", "pirates", "dont_fall", "spleef"],
   2: ["race", "hunt", "battle", "heist", "extraction", "pirates", "dont_fall", "spleef"]
-}
+};
 
 // ------------------ PLAYER ------------------
 
