@@ -111,8 +111,20 @@ function setupCanvas(canvasId, player, json) {
   drawAverageData(ctx, cx, cy, json, maxRadius, highestAverage);
 }
 
-// ✅ NEW FUNCTION
-function setupSeasonCanvas(canvasId, mgs) {
+function getSeasonAverages(json, seasonIndex) {
+  const minigameKeys = Object.keys(json.players[0].minigames);
+
+  return minigameKeys.map(key => {
+    const values = json.players
+      .map(p => p.minigames[key][seasonIndex])
+      .filter(v => v > 1); // same rule as averageValid
+
+    if (!values.length) return 0;
+
+    return values.reduce((a, b) => a + b, 0) / values.length;
+  });
+}
+function setupSeasonCanvas(canvasId, mgs, json, seasonIndex) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
 
@@ -132,13 +144,36 @@ function setupSeasonCanvas(canvasId, mgs) {
   const cy = size / 2;
   const maxRadius = 140;
 
+  // Player values
   const values = mgs.map(mg => mg.score);
-  const maxValue = Math.max(...values, 1);
 
-  const normalized = values.map(v => (v / maxValue) * maxRadius);
+  // Season averages
+  const averages = getSeasonAverages(json, seasonIndex);
+
+  const maxValue = Math.max(...values, ...averages, 1);
+
+  const normalizedPlayer = values.map(v => (v / maxValue) * maxRadius);
+  const normalizedAvg = averages.map(v => (v / maxValue) * maxRadius);
 
   drawPolygon(ctx, cx, cy, maxRadius, values.length);
-  drawPlayerData(ctx, cx, cy, normalized);
+
+  drawPlayerData(ctx, cx, cy, normalizedPlayer);
+
+  ctx.beginPath();
+  normalizedAvg.forEach((value, i) => {
+    const angle = (i / normalizedAvg.length) * Math.PI * 2 - Math.PI / 2;
+    const x = cx + Math.cos(angle) * value;
+    const y = cy + Math.sin(angle) * value;
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  });
+  ctx.closePath();
+
+  ctx.fillStyle = "rgba(255, 100, 0, 0.2)";
+  ctx.strokeStyle = "rgba(255, 100, 0, 1)";
+  ctx.lineWidth = 2;
+
+  ctx.fill();
+  ctx.stroke();
 }
 
 function drawPolygon(ctx, cx, cy, radius, sides) {
