@@ -233,15 +233,14 @@ function changeScores(player, version, season) {
 }
 
 function updateScores(json, { total, mgs }) {
-  mgs.sort((a, b) => b.score - a.score);
+  setupSeasonCanvas("seasonCanvas", mgs);
+
+  const sorted = [...mgs].sort((a, b) => b.score - a.score);
 
   document.getElementById("ptsIndic").textContent = `Points: `;
   document.getElementById("total").textContent = `Total: ${total}`;
 
-  // ✅ FIXED HERE
-  setupSeasonCanvas("seasonCanvas", mgs);
-
-  mgs.forEach((mg, i) => {
+  sorted.forEach((mg, i) => {
     const el = document.getElementById(`minigame${i + 1}`);
     if (el) {
       el.textContent = `${mg.name}: ${mg.score}`;
