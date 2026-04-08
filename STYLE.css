@@ -73,6 +73,8 @@ option {
   background: linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.05));
 }
 .btn-card {
+  white-space: nowrap;
+  overflow: hidden;
   display:flex;
   font-size: 2rem;
   align-items:center;
