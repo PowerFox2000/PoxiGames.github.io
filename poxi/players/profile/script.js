@@ -309,7 +309,7 @@ function setupButtons(json, player) {
 
     const result = changeScores(player, 3, btn3.value);
     result.mgs.splice(4, 1);
-    setTeams(player, 3, btn3.value);
+    setTeams(player, player, 3, btn3.value);
     updateScores(json, result);
 
     btn3.classList.add("selected");
