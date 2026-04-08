@@ -65,7 +65,8 @@ function renderPlayer(player) {
         <button class="button-middle bodyText" disabled>Poxi Games 4</button>
         <button class="button-right bodyText" disabled>Poxi Games 5</button>
       </div>
-      
+
+      <p class="subtitle" id="seasonTeamIndic"></p>
       <p class="subTitle" id="ptsIndic"></p>
       <p class="bodyText" id="total"></p>
       <canvas id="seasonCanvas"></canvas>
