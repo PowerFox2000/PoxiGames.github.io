@@ -269,7 +269,7 @@ function changeScores(player, version, season) {
 }
 
 function updateScores(json, { total, mgs }) {
-  setupSeasonCanvas("seasonCanvas", mgs);
+  setupSeasonCanvas("seasonCanvas", mgs, json);
 
   const sorted = [...mgs].sort((a, b) => b.score - a.score);
 
