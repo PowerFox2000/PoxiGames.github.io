@@ -129,8 +129,11 @@ canvas {
   align-items: center;
   justify-context: center;
 }
+.players a {
+  align-items: left;
+}
 .player img {
-  width: 8rem;
+  width: 6.5rem;
   margin-right: 10px;
 }
 @media (max-width: 730px) {
