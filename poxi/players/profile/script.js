@@ -319,6 +319,7 @@ function setupButtons(json, player) {
 }
 
 function setTeams(player, version, season) {
+  season = Number(season);
   var team = player.team[season + version - 1];
   document.getElementById("seasonTeamIndic").textContent = `Played in ${team} Team`;
 }
