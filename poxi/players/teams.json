@@ -35,7 +35,7 @@
       "Red": [
         "Little_Fox_2000",
         "Dragon_Sam",
-        "EarthStream325",
+        "EarthStream3321",
         1,
         29416
       ],
@@ -64,7 +64,7 @@
     {
       "Red": [
         "Little_Fox_2000",
-        "EarthStream325",
+        "EarthStream3321",
         "oIsar",
         2,
         23325
@@ -92,5 +92,35 @@
         8053
       ]
     },
+    {
+      "Red": [
+        "Little_Fox_2000",
+        "Rodald",
+        "forkloo",
+        2,
+        25879
+      ],
+      "Blue": [
+        "RealRemnant",
+        "Dragon_Sam",
+        "Darbz",
+        1,
+        25614
+      ],
+      "Purple": [
+        "dierentuin",
+        "RaccoonFish",
+        "CoolNugets325",
+        3,
+        18882
+      ],
+      "Green": [
+        "EarthStream3321",
+        "Soulgregory345",
+        "Kibiyo",
+        4,
+        9509
+      ]
+    }
   ]
 }
