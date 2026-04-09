@@ -1,0 +1,65 @@
+{
+  "seasons": [
+    {},
+    {
+      "Red": [
+        "Little_Fox_2000",
+        "Dragon_Sam",
+        "EarthStream3321",
+        3,
+        29867
+      ],
+      "Blue": [
+        "thelololguy",
+        "DuckyMCz",
+        "AlexAstro",
+        2,
+        32847
+      ],
+      "Purple": [
+        "4Koala",
+        "ChickenIsOnline",
+        "Walrus"
+        1,
+        31572
+      ],
+      "Green": [
+        "Mando",
+        "CoolNugets325",
+        "",
+        4,
+        6669        
+      ],
+    },
+    {
+      "Red": [
+        "Little_Fox_2000",
+        "Dragon_Sam",
+        "EarthStream325",
+        1,
+        29416
+      ],
+      "Blue": [
+        "DuckyMCz",
+        "SpookyCyber",
+        "AlexAstro",
+        3, 
+        11149
+      ],
+      "Purple": [
+        "thelololguy",
+        "MonkeyMan",
+        "dierentuin",
+        2, 
+        22306
+      ],
+      "Green": [
+        "CoolNugets325",
+        "Mando",
+        ".DashedPath",
+        4,
+        4541
+      ]
+    },
+  ]
+}
