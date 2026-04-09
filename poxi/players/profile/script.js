@@ -296,7 +296,7 @@ function setupButtons(json, player) {
 
     const result = changeScores(player, 2, btn2.value);
     result.mgs.splice(5, 1);
-    setTeams(json, player, 2, btn2.value);
+    setTeams(player, 2, btn2.value);
     updateScores(json, result);
 
     btn2.classList.add("selected");
@@ -309,7 +309,7 @@ function setupButtons(json, player) {
 
     const result = changeScores(player, 3, btn3.value);
     result.mgs.splice(4, 1);
-    setTeams(json, player, 3, btn3.value);
+    setTeams(player, 3, btn3.value);
     updateScores(json, result);
 
     btn3.classList.add("selected");
@@ -318,8 +318,8 @@ function setupButtons(json, player) {
   });
 }
 
-function setTeams(json, player, version, season) {
-  var team = json.player.team[season + version - 1];
+function setTeams(player, version, season) {
+  var team = player.team[season + version - 1];
   document.getElementById("seasonTeamIndic").textContent = `Played in ${team} Team`;
 }
 
