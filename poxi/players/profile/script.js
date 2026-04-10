@@ -319,10 +319,15 @@ function setupButtons(json, player) {
 }
 
 function setTeams(player, version, season) {
+  fetch("../data.json")
+  .then(r => r.json())
+  .then(json => {
   season = Number(season);
   if(version == 3) season += 5;
   var team = player.team[season - 1];
   document.getElementById("seasonTeamIndic").textContent = `Played in ${team} Team`;
+  })
+  .catch(console.error);
 }
 
 // ------------------ HELPERS ------------------
