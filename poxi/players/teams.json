@@ -19,7 +19,7 @@
       "Purple": [
         "4Koala",
         "ChickenIsOnline",
-        "Walrus"
+        "Walrus",
         1,
         31572
       ],
@@ -211,6 +211,6 @@
         4,
         9663
       ]
-    },
+    }
   ]
 }
