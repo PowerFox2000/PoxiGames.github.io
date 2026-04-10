@@ -7,6 +7,8 @@ fetch("../data.json")
     renderPlayer(player);
     setupCanvas("statsCanvas", player, json);
     setupButtons(json, player);
+    
+    updateSeasonOptions(json, player);
   })
   .catch(console.error);
 
@@ -350,6 +352,31 @@ function setTeams(player, version, season) {
     .catch(console.error);
 }
 
+function updateSeasonOptions(json, player) {
+  const btn2 = document.getElementById("button2");
+  const btn3 = document.getElementById("button3");
+
+  // Poxi Games 2 = seasons 1–5 (index 0–4)
+  [...btn2.options].forEach(opt => {
+    if (opt.value === "default") return;
+
+    const seasonIndex = Number(opt.value) - 1;
+    const allowed = playedInSeason(json, player.minecraft, seasonIndex);
+
+    opt.disabled = !allowed;
+  });
+
+  // Poxi Games 3 = seasons 6–10 (index 5–9)
+  [...btn3.options].forEach(opt => {
+    if (opt.value === "default") return;
+
+    const seasonIndex = Number(opt.value) - 1 + 5;
+    const allowed = playedInSeason(json, player.minecraft, seasonIndex);
+
+    opt.disabled = !allowed;
+  });
+}
+
 // ------------------ HELPERS ------------------
 
 function averageValid(values) {
@@ -375,4 +402,13 @@ function getFirstSeasonText(firstSeason) {
 function formatRoles(roles) {
   if (!roles.length) return "";
   return roles.join(", ").replace(/,([^,]*)$/, " and$1");
+}
+
+function playedInSeason(json, playerId, seasonIndex) {
+  const season = json.seasons[seasonIndex];
+  if (!season) return false;
+
+  return Object.values(season).some(team =>
+    team.slice(0, -2).includes(playerId)
+  );
 }
