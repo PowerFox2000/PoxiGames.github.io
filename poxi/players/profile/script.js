@@ -118,14 +118,13 @@ function getSeasonAverages(json, seasonIndex) {
   return minigameKeys.map(key => {
     const values = json.players
       .map(p => p.minigames[key][seasonIndex])
-      .filter(v => v > 1);
+      .filter(v => v > 1); // same rule as averageValid
 
     if (!values.length) return 0;
 
     return values.reduce((a, b) => a + b, 0) / values.length;
   });
 }
-
 function setupSeasonCanvas(canvasId, mgs, json, seasonIndex) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
@@ -146,7 +145,10 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex) {
   const cy = size / 2;
   const maxRadius = 140;
 
+  // Player values
   const values = mgs.map(mg => mg.score);
+
+  // Season averages
   const averages = getSeasonAverages(json, seasonIndex);
 
   const maxValue = Math.max(...values, ...averages, 1);
@@ -174,6 +176,74 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex) {
   ctx.fill();
   ctx.stroke();
 }
+
+function drawPolygon(ctx, cx, cy, radius, sides) {
+  ctx.beginPath();
+  for (let i = 0; i < sides; i++) {
+    const angle = (i / sides) * Math.PI * 2 - Math.PI / 2;
+    const x = cx + Math.cos(angle) * radius;
+    const y = cy + Math.sin(angle) * radius;
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  }
+  ctx.closePath();
+
+  ctx.fillStyle = "rgba(200, 200, 200, 0.05)";
+  ctx.strokeStyle = "rgba(200, 200, 200, 1)";
+  ctx.lineWidth = 1;
+
+  ctx.fill();
+  ctx.stroke();
+}
+
+function drawPlayerData(ctx, cx, cy, values) {
+  ctx.beginPath();
+  values.forEach((value, i) => {
+    const angle = (i / values.length) * Math.PI * 2 - Math.PI / 2;
+    const x = cx + Math.cos(angle) * value;
+    const y = cy + Math.sin(angle) * value;
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  });
+  ctx.closePath();
+
+  ctx.fillStyle = "rgba(255, 0, 0, 0.2)";
+  ctx.strokeStyle = "rgba(255, 0, 0, 1)";
+  ctx.lineWidth = 1;
+
+  ctx.fill();
+  ctx.stroke();
+}
+
+function drawAverageData(ctx, cx, cy, json, maxRadius, highestAverage) {
+  const minigameKeys = Object.keys(json.players[0].minigames);
+
+  const averages = minigameKeys.map(key => {
+    const allValues = json.players.flatMap(p => p.minigames[key]);
+    return averageValid(allValues);
+  });
+
+  const normalized = averages.map(v =>
+    highestAverage > 0 ? (v / highestAverage) * maxRadius : 0
+  );
+
+  ctx.beginPath();
+
+  normalized.forEach((value, i) => {
+    const angle = (i / normalized.length) * Math.PI * 2 - Math.PI / 2;
+    const x = cx + Math.cos(angle) * value;
+    const y = cy + Math.sin(angle) * value;
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  });
+
+  ctx.closePath();
+
+  ctx.fillStyle = "rgba(255, 100, 0, 0.2)";
+  ctx.strokeStyle = "rgba(255, 100, 0, 1)";
+  ctx.lineWidth = 2;
+
+  ctx.fill();
+  ctx.stroke();
+}
+
 
 // ------------------ SCORES ------------------
 
@@ -226,7 +296,7 @@ function setupButtons(json, player) {
 
     const result = changeScores(player, 2, btn2.value);
     result.mgs.splice(5, 1);
-    setTeams(player, 2, btn2.value, json);
+    setTeams(player, 2, btn2.value);
     updateScores(json, result);
 
     btn2.classList.add("selected");
@@ -239,7 +309,7 @@ function setupButtons(json, player) {
 
     const result = changeScores(player, 3, btn3.value);
     result.mgs.splice(4, 1);
-    setTeams(player, 3, btn3.value, json);
+    setTeams(player, 3, btn3.value);
     updateScores(json, result);
 
     btn3.classList.add("selected");
@@ -248,16 +318,18 @@ function setupButtons(json, player) {
   });
 }
 
-function setTeams(player, version, season, json) {
-  season = Number(season);
-  if(version == 3) season += 5;
-
-  var team = player.team[season - 1];
-  const placementTeam = json.seasons[season - 1].team[4];
-  const pointsTeam = json.seasons[season - 1].team[4];
-
-  document.getElementById("seasonTeamIndic").textContent =
-    `Played in ${team} Team : ${pointsTeam} -- #${placementTeam}`;
+function setTeams(player, version, season) {
+  fetch("../data.json")
+  .then(r => r.json())
+  .then(json => {
+    season = Number(season);
+    if(version == 3) season += 5;
+    var team = player.team[season - 1];
+    const placementTeam = json.seasons[season - 1].team[4];
+    const pointsTeam = json.seasons[season - 1].team[4];
+    document.getElementById("seasonTeamIndic").textContent = `Played in ${team} Team : ${pointsTeam} -- #${placementTeam}`;
+  })
+  .catch(console.error);
 }
 
 // ------------------ HELPERS ------------------
