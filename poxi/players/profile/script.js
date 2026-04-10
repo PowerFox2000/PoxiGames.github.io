@@ -31,6 +31,7 @@ function renderPlayer(player) {
 
   val.innerHTML = `
     <div class="space-y-2">
+      <link rel="icon" type="image/x-icon" href="https://mc-heads.net/head/${player.minecraft}"/>
       <img src="https://mc-heads.net/head/${player.minecraft}" />
       <p class="title">${player.minecraft} ⎯⎯ Tier ${player.tier}</p>
       <p class="subTitle">${player.name} ⎯ Discord : ${player.discord} - ${player.discord_id}</p>
@@ -46,17 +47,19 @@ function renderPlayer(player) {
       <div class="grid grid-cols-1 sm:grid-cols-4 gap-0">
         <select class="button-left enabled bodyText" id="button2">
           <option hidden selected value="default">Poxi Games 2</option>
-          <option value="2">Season 2</option>
-          <option value="3">Season 3</option>
-          <option value="4">Season 4</option>
-          <option value="5">Season 5</option>
+          <option value="2">Poxi Games 2 Season 2</option>
+          <option value="3">Poxi Games 2 Season 3</option>
+          <option value="4">Poxi Games 2 Season 4</option>
+          <option value="5">Poxi Games 2 Season 5</option>
         </select>
 
         <select class="button-middle enabled bodyText" id="button3">
           <option hidden selected value="default">Poxi Games 3</option>
-          <option value="1">Season 1</option>
-          <option value="2">Season 2</option>
-          <option value="3">Season 3</option>
+          <option value="1">Poxi Games 3 Season 1</option>
+          <option value="2">Poxi Games 3 Season 2</option>
+          <option value="3">Poxi Games 3 Season 3</option>
+          <option value="4" disabled>Poxi Games 3 Season 4</option>
+          <option value="5" disabled>Poxi Games 3 Season 5</option>
         </select>
 
         <button class="button-middle bodyText" disabled>Poxi Games 4</button>
@@ -137,20 +140,36 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex) {
   const normalizedAvg = averages.map(v => (v / maxValue) * maxRadius);
 
   drawPolygon(ctx, cx, cy, maxRadius, values.length);
+
   drawPlayerData(ctx, cx, cy, normalizedPlayer);
 
-  drawPlayerData(ctx, cx, cy, normalizedAvg); // reuse for avg (same shape)
+  ctx.beginPath();
+  normalizedAvg.forEach((value, i) => {
+    const angle = (i / normalizedAvg.length) * Math.PI * 2 - Math.PI / 2;
+    const x = cx + Math.cos(angle) * value;
+    const y = cy + Math.sin(angle) * value;
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  });
+  ctx.closePath();
+
+  ctx.fillStyle = "rgba(255, 100, 0, 0.2)";
+  ctx.strokeStyle = "rgba(255, 100, 0, 1)";
+  ctx.lineWidth = 2;
+
+  ctx.fill();
+  ctx.stroke();
 }
 
 function getSeasonAverages(json, seasonIndex) {
-  const keys = Object.keys(json.players[0].minigames);
+  const minigameKeys = Object.keys(json.players[0].minigames);
 
-  return keys.map(key => {
+  return minigameKeys.map(key => {
     const values = json.players
       .map(p => p.minigames[key][seasonIndex])
       .filter(v => v > 1);
 
     if (!values.length) return 0;
+
     return values.reduce((a, b) => a + b, 0) / values.length;
   });
 }
@@ -158,37 +177,39 @@ function getSeasonAverages(json, seasonIndex) {
 // ------------------ SCORES ------------------
 
 function changeScores(player, version, season) {
-  let index = Number(season) - 1;
-  if (version === 3) index += 5;
+  season = Number(season) - 1;
+  if (version === 3) season += 5;
 
-  const total = player.points[index];
+  const total = player.points[season];
 
   const mgs = [
-    { name: "Battle", score: player.minigames.battle[index] },
-    { name: "Don't fall", score: player.minigames.dont_fall[index] },
-    { name: "Heist", score: player.minigames.heist[index] },
-    { name: "Hunt", score: player.minigames.hunt[index] },
-    { name: "LavaRun", score: player.minigames.lavarun[index] },
-    { name: "Extraction", score: player.minigames.extraction[index] },
-    { name: "Pirates", score: player.minigames.pirates[index] },
-    { name: "Race", score: player.minigames.race[index] },
-    { name: "Spleef", score: player.minigames.spleef[index] }
+    { name: "Battle", score: player.minigames.battle[season] },
+    { name: "Don't fall", score: player.minigames.dont_fall[season] },
+    { name: "Heist", score: player.minigames.heist[season] },
+    { name: "Hunt", score: player.minigames.hunt[season] },
+    { name: "LavaRun", score: player.minigames.lavarun[season] },
+    { name: "Extraction", score: player.minigames.extraction[season] },
+    { name: "Pirates", score: player.minigames.pirates[season] },
+    { name: "Race", score: player.minigames.race[season] },
+    { name: "Spleef", score: player.minigames.spleef[season] }
   ];
 
-  return { total, mgs, seasonIndex: index };
+  return { total, mgs, seasonIndex: season }; // FIX
 }
 
 function updateScores(json, { total, mgs, seasonIndex }) {
-  setupSeasonCanvas("seasonCanvas", mgs, json, seasonIndex);
+  setupSeasonCanvas("seasonCanvas", mgs, json, seasonIndex); // FIX
 
   const sorted = [...mgs].sort((a, b) => b.score - a.score);
 
-  document.getElementById("ptsIndic").textContent = `Points:`;
+  document.getElementById("ptsIndic").textContent = `Points: `;
   document.getElementById("total").textContent = `Total: ${total}`;
 
   sorted.forEach((mg, i) => {
     const el = document.getElementById(`minigame${i + 1}`);
-    if (el) el.textContent = `${mg.name}: ${mg.score}`;
+    if (el) {
+      el.textContent = `${mg.name}: ${mg.score}`;
+    }
   });
 }
 
@@ -202,7 +223,8 @@ function setupButtons(json, player) {
     if (btn2.value === "default") return;
 
     const result = changeScores(player, 2, btn2.value);
-    setTeams(player, 2, btn2.value, json);
+    result.mgs.splice(5, 1);
+    setTeams(player, 2, btn2.value, json); // FIX
     updateScores(json, result);
 
     btn2.classList.add("selected");
@@ -214,7 +236,8 @@ function setupButtons(json, player) {
     if (btn3.value === "default") return;
 
     const result = changeScores(player, 3, btn3.value);
-    setTeams(player, 3, btn3.value, json);
+    result.mgs.splice(4, 1);
+    setTeams(player, 3, btn3.value, json); // FIX
     updateScores(json, result);
 
     btn3.classList.add("selected");
@@ -224,19 +247,17 @@ function setupButtons(json, player) {
 }
 
 function setTeams(player, version, season, json) {
-  let index = Number(season) - 1;
-  if (version === 3) index += 5;
+  season = Number(season);
+  if(version == 3) season += 5;
 
-  const team = player.team[index];
-  const seasonData = json.seasons[index];
+  const index = season - 1;
 
-  if (!seasonData) return;
-
-  const placement = seasonData.team?.[4];
-  const points = seasonData.team?.[3];
+  var team = player.team[index];
+  const placementTeam = json.seasons[index]?.team?.[4];
+  const pointsTeam = json.seasons[index]?.team?.[3]; // FIX
 
   document.getElementById("seasonTeamIndic").textContent =
-    `Played in ${team} Team : ${points} pts — #${placement}`;
+    `Played in ${team} Team : ${pointsTeam} -- #${placementTeam}`;
 }
 
 // ------------------ HELPERS ------------------
