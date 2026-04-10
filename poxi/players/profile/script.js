@@ -7,6 +7,8 @@ fetch("../data.json")
     renderPlayer(player);
     setupCanvas("statsCanvas", player, json);
     setupButtons(json, player);
+    
+    updateSeasonOptions(player);
   })
   .catch(console.error);
 
@@ -319,17 +321,29 @@ function setupButtons(json, player) {
 }
 
 function setTeams(player, version, season) {
-  fetch("../data.json")
-  .then(r => r.json())
-  .then(json => {
-    season = Number(season);
-    if(version == 3) season += 5;
-    var team = player.team[season - 1];
-    const placementTeam = json.seasons[season - 1].team[4];
-    const pointsTeam = json.seasons[season - 1].team[4];
-    document.getElementById("seasonTeamIndic").textContent = `Played in ${team} Team : ${pointsTeam} -- #${placementTeam}`;
-  })
-  .catch(console.error);
+  fetch("../teams.json")
+    .then(r => r.json())
+    .then(json => {
+      season = Number(season);
+      if (version == 3) season += 5;
+
+      const seasonData = json.seasons[season - 1];
+      if (!seasonData) return;
+
+      for (const [teamName, teamData] of Object.entries(seasonData)) {
+        const players = teamData.slice(0, -2);
+
+        if (players.includes(player.minecraft)) {
+          const placement = teamData[teamData.length - 2];
+          const points = teamData[teamData.length - 1];
+
+          document.getElementById("seasonTeamIndic").textContent =
+            `Played in ${teamName} Team : ${points} -- #${placement}`;
+          return;
+        }
+      }
+    })
+    .catch(console.error);
 }
 
 // ------------------ HELPERS ------------------
@@ -357,4 +371,46 @@ function getFirstSeasonText(firstSeason) {
 function formatRoles(roles) {
   if (!roles.length) return "";
   return roles.join(", ").replace(/,([^,]*)$/, " and$1");
+}
+function playedInSeason(teamsJson, playerId, seasonIndex) {
+  const season = teamsJson.seasons[seasonIndex];
+  if (!season) return false;
+
+  return Object.values(season).some(team =>
+    team.slice(0, -2).includes(playerId)
+  );
+}
+
+function updateSeasonOptions(player) {
+  fetch("../teams.json")
+    .then(r => r.json())
+    .then(json => {
+
+      const btn2 = document.getElementById("button2");
+      const btn3 = document.getElementById("button3");
+
+      if (!btn2 || !btn3) return;
+
+      // Poxi Games 2
+      [...btn2.options].forEach(opt => {
+        if (opt.value === "default") return;
+
+        const seasonIndex = Number(opt.value) - 1;
+        const allowed = playedInSeason(json, player.minecraft, seasonIndex);
+
+        opt.disabled = !allowed;
+      });
+
+      // Poxi Games 3
+      [...btn3.options].forEach(opt => {
+        if (opt.value === "default") return;
+
+        const seasonIndex = Number(opt.value) - 1 + 5;
+        const allowed = playedInSeason(json, player.minecraft, seasonIndex);
+
+        opt.disabled = !allowed;
+      });
+
+    })
+    .catch(console.error);
 }
