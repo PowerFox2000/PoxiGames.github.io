@@ -322,10 +322,12 @@ function setTeams(player, version, season) {
   fetch("../data.json")
   .then(r => r.json())
   .then(json => {
-  season = Number(season);
-  if(version == 3) season += 5;
-  var team = player.team[season - 1];
-  document.getElementById("seasonTeamIndic").textContent = `Played in ${team} Team`;
+    season = Number(season);
+    if(version == 3) season += 5;
+    var team = player.team[season - 1];
+    const placementTeam = json.seasons[season - 1].team[4];
+    const pointsTeam = json.seasons[season - 1].team[4];
+    document.getElementById("seasonTeamIndic").textContent = `Played in ${team} Team : ${pointsTeam} -- #${placementTeam}`;
   })
   .catch(console.error);
 }
