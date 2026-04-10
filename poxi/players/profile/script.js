@@ -15,7 +15,7 @@ fetch("../data.json")
 function getPlayerFromURL(json) {
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
-  return json.players?.find(p => p.minecraft === id);
+  return json.players.find(p => p.minecraft === id);
 }
 
 function renderPlayer(player) {
@@ -77,11 +77,12 @@ function renderPlayer(player) {
   document.querySelector(".infos").appendChild(val);
 }
 
+
 // ------------------ CANVAS ------------------
 
 function setupCanvas(canvasId, player, json) {
   const canvas = document.getElementById(canvasId);
-  if (!canvas || !canvas.getContext) return;
+  if (!canvas) return;
 
   const ctx = canvas.getContext("2d");
 
@@ -111,9 +112,23 @@ function setupCanvas(canvasId, player, json) {
   drawAverageData(ctx, cx, cy, json, maxRadius, highestAverage);
 }
 
+function getSeasonAverages(json, seasonIndex) {
+  const minigameKeys = Object.keys(json.players[0].minigames);
+
+  return minigameKeys.map(key => {
+    const values = json.players
+      .map(p => p.minigames[key][seasonIndex])
+      .filter(v => v > 1);
+
+    if (!values.length) return 0;
+
+    return values.reduce((a, b) => a + b, 0) / values.length;
+  });
+}
+
 function setupSeasonCanvas(canvasId, mgs, json, seasonIndex) {
   const canvas = document.getElementById(canvasId);
-  if (!canvas || !canvas.getContext) return;
+  if (!canvas) return;
 
   const ctx = canvas.getContext("2d");
 
@@ -160,20 +175,6 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex) {
   ctx.stroke();
 }
 
-function getSeasonAverages(json, seasonIndex) {
-  const minigameKeys = Object.keys(json.players[0].minigames);
-
-  return minigameKeys.map(key => {
-    const values = json.players
-      .map(p => p.minigames[key][seasonIndex])
-      .filter(v => v > 1);
-
-    if (!values.length) return 0;
-
-    return values.reduce((a, b) => a + b, 0) / values.length;
-  });
-}
-
 // ------------------ SCORES ------------------
 
 function changeScores(player, version, season) {
@@ -194,11 +195,11 @@ function changeScores(player, version, season) {
     { name: "Spleef", score: player.minigames.spleef[season] }
   ];
 
-  return { total, mgs, seasonIndex: season }; // FIX
+  return { total, mgs };
 }
 
-function updateScores(json, { total, mgs, seasonIndex }) {
-  setupSeasonCanvas("seasonCanvas", mgs, json, seasonIndex); // FIX
+function updateScores(json, { total, mgs }) {
+  setupSeasonCanvas("seasonCanvas", mgs, json);
 
   const sorted = [...mgs].sort((a, b) => b.score - a.score);
 
@@ -213,6 +214,7 @@ function updateScores(json, { total, mgs, seasonIndex }) {
   });
 }
 
+
 // ------------------ BUTTONS ------------------
 
 function setupButtons(json, player) {
@@ -224,7 +226,7 @@ function setupButtons(json, player) {
 
     const result = changeScores(player, 2, btn2.value);
     result.mgs.splice(5, 1);
-    setTeams(player, 2, btn2.value, json); // FIX
+    setTeams(player, 2, btn2.value, json);
     updateScores(json, result);
 
     btn2.classList.add("selected");
@@ -237,7 +239,7 @@ function setupButtons(json, player) {
 
     const result = changeScores(player, 3, btn3.value);
     result.mgs.splice(4, 1);
-    setTeams(player, 3, btn3.value, json); // FIX
+    setTeams(player, 3, btn3.value, json);
     updateScores(json, result);
 
     btn3.classList.add("selected");
@@ -250,11 +252,9 @@ function setTeams(player, version, season, json) {
   season = Number(season);
   if(version == 3) season += 5;
 
-  const index = season - 1;
-
-  var team = player.team[index];
-  const placementTeam = json.seasons[index]?.team?.[4];
-  const pointsTeam = json.seasons[index]?.team?.[3]; // FIX
+  var team = player.team[season - 1];
+  const placementTeam = json.seasons[season - 1].team[4];
+  const pointsTeam = json.seasons[season - 1].team[4];
 
   document.getElementById("seasonTeamIndic").textContent =
     `Played in ${team} Team : ${pointsTeam} -- #${placementTeam}`;
