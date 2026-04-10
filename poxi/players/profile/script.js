@@ -15,7 +15,7 @@ fetch("../data.json")
 function getPlayerFromURL(json) {
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
-  return json.players.find(p => p.minecraft === id);
+  return json.players?.find(p => p.minecraft === id);
 }
 
 function renderPlayer(player) {
@@ -31,7 +31,6 @@ function renderPlayer(player) {
 
   val.innerHTML = `
     <div class="space-y-2">
-      <link rel="icon" type="image/x-icon" href="https://mc-heads.net/head/${player.minecraft}"/>
       <img src="https://mc-heads.net/head/${player.minecraft}" />
       <p class="title">${player.minecraft} ⎯⎯ Tier ${player.tier}</p>
       <p class="subTitle">${player.name} ⎯ Discord : ${player.discord} - ${player.discord_id}</p>
@@ -47,19 +46,17 @@ function renderPlayer(player) {
       <div class="grid grid-cols-1 sm:grid-cols-4 gap-0">
         <select class="button-left enabled bodyText" id="button2">
           <option hidden selected value="default">Poxi Games 2</option>
-          <option value="2">Poxi Games 2 Season 2</option>
-          <option value="3">Poxi Games 2 Season 3</option>
-          <option value="4">Poxi Games 2 Season 4</option>
-          <option value="5">Poxi Games 2 Season 5</option>
+          <option value="2">Season 2</option>
+          <option value="3">Season 3</option>
+          <option value="4">Season 4</option>
+          <option value="5">Season 5</option>
         </select>
 
         <select class="button-middle enabled bodyText" id="button3">
           <option hidden selected value="default">Poxi Games 3</option>
-          <option value="1">Poxi Games 3 Season 1</option>
-          <option value="2">Poxi Games 3 Season 2</option>
-          <option value="3">Poxi Games 3 Season 3</option>
-          <option value="4" disabled>Poxi Games 3 Season 4</option>
-          <option value="5" disabled>Poxi Games 3 Season 5</option>
+          <option value="1">Season 1</option>
+          <option value="2">Season 2</option>
+          <option value="3">Season 3</option>
         </select>
 
         <button class="button-middle bodyText" disabled>Poxi Games 4</button>
@@ -77,12 +74,11 @@ function renderPlayer(player) {
   document.querySelector(".infos").appendChild(val);
 }
 
-
 // ------------------ CANVAS ------------------
 
 function setupCanvas(canvasId, player, json) {
   const canvas = document.getElementById(canvasId);
-  if (!canvas) return;
+  if (!canvas || !canvas.getContext) return;
 
   const ctx = canvas.getContext("2d");
 
@@ -112,22 +108,9 @@ function setupCanvas(canvasId, player, json) {
   drawAverageData(ctx, cx, cy, json, maxRadius, highestAverage);
 }
 
-function getSeasonAverages(json, seasonIndex) {
-  const minigameKeys = Object.keys(json.players[0].minigames);
-
-  return minigameKeys.map(key => {
-    const values = json.players
-      .map(p => p.minigames[key][seasonIndex])
-      .filter(v => v > 1); // same rule as averageValid
-
-    if (!values.length) return 0;
-
-    return values.reduce((a, b) => a + b, 0) / values.length;
-  });
-}
 function setupSeasonCanvas(canvasId, mgs, json, seasonIndex) {
   const canvas = document.getElementById(canvasId);
-  if (!canvas) return;
+  if (!canvas || !canvas.getContext) return;
 
   const ctx = canvas.getContext("2d");
 
@@ -145,10 +128,7 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex) {
   const cy = size / 2;
   const maxRadius = 140;
 
-  // Player values
   const values = mgs.map(mg => mg.score);
-
-  // Season averages
   const averages = getSeasonAverages(json, seasonIndex);
 
   const maxValue = Math.max(...values, ...averages, 1);
@@ -157,133 +137,60 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex) {
   const normalizedAvg = averages.map(v => (v / maxValue) * maxRadius);
 
   drawPolygon(ctx, cx, cy, maxRadius, values.length);
-
   drawPlayerData(ctx, cx, cy, normalizedPlayer);
 
-  ctx.beginPath();
-  normalizedAvg.forEach((value, i) => {
-    const angle = (i / normalizedAvg.length) * Math.PI * 2 - Math.PI / 2;
-    const x = cx + Math.cos(angle) * value;
-    const y = cy + Math.sin(angle) * value;
-    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-  });
-  ctx.closePath();
-
-  ctx.fillStyle = "rgba(255, 100, 0, 0.2)";
-  ctx.strokeStyle = "rgba(255, 100, 0, 1)";
-  ctx.lineWidth = 2;
-
-  ctx.fill();
-  ctx.stroke();
+  drawPlayerData(ctx, cx, cy, normalizedAvg); // reuse for avg (same shape)
 }
 
-function drawPolygon(ctx, cx, cy, radius, sides) {
-  ctx.beginPath();
-  for (let i = 0; i < sides; i++) {
-    const angle = (i / sides) * Math.PI * 2 - Math.PI / 2;
-    const x = cx + Math.cos(angle) * radius;
-    const y = cy + Math.sin(angle) * radius;
-    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-  }
-  ctx.closePath();
+function getSeasonAverages(json, seasonIndex) {
+  const keys = Object.keys(json.players[0].minigames);
 
-  ctx.fillStyle = "rgba(200, 200, 200, 0.05)";
-  ctx.strokeStyle = "rgba(200, 200, 200, 1)";
-  ctx.lineWidth = 1;
+  return keys.map(key => {
+    const values = json.players
+      .map(p => p.minigames[key][seasonIndex])
+      .filter(v => v > 1);
 
-  ctx.fill();
-  ctx.stroke();
-}
-
-function drawPlayerData(ctx, cx, cy, values) {
-  ctx.beginPath();
-  values.forEach((value, i) => {
-    const angle = (i / values.length) * Math.PI * 2 - Math.PI / 2;
-    const x = cx + Math.cos(angle) * value;
-    const y = cy + Math.sin(angle) * value;
-    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    if (!values.length) return 0;
+    return values.reduce((a, b) => a + b, 0) / values.length;
   });
-  ctx.closePath();
-
-  ctx.fillStyle = "rgba(255, 0, 0, 0.2)";
-  ctx.strokeStyle = "rgba(255, 0, 0, 1)";
-  ctx.lineWidth = 1;
-
-  ctx.fill();
-  ctx.stroke();
 }
-
-function drawAverageData(ctx, cx, cy, json, maxRadius, highestAverage) {
-  const minigameKeys = Object.keys(json.players[0].minigames);
-
-  const averages = minigameKeys.map(key => {
-    const allValues = json.players.flatMap(p => p.minigames[key]);
-    return averageValid(allValues);
-  });
-
-  const normalized = averages.map(v =>
-    highestAverage > 0 ? (v / highestAverage) * maxRadius : 0
-  );
-
-  ctx.beginPath();
-
-  normalized.forEach((value, i) => {
-    const angle = (i / normalized.length) * Math.PI * 2 - Math.PI / 2;
-    const x = cx + Math.cos(angle) * value;
-    const y = cy + Math.sin(angle) * value;
-    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-  });
-
-  ctx.closePath();
-
-  ctx.fillStyle = "rgba(255, 100, 0, 0.2)";
-  ctx.strokeStyle = "rgba(255, 100, 0, 1)";
-  ctx.lineWidth = 2;
-
-  ctx.fill();
-  ctx.stroke();
-}
-
 
 // ------------------ SCORES ------------------
 
 function changeScores(player, version, season) {
-  season = Number(season) - 1;
-  if (version === 3) season += 5;
+  let index = Number(season) - 1;
+  if (version === 3) index += 5;
 
-  const total = player.points[season];
+  const total = player.points[index];
 
   const mgs = [
-    { name: "Battle", score: player.minigames.battle[season] },
-    { name: "Don't fall", score: player.minigames.dont_fall[season] },
-    { name: "Heist", score: player.minigames.heist[season] },
-    { name: "Hunt", score: player.minigames.hunt[season] },
-    { name: "LavaRun", score: player.minigames.lavarun[season] },
-    { name: "Extraction", score: player.minigames.extraction[season] },
-    { name: "Pirates", score: player.minigames.pirates[season] },
-    { name: "Race", score: player.minigames.race[season] },
-    { name: "Spleef", score: player.minigames.spleef[season] }
+    { name: "Battle", score: player.minigames.battle[index] },
+    { name: "Don't fall", score: player.minigames.dont_fall[index] },
+    { name: "Heist", score: player.minigames.heist[index] },
+    { name: "Hunt", score: player.minigames.hunt[index] },
+    { name: "LavaRun", score: player.minigames.lavarun[index] },
+    { name: "Extraction", score: player.minigames.extraction[index] },
+    { name: "Pirates", score: player.minigames.pirates[index] },
+    { name: "Race", score: player.minigames.race[index] },
+    { name: "Spleef", score: player.minigames.spleef[index] }
   ];
 
-  return { total, mgs };
+  return { total, mgs, seasonIndex: index };
 }
 
-function updateScores(json, { total, mgs }) {
-  setupSeasonCanvas("seasonCanvas", mgs, json);
+function updateScores(json, { total, mgs, seasonIndex }) {
+  setupSeasonCanvas("seasonCanvas", mgs, json, seasonIndex);
 
   const sorted = [...mgs].sort((a, b) => b.score - a.score);
 
-  document.getElementById("ptsIndic").textContent = `Points: `;
+  document.getElementById("ptsIndic").textContent = `Points:`;
   document.getElementById("total").textContent = `Total: ${total}`;
 
   sorted.forEach((mg, i) => {
     const el = document.getElementById(`minigame${i + 1}`);
-    if (el) {
-      el.textContent = `${mg.name}: ${mg.score}`;
-    }
+    if (el) el.textContent = `${mg.name}: ${mg.score}`;
   });
 }
-
 
 // ------------------ BUTTONS ------------------
 
@@ -295,8 +202,7 @@ function setupButtons(json, player) {
     if (btn2.value === "default") return;
 
     const result = changeScores(player, 2, btn2.value);
-    result.mgs.splice(5, 1);
-    setTeams(player, 2, btn2.value);
+    setTeams(player, 2, btn2.value, json);
     updateScores(json, result);
 
     btn2.classList.add("selected");
@@ -308,8 +214,7 @@ function setupButtons(json, player) {
     if (btn3.value === "default") return;
 
     const result = changeScores(player, 3, btn3.value);
-    result.mgs.splice(4, 1);
-    setTeams(player, 3, btn3.value);
+    setTeams(player, 3, btn3.value, json);
     updateScores(json, result);
 
     btn3.classList.add("selected");
@@ -318,18 +223,20 @@ function setupButtons(json, player) {
   });
 }
 
-function setTeams(player, version, season) {
-  fetch("../data.json")
-  .then(r => r.json())
-  .then(json => {
-    season = Number(season);
-    if(version == 3) season += 5;
-    var team = player.team[season - 1];
-    const placementTeam = json.seasons[season - 1].team[4];
-    const pointsTeam = json.seasons[season - 1].team[4];
-    document.getElementById("seasonTeamIndic").textContent = `Played in ${team} Team : ${pointsTeam} -- #${placementTeam}`;
-  })
-  .catch(console.error);
+function setTeams(player, version, season, json) {
+  let index = Number(season) - 1;
+  if (version === 3) index += 5;
+
+  const team = player.team[index];
+  const seasonData = json.seasons[index];
+
+  if (!seasonData) return;
+
+  const placement = seasonData.team?.[4];
+  const points = seasonData.team?.[3];
+
+  document.getElementById("seasonTeamIndic").textContent =
+    `Played in ${team} Team : ${points} pts — #${placement}`;
 }
 
 // ------------------ HELPERS ------------------
