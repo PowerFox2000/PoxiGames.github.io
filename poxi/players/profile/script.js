@@ -317,19 +317,37 @@ function setupButtons(json, player) {
     btn2.classList.remove("selected");
   });
 }
-
 function setTeams(player, version, season) {
-  fetch("../data.json")
-  .then(r => r.json())
-  .then(json => {
-    season = Number(season);
-    if(version == 3) season += 5;
-    var team = player.team[season - 1];
-    const placementTeam = json.seasons[season - 1].team[4];
-    const pointsTeam = json.seasons[season - 1].team[4];
-    document.getElementById("seasonTeamIndic").textContent = `Played in ${team} Team : ${pointsTeam} -- #${placementTeam}`;
-  })
-  .catch(console.error);
+  fetch("../teams.json")
+    .then(r => r.json())
+    .then(json => {
+      season = Number(season);
+      if (version == 3) season += 5;
+
+      const seasonData = json.seasons[season - 1];
+      if (!seasonData) return;
+
+      let foundTeam = null;
+      let placement = null;
+      let points = null;
+
+      for (const [teamName, teamData] of Object.entries(seasonData)) {
+        const players = teamData.slice(0, -2);
+
+        if (players.includes(player.minecraft)) {
+          foundTeam = teamName;
+          placement = teamData[teamData.length - 2];
+          points = teamData[teamData.length - 1];
+          break;
+        }
+      }
+
+      document.getElementById("seasonTeamIndic").textContent =
+        foundTeam
+          ? `Played in ${foundTeam} Team : ${points} -- #${placement}`
+          : "Team not found";
+    })
+    .catch(console.error);
 }
 
 // ------------------ HELPERS ------------------
