@@ -36,8 +36,10 @@ function renderPlayer(player) {
       <link rel="icon" type="image/x-icon" href="https://mc-heads.net/head/${player.minecraft}"/>
       <canvas id="statsCanvas"></canvas>
       <img src="https://mc-heads.net/head/${player.minecraft}" />
-      <p class="title">${player.minecraft} ⎯⎯ Tier ${player.tier}</p>
-      <p class="subTitle">${player.name} ⎯ Discord : ${player.discord} - ${player.discord_id}</p>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <p class="title">${player.minecraft} ⎯⎯ Tier ${player.tier}</p>
+        <p class="subTitle">${player.name} ⎯ Discord : ${player.discord} - ${player.discord_id}</p>
+        </div>
       <br />
       <p class="bodyText">${firstSeasonIndicator}</p>
 
