@@ -34,15 +34,13 @@ function renderPlayer(player) {
   val.innerHTML = `
     <div class="space-y-2">
       <link rel="icon" type="image/x-icon" href="https://mc-heads.net/head/${player.minecraft}"/>
+      <canvas id="statsCanvas"></canvas>
       <img src="https://mc-heads.net/head/${player.minecraft}" />
       <p class="title">${player.minecraft} ⎯⎯ Tier ${player.tier}</p>
       <p class="subTitle">${player.name} ⎯ Discord : ${player.discord} - ${player.discord_id}</p>
       <br />
       <p class="bodyText">${firstSeasonIndicator}</p>
 
-      <div class="stats">
-        <canvas id="statsCanvas"></canvas>
-      </div>
 
       <p class="bodyText">${rolesIndicator}</p><br /><br/>
 
