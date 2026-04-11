@@ -136,32 +136,40 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, highestAverage, ver
   );
 
   const ctx = canvas.getContext("2d");
-
+  
   const size = 300;
   const dpr = window.devicePixelRatio || 1;
-
+  
   canvas.width = size * dpr;
   canvas.height = size * dpr;
   canvas.style.width = size + "px";
   canvas.style.height = size + "px";
-
+  
   ctx.scale(dpr, dpr);
-
+  
   const cx = size / 2;
   const cy = size / 2;
-  const maxRadius = 140;
+  const maxRadius = 140; // <-- MUST be before usage
 
   // Player values
   const values = mgs.map(mg => mg.score);
-
+  
   // Season averages
   const averages = getSeasonAverages(json, seasonIndex);
   
+  // Version averages (MOVE HERE)
+  const versionAvg = getVersionAverages(json, version);
+  
+  // Normalizations
   const normalizedPlayer = values.map(v =>
     highestAverage > 0 ? (v / highestAverage) * maxRadius : 0
   );
   
   const normalizedAvg = averages.map(v =>
+    highestAverage > 0 ? (v / highestAverage) * maxRadius : 0
+  );
+  
+  const normalizedVersion = versionAvg.map(v =>
     highestAverage > 0 ? (v / highestAverage) * maxRadius : 0
   );
   drawPolygon(ctx, cx, cy, maxRadius, values.length);
