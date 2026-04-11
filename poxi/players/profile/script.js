@@ -125,7 +125,7 @@ function getSeasonAverages(json, seasonIndex) {
     return values.reduce((a, b) => a + b, 0) / values.length;
   });
 }
-function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, highestAverage)
+function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, highestAverage) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
 
