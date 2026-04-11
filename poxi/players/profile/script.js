@@ -130,52 +130,50 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, highestAverage, ver
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
 
-  const versionAvg = getVersionAverages(json, version);
-  const normalizedVersion = versionAvg.map(v =>
-    highestAverage > 0 ? (v / highestAverage) * maxRadius : 0
-  );
-
   const ctx = canvas.getContext("2d");
-  
+
   const size = 300;
   const dpr = window.devicePixelRatio || 1;
-  
+
   canvas.width = size * dpr;
   canvas.height = size * dpr;
   canvas.style.width = size + "px";
   canvas.style.height = size + "px";
-  
+
   ctx.scale(dpr, dpr);
-  
+
   const cx = size / 2;
   const cy = size / 2;
-  const maxRadius = 140; // <-- MUST be before usage
+  const maxRadius = 140;
 
-  // Player values
+  // ---------------- DATA ----------------
+
   const values = mgs.map(mg => mg.score);
-  
-  // Season averages
   const averages = getSeasonAverages(json, seasonIndex);
-  
-  // Version averages (MOVE HERE)
   const versionAvg = getVersionAverages(json, version);
-  
-  // Normalizations
+
+  // ---------------- NORMALIZATION ----------------
+
   const normalizedPlayer = values.map(v =>
     highestAverage > 0 ? (v / highestAverage) * maxRadius : 0
   );
-  
+
   const normalizedAvg = averages.map(v =>
     highestAverage > 0 ? (v / highestAverage) * maxRadius : 0
   );
-  
+
   const normalizedVersion = versionAvg.map(v =>
     highestAverage > 0 ? (v / highestAverage) * maxRadius : 0
   );
+
+  // ---------------- DRAW ----------------
+
   drawPolygon(ctx, cx, cy, maxRadius, values.length);
 
+  // Player (red)
   drawPlayerData(ctx, cx, cy, normalizedPlayer);
 
+  // Season average (orange)
   ctx.beginPath();
   normalizedAvg.forEach((value, i) => {
     const angle = (i / normalizedAvg.length) * Math.PI * 2 - Math.PI / 2;
@@ -188,25 +186,22 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, highestAverage, ver
   ctx.fillStyle = "rgba(255, 100, 0, 0.2)";
   ctx.strokeStyle = "rgba(255, 100, 0, 1)";
   ctx.lineWidth = 2;
-
   ctx.fill();
   ctx.stroke();
 
+  // Version average (blue)
   ctx.beginPath();
-
   normalizedVersion.forEach((value, i) => {
     const angle = (i / normalizedVersion.length) * Math.PI * 2 - Math.PI / 2;
     const x = cx + Math.cos(angle) * value;
     const y = cy + Math.sin(angle) * value;
     i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
   });
-  
   ctx.closePath();
-  
+
   ctx.fillStyle = "rgba(0, 150, 255, 0.2)";
   ctx.strokeStyle = "rgba(0, 150, 255, 1)";
   ctx.lineWidth = 2;
-  
   ctx.fill();
   ctx.stroke();
 }
