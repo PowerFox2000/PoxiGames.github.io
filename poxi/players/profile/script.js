@@ -125,9 +125,15 @@ function getSeasonAverages(json, seasonIndex) {
     return values.reduce((a, b) => a + b, 0) / values.length;
   });
 }
-function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, highestAverage) {
+
+function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, highestAverage, version) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
+
+  const versionAvg = getVersionAverages(json, version);
+  const normalizedVersion = versionAvg.map(v =>
+    highestAverage > 0 ? (v / highestAverage) * maxRadius : 0
+  );
 
   const ctx = canvas.getContext("2d");
 
@@ -177,6 +183,41 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, highestAverage) {
 
   ctx.fill();
   ctx.stroke();
+
+  ctx.beginPath();
+
+  normalizedVersion.forEach((value, i) => {
+    const angle = (i / normalizedVersion.length) * Math.PI * 2 - Math.PI / 2;
+    const x = cx + Math.cos(angle) * value;
+    const y = cy + Math.sin(angle) * value;
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  });
+  
+  ctx.closePath();
+  
+  ctx.fillStyle = "rgba(0, 150, 255, 0.2)";
+  ctx.strokeStyle = "rgba(0, 150, 255, 1)";
+  ctx.lineWidth = 2;
+  
+  ctx.fill();
+  ctx.stroke();
+}
+
+function getVersionAverages(json, version) {
+  const keys = Object.keys(json.players[0].minigames);
+
+  const start = version === 2 ? 0 : 5;
+  const end = version === 2 ? 5 : 10;
+
+  return keys.map(key => {
+    const values = json.players.flatMap(p =>
+      p.minigames[key].slice(start, end)
+    ).filter(v => v > 1);
+
+    if (!values.length) return 0;
+
+    return values.reduce((a, b) => a + b, 0) / values.length;
+  });
 }
 
 function drawPolygon(ctx, cx, cy, radius, sides) {
@@ -267,13 +308,20 @@ function changeScores(player, version, season) {
     { name: "Spleef", score: player.minigames.spleef[seasonIndex] }
   ];
 
-  return { total, mgs, seasonIndex };
+  return { total, mgs, seasonIndex, version };
 }
 
-function updateScores(json, { total, mgs, seasonIndex }) {
+function updateScores(json, { total, mgs, seasonIndex, version }) {
   const highestAverage = getHighestAverage(json);
 
-  setupSeasonCanvas("seasonCanvas", mgs, json, seasonIndex, highestAverage);
+  setupSeasonCanvas(
+    "seasonCanvas",
+    mgs,
+    json,
+    seasonIndex,
+    highestAverage,
+    version
+  );
 
   const sorted = [...mgs].sort((a, b) => b.score - a.score);
 
