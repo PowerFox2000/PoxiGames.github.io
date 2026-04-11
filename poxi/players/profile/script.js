@@ -183,8 +183,8 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, highestAverage, ver
   });
   ctx.closePath();
 
-  ctx.fillStyle = "rgba(255, 100, 0, 0.2)";
-  ctx.strokeStyle = "rgba(255, 100, 0, 1)";
+  ctx.fillStyle = "rgba(255, 100, 0, 0.1)";
+  ctx.strokeStyle = "rgba(255, 100, 0, 0.5)";
   ctx.lineWidth = 2;
   ctx.fill();
   ctx.stroke();
@@ -199,8 +199,8 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, highestAverage, ver
   });
   ctx.closePath();
 
-  ctx.fillStyle = "rgba(0, 150, 255, 0.2)";
-  ctx.strokeStyle = "rgba(0, 150, 255, 1)";
+  ctx.fillStyle = "rgba(0, 150, 255, 0.01)";
+  ctx.strokeStyle = "rgba(0, 150, 255, 0.3)";
   ctx.lineWidth = 2;
   ctx.fill();
   ctx.stroke();
