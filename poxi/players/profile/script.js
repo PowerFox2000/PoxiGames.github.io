@@ -150,7 +150,7 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, highestAverage) {
 
   // Season averages
   const averages = getSeasonAverages(json, seasonIndex);
-
+  
   const normalizedPlayer = values.map(v =>
     highestAverage > 0 ? (v / highestAverage) * maxRadius : 0
   );
@@ -250,30 +250,30 @@ function drawAverageData(ctx, cx, cy, json, maxRadius, highestAverage) {
 // ------------------ SCORES ------------------
 
 function changeScores(player, version, season) {
-  season = Number(season) - 1;
-  if (version === 3) season += 5;
+  let seasonIndex = Number(season) - 1;
+  if (version === 3) seasonIndex += 5;
 
-  const total = player.points[season];
+  const total = player.points[seasonIndex];
 
   const mgs = [
-    { name: "Battle", score: player.minigames.battle[season] },
-    { name: "Don't fall", score: player.minigames.dont_fall[season] },
-    { name: "Heist", score: player.minigames.heist[season] },
-    { name: "Hunt", score: player.minigames.hunt[season] },
-    { name: "LavaRun", score: player.minigames.lavarun[season] },
-    { name: "Extraction", score: player.minigames.extraction[season] },
-    { name: "Pirates", score: player.minigames.pirates[season] },
-    { name: "Race", score: player.minigames.race[season] },
-    { name: "Spleef", score: player.minigames.spleef[season] }
+    { name: "Battle", score: player.minigames.battle[seasonIndex] },
+    { name: "Don't fall", score: player.minigames.dont_fall[seasonIndex] },
+    { name: "Heist", score: player.minigames.heist[seasonIndex] },
+    { name: "Hunt", score: player.minigames.hunt[seasonIndex] },
+    { name: "LavaRun", score: player.minigames.lavarun[seasonIndex] },
+    { name: "Extraction", score: player.minigames.extraction[seasonIndex] },
+    { name: "Pirates", score: player.minigames.pirates[seasonIndex] },
+    { name: "Race", score: player.minigames.race[seasonIndex] },
+    { name: "Spleef", score: player.minigames.spleef[seasonIndex] }
   ];
 
-  return { total, mgs };
+  return { total, mgs, seasonIndex };
 }
 
-function updateScores(json, { total, mgs }) {
+function updateScores(json, { total, mgs, seasonIndex }) {
   const highestAverage = getHighestAverage(json);
 
-  setupSeasonCanvas("seasonCanvas", mgs, json, null, highestAverage);
+  setupSeasonCanvas("seasonCanvas", mgs, json, seasonIndex, highestAverage);
 
   const sorted = [...mgs].sort((a, b) => b.score - a.score);
 
