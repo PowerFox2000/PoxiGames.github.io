@@ -126,7 +126,7 @@ function getSeasonAverages(json, seasonIndex) {
   });
 }
 
-function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, highestAverage, version) {
+function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, maxScore, version) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
 
@@ -324,7 +324,6 @@ function updateScores(json, { total, mgs, seasonIndex, version }) {
     mgs,
     json,
     seasonIndex,
-    highestAverage,
     maxScore,
     version
   );
