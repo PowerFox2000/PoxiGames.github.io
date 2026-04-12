@@ -7,7 +7,7 @@ fetch("../data.json")
     renderPlayer(player);
     setupCanvas("statsCanvas", player, json);
     setupButtons(json, player);
-    
+
     updateSeasonOptions(player);
   })
   .catch(console.error);
@@ -133,7 +133,7 @@ function getSeasonAverages(json, seasonIndex) {
   });
 }
 
-function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, maxScores, version) {
+function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, maxScore, version) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
 
@@ -160,18 +160,19 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, maxScores, version)
   const versionAvg = getVersionAverages(json, version);
 
   // ---------------- NORMALIZATION ----------------
-  
-  const normalizedPlayer = values.map((v, i) =>
-    maxScores[i] > 0 ? (v / maxScores[i]) * maxRadius : 0
+
+  const normalizedPlayer = values.map(v =>
+    maxScore > 0 ? (v / maxScore) * maxRadius : 0
+  );
+
+  const normalizedAvg = averages.map(v =>
+    maxScore > 0 ? (v / maxScore) * maxRadius : 0
+  );
+
+  const normalizedVersion = versionAvg.map(v =>
+    maxScore > 0 ? (v / maxScore) * maxRadius : 0
   );
   
-  const normalizedAvg = averages.map((v, i) =>
-    maxScores[i] > 0 ? (v / maxScores[i]) * maxRadius : 0
-  );
-  
-  const normalizedVersion = versionAvg.map((v, i) =>
-    maxScores[i] > 0 ? (v / maxScores[i]) * maxRadius : 0
-  );
     
   // ---------------- DRAW ----------------
 
@@ -297,33 +298,6 @@ function drawAverageData(ctx, cx, cy, json, maxRadius, highestAverage) {
   ctx.stroke();
 }
 
-function getSeasonMaxPerMinigame(json, seasonIndex) {
-  const keys = [
-    "battle",
-    "dont_fall",
-    "heist",
-    "hunt",
-    "lavarun",
-    "extraction",
-    "pirates",
-    "race",
-    "spleef"
-  ];
-
-  return keys.map(key => {
-    let max = 0;
-
-    for (const p of json.players) {
-      const v = p.minigames[key]?.[seasonIndex];
-      if (typeof v === "number" && v > max) {
-        max = v;
-      }
-    }
-
-    return max;
-  });
-}
-
 // ------------------ SCORES ------------------
 
 function changeScores(player, version, season) {
@@ -350,17 +324,17 @@ function changeScores(player, version, season) {
 function updateScores(json, { total, mgs, seasonIndex, version }) {
   const highestAverage = getHighestAverage(json);
 
-  const maxScores = getSeasonMaxPerMinigame(json, seasonIndex);
-  
+  const maxScore = getGlobalMaxScore(json);
+
   setupSeasonCanvas(
     "seasonCanvas",
     mgs,
     json,
     seasonIndex,
-    maxScores,
+    maxScore,
     version
   );
-  
+
   const sorted = [...mgs].sort((a, b) => b.score - a.score);
 
   document.getElementById("ptsIndic").textContent = `Points: `;
@@ -501,4 +475,12 @@ function updateSeasonOptions(player) {
 
     })
     .catch(console.error);
+}
+
+function getGlobalMaxScore(json) {
+  return Math.max(
+    ...json.players.flatMap(p =>
+      Object.values(p.minigames).flat()
+    )
+  );
 }
