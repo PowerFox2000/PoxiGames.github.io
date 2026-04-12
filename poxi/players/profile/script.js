@@ -493,11 +493,3 @@ function updateSeasonOptions(player) {
     })
     .catch(console.error);
 }
-
-function getGlobalMaxScore(json) {
-  return Math.max(
-    ...json.players.flatMap(p =>
-      Object.values(p.minigames).flat()
-    )
-  );
-}
