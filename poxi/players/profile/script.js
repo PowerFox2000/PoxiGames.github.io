@@ -172,7 +172,7 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, maxScore, version) 
   const normalizedVersion = versionAvg.map(v =>
     maxScore > 0 ? (v / maxScore) * maxRadius : 0
   );
-  
+    
   // ---------------- DRAW ----------------
 
   drawPolygon(ctx, cx, cy, maxRadius, values.length);
@@ -297,6 +297,23 @@ function drawAverageData(ctx, cx, cy, json, maxRadius, highestAverage) {
   ctx.stroke();
 }
 
+function getGlobalMaxScoreForSeason(json, seasonIndex) {
+  const keys = Object.keys(json.players[0].minigames);
+
+  let max = 0;
+
+  for (const p of json.players) {
+    for (const key of keys) {
+      const value = p.minigames[key]?.[seasonIndex];
+
+      if (typeof value === "number" && value > max) {
+        max = value;
+      }
+    }
+  }
+
+  return max;
+}
 
 // ------------------ SCORES ------------------
 
@@ -324,7 +341,7 @@ function changeScores(player, version, season) {
 function updateScores(json, { total, mgs, seasonIndex, version }) {
   const highestAverage = getHighestAverage(json);
 
-  const maxScore = getGlobalMaxScore(json);
+  const maxScore = getGlobalMaxScoreForSeason(json, seasonIndex);
   
   setupSeasonCanvas(
     "seasonCanvas",
