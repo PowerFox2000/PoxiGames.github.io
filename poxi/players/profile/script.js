@@ -161,8 +161,6 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, version) {
   const maxPerMG = getSeasonMaxPerMG(json, seasonIndex, keys);
 
   // ---------------- NORMALIZATION ----------------
-
-  const maxPerMG = getSeasonMaxPerMinigameFiltered(json, seasonIndex, mgs);
   
   const normalizedPlayer = values.map((v, i) =>
     maxPerMG[i] ? (v / maxPerMG[i]) * maxRadius : 0
