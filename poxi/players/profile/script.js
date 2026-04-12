@@ -133,7 +133,7 @@ function getSeasonAverages(json, seasonIndex) {
   });
 }
 
-function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, maxScore, version) {
+function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, version) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
 
@@ -161,10 +161,8 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, maxScore, version) 
 
   // ---------------- NORMALIZATION ----------------
 
-    // Get per-minigame max
-  const maxPerMG = getSeasonMaxPerMinigame(json, seasonIndex);
+  const maxPerMG = getSeasonMaxPerMinigameFiltered(json, seasonIndex, mgs);
   
-  // Normalize per axis
   const normalizedPlayer = values.map((v, i) =>
     maxPerMG[i] > 0 ? (v / maxPerMG[i]) * maxRadius : 0
   );
@@ -329,13 +327,12 @@ function updateScores(json, { total, mgs, seasonIndex, version }) {
   const highestAverage = getHighestAverage(json);
 
   const maxScore = getGlobalMaxScore(json);
-
+  
   setupSeasonCanvas(
     "seasonCanvas",
     mgs,
     json,
     seasonIndex,
-    maxScore,
     version
   );
 
@@ -489,13 +486,16 @@ function getGlobalMaxScore(json) {
   );
 }
 
-function getSeasonMaxPerMinigame(json, seasonIndex) {
-  const keys = Object.keys(json.players[0].minigames);
+function getSeasonMaxPerMinigameFiltered(json, seasonIndex, mgs) {
+  return mgs.map(mg => {
+    const key = mg.name
+      .toLowerCase()
+      .replace(" ", "_")
+      .replace("'", "");
 
-  return keys.map(key => {
     const values = json.players
-      .map(p => p.minigames[key][seasonIndex])
-      .filter(v => v > 0);
+      .map(p => p.minigames[key]?.[seasonIndex])
+      .filter(v => v > 1);
 
     if (!values.length) return 0;
 
