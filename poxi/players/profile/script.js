@@ -119,13 +119,11 @@ function setupCanvas(canvasId, player, json) {
   drawAverageData(ctx, cx, cy, json, maxRadius, highestAverage);
 }
 
-function getSeasonAverages(json, seasonIndex) {
-  const minigameKeys = Object.keys(json.players[0].minigames);
-
-  return minigameKeys.map(key => {
+function getSeasonAverages(json, seasonIndex, keys) {
+  return keys.map(key => {
     const values = json.players
-      .map(p => p.minigames[key][seasonIndex])
-      .filter(v => v > 1); // same rule as averageValid
+      .map(p => p.minigames[key]?.[seasonIndex])
+      .filter(v => v > 1);
 
     if (!values.length) return 0;
 
@@ -154,25 +152,28 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, version) {
   const maxRadius = 140;
 
   // ---------------- DATA ----------------
-
-  const values = mgs.map(mg => mg.score);
-  const averages = getSeasonAverages(json, seasonIndex);
-  const versionAvg = getVersionAverages(json, version);
+  
+  const keys = mgs.map(m => m.key);
+  
+  const values = mgs.map(m => m.score);
+  const averages = getSeasonAverages(json, seasonIndex, keys);
+  const versionAvg = getVersionAverages(json, version, keys);
+  const maxPerMG = getSeasonMaxPerMG(json, seasonIndex, keys);
 
   // ---------------- NORMALIZATION ----------------
 
   const maxPerMG = getSeasonMaxPerMinigameFiltered(json, seasonIndex, mgs);
   
   const normalizedPlayer = values.map((v, i) =>
-    maxPerMG[i] > 0 ? (v / maxPerMG[i]) * maxRadius : 0
+    maxPerMG[i] ? (v / maxPerMG[i]) * maxRadius : 0
   );
   
   const normalizedAvg = averages.map((v, i) =>
-    maxPerMG[i] > 0 ? (v / maxPerMG[i]) * maxRadius : 0
+    maxPerMG[i] ? (v / maxPerMG[i]) * maxRadius : 0
   );
   
   const normalizedVersion = versionAvg.map((v, i) =>
-    maxPerMG[i] > 0 ? (v / maxPerMG[i]) * maxRadius : 0
+    maxPerMG[i] ? (v / maxPerMG[i]) * maxRadius : 0
   );
   
     
@@ -215,19 +216,17 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, version) {
   ctx.fill();
   ctx.stroke();
 
-  drawEmojis(ctx, cx, cy, maxRadius, mgs);
+  drawEmojis(ctx, cx, cy, maxRadius, keys);
 }
 
-function getVersionAverages(json, version) {
-  const keys = Object.keys(json.players[0].minigames);
-
+function getVersionAverages(json, version, keys) {
   const start = version === 2 ? 0 : 5;
   const end = version === 2 ? 5 : 10;
 
   return keys.map(key => {
-    const values = json.players.flatMap(p =>
-      p.minigames[key].slice(start, end)
-    ).filter(v => v > 1);
+    const values = json.players
+      .flatMap(p => p.minigames[key]?.slice(start, end) || [])
+      .filter(v => v > 1);
 
     if (!values.length) return 0;
 
@@ -310,17 +309,13 @@ function changeScores(player, version, season) {
 
   const total = player.points[seasonIndex];
 
-  const mgs = [
-    { key: "battle", name: "Battle", score: player.minigames.battle[seasonIndex] },
-    { key: "dont_fall", name: "Don't fall", score: player.minigames.dont_fall[seasonIndex] },
-    { key: "heist", name: "Heist", score: player.minigames.heist[seasonIndex] },
-    { key: "hunt", name: "Hunt", score: player.minigames.hunt[seasonIndex] },
-    { key: "lavarun", name: "LavaRun", score: player.minigames.lavarun[seasonIndex] },
-    { key: "extraction", name: "Extraction", score: player.minigames.extraction[seasonIndex] },
-    { key: "pirates", name: "Pirates", score: player.minigames.pirates[seasonIndex] },
-    { key: "race", name: "Race", score: player.minigames.race[seasonIndex] },
-    { key: "spleef", name: "Spleef", score: player.minigames.spleef[seasonIndex] }
-  ];
+  const keys = MG_BY_VERSION[version];
+  
+  const mgs = keys.map(key => ({
+    key,
+    name: formatMGName(key),
+    score: player.minigames[key][seasonIndex] ?? 0
+  }));
 
   return { total, mgs, seasonIndex, version };
 }
@@ -517,22 +512,38 @@ const minigameEmojis = {
   spleef: "❄️"
 };
 
-function drawEmojis(ctx, cx, cy, radius, mgs) {
-  ctx.font = "18px sans-serif";
+const MG_BY_VERSION = {
+  2: ["battle", "dont_fall", "heist", "hunt", "lavarun", "pirates", "race", "spleef"],
+  3: ["battle", "dont_fall", "heist", "hunt", "lavarun", "extraction", "race", "spleef"]
+};
+
+function formatMGName(key) {
+  return key
+    .replace("_", " ")
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function getSeasonMaxPerMG(json, seasonIndex, keys) {
+  return keys.map(key => {
+    const values = json.players
+      .map(p => p.minigames[key]?.[seasonIndex])
+      .filter(v => v > 1);
+
+    return values.length ? Math.max(...values) : 0;
+  });
+}
+
+function drawEmojis(ctx, cx, cy, radius, keys) {
+  ctx.font = "18px Arial";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
 
-  mgs.forEach((mg, i) => {
-    const angle = (i / mgs.length) * Math.PI * 2 - Math.PI / 2;
+  keys.forEach((key, i) => {
+    const angle = (i / keys.length) * Math.PI * 2 - Math.PI / 2;
 
-    // push emoji slightly outside polygon
-    const offset = radius + 20;
+    const x = cx + Math.cos(angle) * (radius + 25);
+    const y = cy + Math.sin(angle) * (radius + 25);
 
-    const x = cx + Math.cos(angle) * offset;
-    const y = cy + Math.sin(angle) * offset;
-
-    const emoji = minigameEmojis[mg.key] || "❓";
-
-    ctx.fillText(emoji, x, y);
+    ctx.fillText(minigameEmojis[key] || "❓", x, y);
   });
 }
