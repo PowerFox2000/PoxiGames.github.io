@@ -161,16 +161,20 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, maxScore, version) 
 
   // ---------------- NORMALIZATION ----------------
 
-  const normalizedPlayer = values.map(v =>
-    maxScore > 0 ? (v / maxScore) * maxRadius : 0
+    // Get per-minigame max
+  const maxPerMG = getSeasonMaxPerMinigame(json, seasonIndex);
+  
+  // Normalize per axis
+  const normalizedPlayer = values.map((v, i) =>
+    maxPerMG[i] > 0 ? (v / maxPerMG[i]) * maxRadius : 0
   );
-
-  const normalizedAvg = averages.map(v =>
-    maxScore > 0 ? (v / maxScore) * maxRadius : 0
+  
+  const normalizedAvg = averages.map((v, i) =>
+    maxPerMG[i] > 0 ? (v / maxPerMG[i]) * maxRadius : 0
   );
-
-  const normalizedVersion = versionAvg.map(v =>
-    maxScore > 0 ? (v / maxScore) * maxRadius : 0
+  
+  const normalizedVersion = versionAvg.map((v, i) =>
+    maxPerMG[i] > 0 ? (v / maxPerMG[i]) * maxRadius : 0
   );
   
     
@@ -483,4 +487,18 @@ function getGlobalMaxScore(json) {
       Object.values(p.minigames).flat()
     )
   );
+}
+
+function getSeasonMaxPerMinigame(json, seasonIndex) {
+  const keys = Object.keys(json.players[0].minigames);
+
+  return keys.map(key => {
+    const values = json.players
+      .map(p => p.minigames[key][seasonIndex])
+      .filter(v => v > 0);
+
+    if (!values.length) return 0;
+
+    return Math.max(...values);
+  });
 }
