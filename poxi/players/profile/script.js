@@ -133,7 +133,7 @@ function getSeasonAverages(json, seasonIndex) {
   });
 }
 
-function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, maxScore, version) {
+function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, maxScores, version) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
 
@@ -161,16 +161,16 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, maxScore, version) 
 
   // ---------------- NORMALIZATION ----------------
   
-  const normalizedPlayer = values.map(v =>
-    maxScore > 0 ? (v / maxScore) * maxRadius : 0
+  const normalizedPlayer = values.map((v, i) =>
+    maxScores[i] > 0 ? (v / maxScores[i]) * maxRadius : 0
   );
   
-  const normalizedAvg = averages.map(v =>
-    maxScore > 0 ? (v / maxScore) * maxRadius : 0
+  const normalizedAvg = averages.map((v, i) =>
+    maxScores[i] > 0 ? (v / maxScores[i]) * maxRadius : 0
   );
   
-  const normalizedVersion = versionAvg.map(v =>
-    maxScore > 0 ? (v / maxScore) * maxRadius : 0
+  const normalizedVersion = versionAvg.map((v, i) =>
+    maxScores[i] > 0 ? (v / maxScores[i]) * maxRadius : 0
   );
     
   // ---------------- DRAW ----------------
@@ -297,22 +297,21 @@ function drawAverageData(ctx, cx, cy, json, maxRadius, highestAverage) {
   ctx.stroke();
 }
 
-function getGlobalMaxScoreForSeason(json, seasonIndex) {
+function getSeasonMaxPerMinigame(json, seasonIndex) {
   const keys = Object.keys(json.players[0].minigames);
 
-  let max = 0;
+  return keys.map(key => {
+    let max = 0;
 
-  for (const p of json.players) {
-    for (const key of keys) {
-      const value = p.minigames[key]?.[seasonIndex];
-
-      if (typeof value === "number" && value > max) {
-        max = value;
+    for (const p of json.players) {
+      const v = p.minigames[key]?.[seasonIndex];
+      if (typeof v === "number" && v > max) {
+        max = v;
       }
     }
-  }
 
-  return max;
+    return max;
+  });
 }
 
 // ------------------ SCORES ------------------
@@ -341,14 +340,14 @@ function changeScores(player, version, season) {
 function updateScores(json, { total, mgs, seasonIndex, version }) {
   const highestAverage = getHighestAverage(json);
 
-  const maxScore = getGlobalMaxScoreForSeason(json, seasonIndex);
+  const maxScores = getSeasonMaxPerMinigame(json, seasonIndex);
   
   setupSeasonCanvas(
     "seasonCanvas",
     mgs,
     json,
     seasonIndex,
-    maxScore,
+    maxScores,
     version
   );
   
