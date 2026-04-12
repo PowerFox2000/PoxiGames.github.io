@@ -199,7 +199,7 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, version) {
   ctx.fill();
   ctx.stroke();
 
-  // Version average (blue)
+  // Version average
   ctx.beginPath();
   normalizedVersion.forEach((value, i) => {
     const angle = (i / normalizedVersion.length) * Math.PI * 2 - Math.PI / 2;
@@ -214,6 +214,8 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, version) {
   ctx.lineWidth = 2;
   ctx.fill();
   ctx.stroke();
+
+  drawEmojis(ctx, cx, cy, maxRadius, mgs);
 }
 
 function getVersionAverages(json, version) {
@@ -309,15 +311,15 @@ function changeScores(player, version, season) {
   const total = player.points[seasonIndex];
 
   const mgs = [
-    { name: "Battle", score: player.minigames.battle[seasonIndex] },
-    { name: "Don't fall", score: player.minigames.dont_fall[seasonIndex] },
-    { name: "Heist", score: player.minigames.heist[seasonIndex] },
-    { name: "Hunt", score: player.minigames.hunt[seasonIndex] },
-    { name: "LavaRun", score: player.minigames.lavarun[seasonIndex] },
-    { name: "Extraction", score: player.minigames.extraction[seasonIndex] },
-    { name: "Pirates", score: player.minigames.pirates[seasonIndex] },
-    { name: "Race", score: player.minigames.race[seasonIndex] },
-    { name: "Spleef", score: player.minigames.spleef[seasonIndex] }
+    { key: "battle", name: "Battle", score: player.minigames.battle[seasonIndex] },
+    { key: "dont_fall", name: "Don't fall", score: player.minigames.dont_fall[seasonIndex] },
+    { key: "heist", name: "Heist", score: player.minigames.heist[seasonIndex] },
+    { key: "hunt", name: "Hunt", score: player.minigames.hunt[seasonIndex] },
+    { key: "lavarun", name: "LavaRun", score: player.minigames.lavarun[seasonIndex] },
+    { key: "extraction", name: "Extraction", score: player.minigames.extraction[seasonIndex] },
+    { key: "pirates", name: "Pirates", score: player.minigames.pirates[seasonIndex] },
+    { key: "race", name: "Race", score: player.minigames.race[seasonIndex] },
+    { key: "spleef", name: "Spleef", score: player.minigames.spleef[seasonIndex] }
   ];
 
   return { total, mgs, seasonIndex, version };
@@ -500,5 +502,37 @@ function getSeasonMaxPerMinigameFiltered(json, seasonIndex, mgs) {
     if (!values.length) return 0;
 
     return Math.max(...values);
+  });
+}
+
+const minigameEmojis = {
+  battle: "⚔️",
+  dont_fall: "🤸",
+  heist: "💰",
+  hunt: "🔪",
+  lavarun: "🌋",
+  extraction: "🏹",
+  pirates: "🏴‍☠️",
+  race: "🏁",
+  spleef: "❄️"
+};
+
+function drawEmojis(ctx, cx, cy, radius, mgs) {
+  ctx.font = "18px sans-serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+
+  mgs.forEach((mg, i) => {
+    const angle = (i / mgs.length) * Math.PI * 2 - Math.PI / 2;
+
+    // push emoji slightly outside polygon
+    const offset = radius + 20;
+
+    const x = cx + Math.cos(angle) * offset;
+    const y = cy + Math.sin(angle) * offset;
+
+    const emoji = minigameEmojis[mg.key] || "❓";
+
+    ctx.fillText(emoji, x, y);
   });
 }
