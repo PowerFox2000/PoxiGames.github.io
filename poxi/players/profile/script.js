@@ -298,7 +298,17 @@ function drawAverageData(ctx, cx, cy, json, maxRadius, highestAverage) {
 }
 
 function getSeasonMaxPerMinigame(json, seasonIndex) {
-  const keys = Object.keys(json.players[0].minigames);
+  const keys = [
+    "battle",
+    "dont_fall",
+    "heist",
+    "hunt",
+    "lavarun",
+    "extraction",
+    "pirates",
+    "race",
+    "spleef"
+  ];
 
   return keys.map(key => {
     let max = 0;
