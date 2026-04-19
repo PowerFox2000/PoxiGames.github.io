@@ -108,7 +108,7 @@ function setupCanvas(canvasId, player, json) {
 
   const cx = size / 2;
   const cy = size / 2;
-  const maxRadius = 140;
+  const maxRadius = 110;
 
   const values = Object.values(player.minigames).map(averageValid);
   const highestAverage = getHighestAverage(json);
@@ -353,14 +353,19 @@ function updateScores(json, { total, mgs, seasonIndex, version }) {
 function setupButtons(json, player) {
   const btn2 = document.getElementById("button2");
   const btn3 = document.getElementById("button3");
-
+  
   btn2.addEventListener("change", () => {
     if (btn2.value === "default") return;
 
-    const result = changeScores(player, 2, btn2.value);
-    result.mgs.splice(5, 1);
-    setTeams(player, 2, btn2.value);
-    updateScores(json, result);
+    const result = changeScores(player, 2, btn3.value);
+  
+  const filteredMgs = [...result.mgs];
+  filteredMgs.splice(5, 1);
+  
+  updateScores(json, {
+    ...result,
+    mgs: filteredMgs
+  });
 
     btn2.classList.add("selected");
     btn3.value = "default";
@@ -371,9 +376,14 @@ function setupButtons(json, player) {
     if (btn3.value === "default") return;
 
     const result = changeScores(player, 3, btn3.value);
-    result.mgs.splice(4, 1);
-    setTeams(player, 3, btn3.value);
-    updateScores(json, result);
+    
+    const filteredMgs = [...result.mgs];
+    filteredMgs.splice(4, 1);
+    
+    updateScores(json, {
+      ...result,
+      mgs: filteredMgs
+    });
 
     btn3.classList.add("selected");
     btn2.value = "default";
