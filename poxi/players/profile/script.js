@@ -359,15 +359,15 @@ function setupButtons(json, player) {
   btn2.addEventListener("change", () => {
     if (btn2.value === "default") return;
 
-    const result = changeScores(player, 2, btn3.value);
+    const result = changeScores(player, 2, btn2.value);
   
-  const filteredMgs = [...result.mgs];
-  filteredMgs.splice(5, 1);
-  
-  updateScores(json, {
-    ...result,
-    mgs: filteredMgs
-  });
+    const filteredMgs = [...result.mgs];
+    filteredMgs.splice(5, 1);
+    
+    updateScores(json, {
+      ...result,
+      mgs: filteredMgs
+    });
 
     btn2.classList.add("selected");
     btn3.value = "default";
