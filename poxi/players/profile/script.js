@@ -50,9 +50,11 @@ function renderPlayer(player) {
 
 
       <p class="bodyText">${rolesIndicator}</p>
-      <p>🟥 ⎯> Player scores </p>
-      <p>🟨 ⎯> All-Players average </p>
-      <p>🟩 ⎯> Player average </p>
+      <p>Player specific:</p>
+      <p>🟥 ⎯> Season scores </p>
+      <p class="comment">For all players:</p>
+      <p>🟨 ⎯> Season averages </p>
+      <p>🟩 ⎯> Version averages </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-4 gap-0">
         <select class="button-left enabled bodyText" id="button2">
@@ -195,7 +197,7 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, version) {
   });
   ctx.closePath();
 
-  ctx.fillStyle = "rgba(255, 100, 0, 0.1)";
+  ctx.fillStyle = "rgba(255, 255, 0, 0.1)";
   ctx.strokeStyle = "rgba(255, 255, 0, 0.5)";
   ctx.lineWidth = 2;
   ctx.fill();
@@ -211,7 +213,7 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, version) {
   });
   ctx.closePath();
 
-  ctx.fillStyle = "rgba(255, 200, 0, 0.01)";
+  ctx.fillStyle = "rgba(0, 255, 0, 0.01)";
   ctx.strokeStyle = "rgba(0, 255, 0, 0.3)";
   ctx.lineWidth = 2;
   ctx.fill();
@@ -294,8 +296,8 @@ function drawAverageData(ctx, cx, cy, json, maxRadius, highestAverage) {
 
   ctx.closePath();
 
-  ctx.fillStyle = "rgba(255, 100, 0, 0.1)";
-  ctx.strokeStyle = "rgba(255, 100, 0, 0.5)";
+  ctx.fillStyle = "rgba(255, 255, 0, 0.1)";
+  ctx.strokeStyle = "rgba(255, 255, 0, 0.5)";
   ctx.lineWidth = 2;
 
   ctx.fill();
