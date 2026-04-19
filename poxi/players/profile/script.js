@@ -182,7 +182,7 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, version) {
   // Player (red)
   drawPlayerData(ctx, cx, cy, normalizedPlayer);
 
-  // Season average (orange)
+  // Season average (yellow)
   ctx.beginPath();
   normalizedAvg.forEach((value, i) => {
     const angle = (i / normalizedAvg.length) * Math.PI * 2 - Math.PI / 2;
@@ -193,7 +193,7 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, version) {
   ctx.closePath();
 
   ctx.fillStyle = "rgba(255, 100, 0, 0.1)";
-  ctx.strokeStyle = "rgba(255, 100, 0, 0.5)";
+  ctx.strokeStyle = "rgba(255, 255, 0, 0.5)";
   ctx.lineWidth = 2;
   ctx.fill();
   ctx.stroke();
@@ -209,7 +209,7 @@ function setupSeasonCanvas(canvasId, mgs, json, seasonIndex, version) {
   ctx.closePath();
 
   ctx.fillStyle = "rgba(255, 200, 0, 0.01)";
-  ctx.strokeStyle = "rgba(255, 200, 0, 0.3)";
+  ctx.strokeStyle = "rgba(0, 255, 0, 0.3)";
   ctx.lineWidth = 2;
   ctx.fill();
   ctx.stroke();
