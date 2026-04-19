@@ -49,7 +49,10 @@ function renderPlayer(player) {
       <p class="bodyText">${firstSeasonIndicator}</p>
 
 
-      <p class="bodyText">${rolesIndicator}</p><br /><br/>
+      <p class="bodyText">${rolesIndicator}</p>
+      <p>🟥 ⎯> Player scores </p>
+      <p>🟨 ⎯> All-Players average </p>
+      <p>🟩 ⎯> Player average </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-4 gap-0">
         <select class="button-left enabled bodyText" id="button2">
