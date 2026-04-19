@@ -360,14 +360,8 @@ function setupButtons(json, player) {
     if (btn2.value === "default") return;
 
     const result = changeScores(player, 2, btn2.value);
-  
-    const filteredMgs = [...result.mgs];
-    filteredMgs.splice(5, 1);
     
-    updateScores(json, {
-      ...result,
-      mgs: filteredMgs
-    });
+    updateScores(result);
 
     btn2.classList.add("selected");
     btn3.value = "default";
@@ -379,13 +373,7 @@ function setupButtons(json, player) {
 
     const result = changeScores(player, 3, btn3.value);
     
-    const filteredMgs = [...result.mgs];
-    filteredMgs.splice(4, 1);
-    
-    updateScores(json, {
-      ...result,
-      mgs: filteredMgs
-    });
+    updateScores(result);
 
     btn3.classList.add("selected");
     btn2.value = "default";
