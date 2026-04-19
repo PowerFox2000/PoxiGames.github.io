@@ -50,7 +50,7 @@ function renderPlayer(player) {
 
 
       <p class="bodyText">${rolesIndicator}</p>
-      <p>Player specific:</p>
+      <p class="comment">Player specific:</p>
       <p>🟥 ⎯> Season scores </p>
       <p class="comment">For all players:</p>
       <p>🟨 ⎯> Season averages </p>
