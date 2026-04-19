@@ -51,9 +51,9 @@ function renderPlayer(player) {
 
       <p class="bodyText">${rolesIndicator}</p>
       <p class="comment">Player specific:</p>
-      <p>🟥 ⎯> Season scores </p>
+      <p>🟥 ⎯> (Season) scores </p>
       <p class="comment">For all players:</p>
-      <p>🟨 ⎯> Season averages </p>
+      <p>🟨 ⎯> (Season) averages </p>
       <p>🟩 ⎯> Version averages </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-4 gap-0">
