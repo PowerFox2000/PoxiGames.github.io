@@ -515,7 +515,7 @@ const minigameEmojis = {
 
 const MG_BY_VERSION = {
   2: ["battle", "dont_fall", "heist", "hunt", "lavarun", "pirates", "race", "spleef"],
-  3: ["battle", "dont_fall", "heist", "hunt", "lavarun", "extraction", "race", "spleef"]
+  3: ["battle", "dont_fall", "heist", "hunt", "pirates", "extraction", "race", "spleef"]
 };
 
 function formatMGName(key) {
