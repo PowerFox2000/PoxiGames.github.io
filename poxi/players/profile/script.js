@@ -70,7 +70,7 @@ function renderPlayer(player) {
           <option value="1">Poxi Games 3 Season 1</option>
           <option value="2">Poxi Games 3 Season 2</option>
           <option value="3">Poxi Games 3 Season 3</option>
-          <option value="4" disabled>Poxi Games 3 Season 4</option>
+          <option value="4">Poxi Games 3 Season 4</option>
           <option value="5" disabled>Poxi Games 3 Season 5</option>
         </select>
 
