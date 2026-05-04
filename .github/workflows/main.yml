@@ -13,10 +13,10 @@ jobs:
 
       # --- C++ ---
       - name: Compile C++
-        run: g++ cpp/main.cpp -o cpp/main
+        run: g++ Json/JsonFiller_PG3.cpp  -o Json/
 
       - name: Run C++ (optional)
-        run: ./cpp/main
+        run: ./Json/
 
       # --- JS ---
       - name: Setup Node
