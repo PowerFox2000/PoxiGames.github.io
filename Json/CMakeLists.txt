@@ -3,22 +3,27 @@ project(JsonPoxi)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# Add your executable
 add_executable(JsonPoxi
-        JsonFiller_PG3.cpp
+    JsonFiller_PG3.cpp
 )
 
-# OpenXLSX
-find_package(OpenXLSX REQUIRED)
-
-# JsonCpp
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(JSONCPP jsoncpp)
-
-target_include_directories(JsonPoxi PRIVATE
-        ${JSONCPP_INCLUDE_DIRS}
+# Add JsonCpp sources
+add_library(jsoncpp
+    include/jsoncpp/src/lib_json/json_reader.cpp
+    include/jsoncpp/src/lib_json/json_value.cpp
+    include/jsoncpp/src/lib_json/json_writer.cpp
 )
 
+target_include_directories(jsoncpp PUBLIC
+    include/jsoncpp/include
+)
+
+# Add OpenXLSX
+add_subdirectory(include/OpenXLSX)
+
+# Link everything
 target_link_libraries(JsonPoxi PRIVATE
-        OpenXLSX::OpenXLSX
-        ${JSONCPP_LIBRARIES}
+    jsoncpp
+    OpenXLSX
 )
