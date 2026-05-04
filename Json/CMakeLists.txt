@@ -3,6 +3,23 @@ project(JsonPoxi)
 
 set(CMAKE_CXX_STANDARD 17)
 
+add_executable(JsonPoxi
+    JsonFiller_PG3.cpp
+)
+
+# Find packages via vcpkg
+find_package(JsonCpp CONFIG REQUIRED)
+find_package(OpenXLSX CONFIG REQUIRED)
+
+# Link libraries
+target_link_libraries(JsonPoxi PRIVATE
+    JsonCpp::JsonCpp
+    OpenXLSX::OpenXLSX
+)cmake_minimum_required(VERSION 3.16)
+project(JsonPoxi)
+
+set(CMAKE_CXX_STANDARD 17)
+
 # Add your executable
 add_executable(JsonPoxi
     JsonFiller_PG3.cpp
