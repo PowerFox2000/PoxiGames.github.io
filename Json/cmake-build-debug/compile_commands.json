@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/someoneelse/Code/Json/cmake-build-debug",
+  "command": "/usr/bin/c++ -DOPENXLSX_STATIC_DEFINE -isystem /usr/local/include/OpenXLSX -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/JsonPoxi.dir/JsonFiller_PG3.cpp.o -c /home/someoneelse/Code/Json/JsonFiller_PG3.cpp",
+  "file": "/home/someoneelse/Code/Json/JsonFiller_PG3.cpp",
+  "output": "/home/someoneelse/Code/Json/cmake-build-debug/CMakeFiles/JsonPoxi.dir/JsonFiller_PG3.cpp.o"
+}
+]

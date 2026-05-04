@@ -1,0 +1,1355 @@
+{
+	"players" : 
+	[
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Little_Fox_2000",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					1692,
+					1269
+				],
+				"dont_fall" : 
+				[
+					0,
+					595,
+					510
+				],
+				"extraction" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					932,
+					2844
+				],
+				"hunt" : 
+				[
+					0,
+					650,
+					688
+				],
+				"lavarun" : 
+				[
+					0,
+					446,
+					480
+				],
+				"overcook" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					2160,
+					1490
+				],
+				"race" : 
+				[
+					0,
+					1391,
+					2127
+				],
+				"spleef" : 
+				[
+					0,
+					648,
+					770
+				]
+			},
+			"name" : "",
+			"placement" : 
+			[
+				0,
+				1,
+				1
+			],
+			"points" : 
+			[
+				0,
+				16469,
+				14244
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"Red",
+				"Red"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "4Koala",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					1593,
+					0
+				],
+				"dont_fall" : 
+				[
+					0,
+					340,
+					0
+				],
+				"extraction" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					782,
+					0
+				],
+				"hunt" : 
+				[
+					0,
+					690,
+					0
+				],
+				"lavarun" : 
+				[
+					0,
+					260,
+					0
+				],
+				"overcook" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					2010,
+					0
+				],
+				"race" : 
+				[
+					0,
+					865,
+					0
+				],
+				"spleef" : 
+				[
+					0,
+					1000,
+					0
+				]
+			},
+			"name" : "",
+			"placement" : 
+			[
+				0,
+				2,
+				0
+			],
+			"points" : 
+			[
+				0,
+				14534,
+				0
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"Purple",
+				""
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "AlexAstro",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					2757,
+					280
+				],
+				"dont_fall" : 
+				[
+					0,
+					255,
+					225
+				],
+				"extraction" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					818,
+					354
+				],
+				"hunt" : 
+				[
+					0,
+					726,
+					606
+				],
+				"lavarun" : 
+				[
+					0,
+					93,
+					123
+				],
+				"overcook" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					160,
+					470
+				],
+				"race" : 
+				[
+					0,
+					488,
+					723
+				],
+				"spleef" : 
+				[
+					0,
+					520,
+					120
+				]
+			},
+			"name" : "",
+			"placement" : 
+			[
+				0,
+				3,
+				9
+			],
+			"points" : 
+			[
+				0,
+				12483,
+				4775
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"Blue",
+				"Blue"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "DuckyMCz",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					2424,
+					277
+				],
+				"dont_fall" : 
+				[
+					0,
+					425,
+					170
+				],
+				"extraction" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					632,
+					602
+				],
+				"hunt" : 
+				[
+					0,
+					570,
+					610
+				],
+				"lavarun" : 
+				[
+					0,
+					180,
+					395
+				],
+				"overcook" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					390,
+					760
+				],
+				"race" : 
+				[
+					0,
+					295,
+					592
+				],
+				"spleef" : 
+				[
+					0,
+					800,
+					270
+				]
+			},
+			"name" : "",
+			"placement" : 
+			[
+				0,
+				4,
+				2
+			],
+			"points" : 
+			[
+				0,
+				11797,
+				5588
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"Blue",
+				"Blue"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "ChickenIsOnline",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					1242,
+					0
+				],
+				"dont_fall" : 
+				[
+					0,
+					595,
+					0
+				],
+				"extraction" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					632,
+					0
+				],
+				"hunt" : 
+				[
+					0,
+					488,
+					0
+				],
+				"lavarun" : 
+				[
+					0,
+					42,
+					0
+				],
+				"overcook" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					830,
+					0
+				],
+				"race" : 
+				[
+					0,
+					373,
+					0
+				],
+				"spleef" : 
+				[
+					0,
+					940,
+					0
+				]
+			},
+			"name" : "",
+			"placement" : 
+			[
+				0,
+				5,
+				0
+			],
+			"points" : 
+			[
+				0,
+				9486,
+				0
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"Purple",
+				""
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "thelololguy",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					1836,
+					1386
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					510
+				],
+				"extraction" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					620,
+					1020
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					688
+				],
+				"lavarun" : 
+				[
+					0,
+					99,
+					379
+				],
+				"overcook" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					160,
+					1360
+				],
+				"race" : 
+				[
+					0,
+					808,
+					1192
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					10
+				]
+			},
+			"name" : "",
+			"placement" : 
+			[
+				0,
+				6,
+				3
+			],
+			"points" : 
+			[
+				0,
+				8567,
+				10663
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"Blue",
+				"Purple"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Dragon_Sam",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					897,
+					571
+				],
+				"dont_fall" : 
+				[
+					0,
+					510,
+					595
+				],
+				"extraction" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					440,
+					3320
+				],
+				"hunt" : 
+				[
+					0,
+					666,
+					800
+				],
+				"lavarun" : 
+				[
+					0,
+					150,
+					378
+				],
+				"overcook" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					890,
+					640
+				],
+				"race" : 
+				[
+					0,
+					647,
+					1491
+				],
+				"spleef" : 
+				[
+					0,
+					284,
+					70
+				]
+			},
+			"name" : "",
+			"placement" : 
+			[
+				0,
+				7,
+				4
+			],
+			"points" : 
+			[
+				0,
+				8281,
+				11146
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"Red",
+				"Red"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Walrus",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					888,
+					0
+				],
+				"dont_fall" : 
+				[
+					0,
+					595,
+					0
+				],
+				"extraction" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					470,
+					0
+				],
+				"hunt" : 
+				[
+					0,
+					790,
+					0
+				],
+				"lavarun" : 
+				[
+					0,
+					111,
+					0
+				],
+				"overcook" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					370,
+					0
+				],
+				"race" : 
+				[
+					0,
+					454,
+					0
+				],
+				"spleef" : 
+				[
+					0,
+					698,
+					0
+				]
+			},
+			"name" : "",
+			"placement" : 
+			[
+				0,
+				8,
+				0
+			],
+			"points" : 
+			[
+				0,
+				7552,
+				0
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"Purple",
+				""
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "EarthStream3321",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					118
+				],
+				"dont_fall" : 
+				[
+					0,
+					255,
+					425
+				],
+				"extraction" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					700,
+					1
+				],
+				"hunt" : 
+				[
+					0,
+					690,
+					688
+				],
+				"lavarun" : 
+				[
+					0,
+					171,
+					123
+				],
+				"overcook" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					810,
+					40
+				],
+				"race" : 
+				[
+					0,
+					424,
+					421
+				],
+				"spleef" : 
+				[
+					0,
+					414,
+					190
+				]
+			},
+			"name" : "",
+			"placement" : 
+			[
+				0,
+				9,
+				10
+			],
+			"points" : 
+			[
+				0,
+				5117,
+				4026
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"Red",
+				"Red"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Coolnugets325",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					609,
+					196
+				],
+				"dont_fall" : 
+				[
+					0,
+					170,
+					340
+				],
+				"extraction" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					428,
+					1
+				],
+				"hunt" : 
+				[
+					0,
+					790,
+					548
+				],
+				"lavarun" : 
+				[
+					0,
+					135,
+					210
+				],
+				"overcook" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					60,
+					520
+				],
+				"race" : 
+				[
+					0,
+					90,
+					218
+				],
+				"spleef" : 
+				[
+					0,
+					532,
+					160
+				]
+			},
+			"name" : "",
+			"placement" : 
+			[
+				0,
+				10,
+				7
+			],
+			"points" : 
+			[
+				0,
+				4493,
+				4151
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"Green",
+				"Green"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "Mando",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0
+				],
+				"dont_fall" : 
+				[
+					0,
+					170,
+					0
+				],
+				"extraction" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					554,
+					0
+				],
+				"hunt" : 
+				[
+					0,
+					602,
+					0
+				],
+				"lavarun" : 
+				[
+					0,
+					673,
+					0
+				],
+				"overcook" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					0,
+					0
+				],
+				"race" : 
+				[
+					0,
+					0,
+					294
+				],
+				"spleef" : 
+				[
+					0,
+					118,
+					0
+				]
+			},
+			"name" : "",
+			"placement" : 
+			[
+				0,
+				11,
+				11
+			],
+			"points" : 
+			[
+				0,
+				2176,
+				294
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"Green",
+				"Green"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "SpookyCyber",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0
+				],
+				"extraction" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					292
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0
+				],
+				"lavarun" : 
+				[
+					0,
+					0,
+					361
+				],
+				"overcook" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					0,
+					0
+				],
+				"race" : 
+				[
+					0,
+					0,
+					652
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					230
+				]
+			},
+			"name" : "",
+			"placement" : 
+			[
+				0,
+				0,
+				5
+			],
+			"points" : 
+			[
+				0,
+				0,
+				1535
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"Blue"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "MonkeyMan",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					599
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					340
+				],
+				"extraction" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					644
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					688
+				],
+				"lavarun" : 
+				[
+					0,
+					0,
+					224
+				],
+				"overcook" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					0,
+					120
+				],
+				"race" : 
+				[
+					0,
+					0,
+					312
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					120
+				]
+			},
+			"name" : "",
+			"placement" : 
+			[
+				0,
+				0,
+				6
+			],
+			"points" : 
+			[
+				0,
+				0,
+				5418
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"Purple"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : "dierentuin",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					200
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					425
+				],
+				"extraction" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					520
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					468
+				],
+				"lavarun" : 
+				[
+					0,
+					0,
+					141
+				],
+				"overcook" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					0,
+					1320
+				],
+				"race" : 
+				[
+					0,
+					0,
+					559
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					180
+				]
+			},
+			"name" : "",
+			"placement" : 
+			[
+				0,
+				0,
+				8
+			],
+			"points" : 
+			[
+				0,
+				0,
+				6225
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"Purple"
+			],
+			"tier" : ""
+		},
+		{
+			"discord" : "",
+			"discord_id" : "",
+			"minecraft" : ".DashedPath",
+			"minigames" : 
+			{
+				"battle" : 
+				[
+					0,
+					0,
+					0
+				],
+				"dont_fall" : 
+				[
+					0,
+					0,
+					0
+				],
+				"extraction" : 
+				[
+					0,
+					0,
+					0
+				],
+				"heist" : 
+				[
+					0,
+					0,
+					0
+				],
+				"hunt" : 
+				[
+					0,
+					0,
+					0
+				],
+				"lavarun" : 
+				[
+					0,
+					0,
+					0
+				],
+				"overcook" : 
+				[
+					0,
+					0,
+					0
+				],
+				"pirates" : 
+				[
+					0,
+					0,
+					0
+				],
+				"race" : 
+				[
+					0,
+					0,
+					96
+				],
+				"spleef" : 
+				[
+					0,
+					0,
+					0
+				]
+			},
+			"name" : "",
+			"placement" : 
+			[
+				0,
+				0,
+				12
+			],
+			"points" : 
+			[
+				0,
+				0,
+				96
+			],
+			"pronoun" : "",
+			"roles" : [],
+			"team" : 
+			[
+				"",
+				"",
+				"Green"
+			],
+			"tier" : ""
+		}
+	]
+}

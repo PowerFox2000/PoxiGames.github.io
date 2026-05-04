@@ -1,0 +1,3 @@
+/home/someoneelse/Code/Json/cmake-build-debug/CMakeFiles/JsonPoxi.dir
+/home/someoneelse/Code/Json/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/someoneelse/Code/Json/cmake-build-debug/CMakeFiles/rebuild_cache.dir
