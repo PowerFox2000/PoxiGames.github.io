@@ -1,0 +1,53 @@
+name: Full build and deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # --- C++ ---
+      - name: Compile C++
+        run: g++ cpp/main.cpp -o cpp/main
+
+      - name: Run C++ (optional)
+        run: ./cpp/main
+
+      # --- JS ---
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build JS
+        run: npm run build
+
+      # --- Assemble site ---
+      - name: Prepare site
+        run: |
+          mkdir public
+          cp -r static/* public/        # your HTML/CSS
+          cp -r dist/* public/ || true  # JS build output
+
+      # --- Pages artifact ---
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - uses: actions/deploy-pages@v4
